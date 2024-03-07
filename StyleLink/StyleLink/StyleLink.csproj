@@ -6,4 +6,9 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
-		</Project>
+	<ItemGroup>
+	  <None Update="Views\Shared\_Layout.cshtml.css">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+</Project>
