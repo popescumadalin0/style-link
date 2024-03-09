@@ -10,7 +10,19 @@
                 <icon class="bi bi-calendar3 fs-3"></icon>
                 <span>Programări</span>
             </a>
-            <a class="nav-item nav-link gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Account" asp-action="Details">
+            @{
+                var action = string.Empty;
+             }
+            
+            @if (false) //user is authenticated
+            {
+                action = "Details";
+            }
+            else
+            {
+                action = "Login";
+            }
+            <a class="nav-item nav-link gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Account" asp-action=@action>
                 <icon class="bi bi-person-circle fs-3"></icon>
                 <span>Contul meu</span>
             </a>

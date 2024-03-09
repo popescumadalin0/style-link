@@ -1,5 +1,49 @@
-﻿@{
+﻿@model StyleLink.Models.LoginModel
+@{
     ViewData["Title"] = "Login";
+    ViewData["HasFooter"] = false;
 }
-
-TODO: Login
+<section class="custom-container-sm mx-auto px-2 pt-3">
+    <h2 class="text-center mt-3">Autentificare</h2>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <div class="d-flex flex-column gap-2">
+            @Html.ValidationSummary(true, "", new
+            {
+                @class="text-danger"
+            })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email)
+                @Html.EditorFor(model => model.Email, new
+                {
+                    htmlAttributes = new
+                    {
+                        placeholder = "Introduceți adresa de email",
+                        @class = "form-control"
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.Email, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password)
+                @Html.EditorFor(model => model.Password, new
+                {
+                    htmlAttributes = new
+                    {
+                        @placeholder = "Introduceți parola",
+                        @class = "form-control"
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.Password, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <button type="submit" class="btn btn-primary">Logare</button>
+            <label>Nu ai cont? <a asp-area="" asp-controller="Account" asp-action="Register">Crează cont nou</a></label>
+        </div>
+    }
+</section>

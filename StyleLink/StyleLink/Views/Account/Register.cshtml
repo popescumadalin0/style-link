@@ -1,5 +1,110 @@
-﻿@{
+﻿@model StyleLink.Models.RegisterModel
+@{
     ViewData["Title"] = "Register";
+    ViewData["HasFooter"] = false;
 }
 
-TODO: Register
+<section class="custom-container-sm mx-auto px-2 pt-3">
+    <h2 class="text-center mt-3">Înregistrare</h2>
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        <div class="d-flex flex-column gap-2">
+            @Html.ValidationSummary(true, "", new
+            {
+                @class="text-danger"
+            })
+            <div class="form-group">
+                @Html.LabelFor(model => model.FirstName)
+                @Html.EditorFor(model => model.FirstName, new
+                {
+                    htmlAttributes = new
+                    {
+                        placeholder = "Introduceți prenumele",
+                        @class = "form-control",
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastName)
+                @Html.EditorFor(model => model.LastName, new
+                {
+                    htmlAttributes = new
+                    {
+                        placeholder = "Introduceți numele",
+                        @class = "form-control",
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.LastName, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email)
+                @Html.EditorFor(model => model.Email, new
+                {
+                    htmlAttributes = new
+                    {
+                        placeholder = "Introduceți adresa de email",
+                        @class = "form-control",
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.Email, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password)
+                @Html.EditorFor(model => model.Password, new
+                {
+                    htmlAttributes = new
+                    {
+                        placeholder = "Introduceți parola",
+                        @class = "form-control",
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.Password, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ConfirmPassword)
+                @Html.EditorFor(model => model.ConfirmPassword, new
+                {
+                    htmlAttributes = new
+                    {
+                        placeholder = "Reintroduceți parola",
+                        @class = "form-control",
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <div class="form-check">
+                <label class="form-check-label" for="@nameof(Model.AgreeWithTermsAndConditions)">Acceptați <a href="/">Termenii și condițiile</a></label>
+                @Html.EditorFor(model => model.AgreeWithTermsAndConditions, new
+                {
+                    htmlAttributes = new
+                    {
+                        type = "checkbox",
+                        @class = "form-check-input",
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.AgreeWithTermsAndConditions, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <button type="submit" class="btn btn-primary">Înregistrare</button>
+            <label>Ai deja cont? <a asp-area="" asp-controller="Account" asp-action="Login">Intră în cont</a></label>
+        </div>
+    }
+</section>
