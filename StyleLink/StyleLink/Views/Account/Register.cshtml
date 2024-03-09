@@ -89,7 +89,6 @@
                 })
             </div>
             <div class="form-check">
-                <label class="form-check-label" for="@nameof(Model.AgreeWithTermsAndConditions)">Acceptați <a href="/">Termenii și condițiile</a></label>
                 @Html.EditorFor(model => model.AgreeWithTermsAndConditions, new
                 {
                     htmlAttributes = new
@@ -98,6 +97,8 @@
                         @class = "form-check-input",
                     }
                 })
+                <label class="form-check-label" for="@nameof(Model.AgreeWithTermsAndConditions)">Acceptați <a href="/">Termenii și condițiile</a></label>
+                <br/>
                 @Html.ValidationMessageFor(model => model.AgreeWithTermsAndConditions, "", new
                 {
                     @class = "text-danger"

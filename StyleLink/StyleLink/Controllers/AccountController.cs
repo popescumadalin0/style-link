@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using StyleLink.Models;
 
 namespace StyleLink.Controllers;
@@ -29,6 +30,11 @@ public class AccountController : Controller
         //save token
 
         return RedirectToAction("Index", "Home");
+    }
+    public IActionResult Logout()
+    {
+        //todo: logout
+        return RedirectToAction("Login", "Account");
     }
 
     public IActionResult Register()

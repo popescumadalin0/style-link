@@ -1,15 +1,15 @@
 html {
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Open Sans' !important;
 }
 
 @media (min-width: 768px) {
     html {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -24,7 +24,7 @@ html {
 
 body {
     margin-bottom: 60px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Open Sans' !important;
     color: var(--bs-dark-rgb)
 }
@@ -37,4 +37,8 @@ body {
 
 .custom-container-sm {
     max-width: 540px;
+}
+
+.dropdown-item:active {
+    background-color: #E0E0E1;
 }

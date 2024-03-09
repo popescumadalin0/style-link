@@ -1,31 +1,56 @@
-﻿<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow p-3 mb-5 bg-white rounded">
+﻿<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow mb-5 bg-white rounded">
     <div class="container justify-content-between">
         <div class="d-flex fw-bold">
-            <a class="navbar-brand fs-2 mb-0 logo" asp-area="" asp-controller="Home" asp-action="Index">
+            <a class="navbar-brand fs-3 mb-0 logo" asp-area="" asp-controller="Home" asp-action="Index">
                 STYLE LINK
             </a>
         </div>
-        <div class="d-flex fs-5 mb-0 fw-bolder">
-            <a class="nav-item nav-link gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Appointments" asp-action="Appointments">
-                <icon class="bi bi-calendar3 fs-3"></icon>
-                <span>Programări</span>
-            </a>
-            @{
-                var action = string.Empty;
-             }
-            
-            @if (false) //user is authenticated
+        <ul class="navbar-nav d-flex mb-0 fw-bolder">
+            <li class="nav-item">
+                <a class="nav-link gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Appointments" asp-action="Appointments">
+                    <icon class="bi bi-calendar3 fs-4"></icon>
+                    <span>Programări</span>
+                </a>
+            </li>
+
+            @if (true) //todo: user is authenticated
             {
-                action = "Details";
+                <li class="nav-item dropdown">
+                    <a class="nav-link gap-2 text-dark d-flex align-items-center" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @*todo: get those from database*@
+                        <img class="rounded-circle" width="35px" height="35px" src="~/images/fb.jpg" alt="Profile Image"></img>
+                        <span>Mădălin</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item gap-2 text-dark  d-flex align-items-center" asp-area="" asp-controller="Account" asp-action="Details">
+                            <icon class="bi bi-person-circle fs-4"></icon>
+                            <span>Contul meu</span>
+                        </a>
+                        <a class="dropdown-item gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Appointments" asp-action="Appointments">
+                            <icon class="bi bi-calendar3 fs-4"></icon>
+                            <span>Programări</span>
+                        </a>
+                        <a class="dropdown-item gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Favorite" asp-action="Favorite">
+                            <icon class="bi bi-heart fs-4"></icon>
+                            <span>Favorite</span>
+                        </a>
+                        <a class="dropdown-item gap-2 text-danger d-flex align-items-center" asp-area="" asp-controller="Account" asp-action="Logout">
+                            <icon class="bi bi-box-arrow-right fs-4"></icon>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </li>
             }
             else
             {
-                action = "Login";
+                <li class="nav-item">
+                    <a class="nav-link gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Account" asp-action="Login">
+                        <icon class="bi bi-person-circle fs-4"></icon>
+                        <span>Contul meu</span>
+                    </a>
+                </li>
             }
-            <a class="nav-item nav-link gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Account" asp-action=@action>
-                <icon class="bi bi-person-circle fs-3"></icon>
-                <span>Contul meu</span>
-            </a>
-        </div>
+
+        </ul>
     </div>
 </nav>
