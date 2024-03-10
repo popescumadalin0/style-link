@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using StyleLink.Enums;
+using StyleLink.Models;
 
 namespace StyleLink.Controllers;
 
@@ -14,6 +18,67 @@ public class AppointmentsController : Controller
 
     public IActionResult Appointments()
     {
-        return View();
+        //todo: get appointments
+
+        var mockAppointments = new List<AppointmentModel>()
+        {
+            new AppointmentModel()
+            {
+                AppointmentStatus = AppointmentStatus.Finished,
+                Currency = "RON",
+                EndDate = DateTime.Now,
+                HairStyleName = "Gabriel Ceranu",
+                SalonName = "Vintage Salon",
+                ServicePrice = 50,
+                ServiceType = "Tuns",
+                StartDate = DateTime.Now.AddDays(-1),
+            },
+            new AppointmentModel()
+            {
+                AppointmentStatus = AppointmentStatus.Finished,
+                Currency = "RON",
+                EndDate = DateTime.Now,
+                HairStyleName = "Gabriel Ceranu",
+                SalonName = "Vintage Salon",
+                ServicePrice = 50,
+                ServiceType = "Tuns",
+                StartDate = DateTime.Now.AddDays(-1),
+            },
+            new AppointmentModel()
+            {
+                AppointmentStatus = AppointmentStatus.Finished,
+                Currency = "RON",
+                EndDate = DateTime.Now,
+                HairStyleName = "Gabriel Ceranu",
+                SalonName = "Vintage Salon",
+                ServicePrice = 50,
+                ServiceType = "Tuns",
+                StartDate = DateTime.Now.AddDays(-1),
+            },
+            new AppointmentModel()
+            {
+                AppointmentStatus = AppointmentStatus.Finished,
+                Currency = "RON",
+                EndDate = DateTime.Now,
+                HairStyleName = "Gabriel Ceranu",
+                SalonName = "Vintage Salon",
+                ServicePrice = 50,
+                ServiceType = "Tuns",
+                StartDate = DateTime.Now.AddDays(-1),
+            },
+            new AppointmentModel()
+            {
+                AppointmentStatus = AppointmentStatus.Finished,
+                Currency = "RON",
+                EndDate = DateTime.Now,
+                HairStyleName = "Gabriel Ceranu",
+                SalonName = "Vintage Salon",
+                ServicePrice = 50,
+                ServiceType = "Tuns",
+                StartDate = DateTime.Now.AddDays(-1),
+            }
+        };
+
+        return View(mockAppointments);
     }
 }

@@ -1,6 +1,39 @@
-﻿@{
+﻿@model List<StyleLink.Models.AppointmentModel>
+@{
     ViewData["Title"] = "Programări";
     ViewData["HasFooter"] = false;
 }
 
-TODO: Programari
+<h1 class="font-weight-bold">Programări</h1>
+@if (!Model.Any())
+{
+    <p>Nu există progamări facute!</p>
+}
+
+@{
+    var countInPast = @Model.Count(model => model.InPast);
+}
+@if (Model.Count() - countInPast > 0)
+{
+    <p>În viitor (@(Model.Count() - countInPast))</p>
+    <div class="row p-2 g-4">
+        @foreach (var appointment in Model.Where(model => !model.InPast))
+        {
+            <div class="col col-md-4">
+                @await Html.PartialAsync("Components/_AppointmentCard", appointment)
+            </div>
+        }
+    </div>
+}
+@if (countInPast > 0)
+{
+    <p>În trecut (@countInPast)</p>
+    <div class="row p-2 g-4">
+        @foreach (var appointment in Model.Where(model => model.InPast))
+        {
+            <div class="col col-md-4">
+                @await Html.PartialAsync("Components/_AppointmentCard", appointment)
+            </div>
+        }
+    </div>
+}

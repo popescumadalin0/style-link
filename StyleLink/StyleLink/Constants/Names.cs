@@ -11,4 +11,6 @@ public static class Names
     public const string LastName = "Nume";
 
     public const string PasswordConfirmation = "Confirmă parola";
+
+    public const string PhoneNumber = "Număr de telefon";
 }

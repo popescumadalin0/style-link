@@ -1,0 +1,29 @@
+﻿@using System.Globalization
+@model StyleLink.Models.AppointmentModel
+
+<div class="card shadow">
+    <div class="card-body">
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between">
+                <span><p>@Model.AppointmentStatus</p></span>
+                <i class="bi bi-chevron-right fs-5" style="color: var(--bs-blue-color)"></i>
+            </div>
+            <h4 class="font-weight-bold">
+                @{
+                    string date = Model.StartDate.ToString("ddd d MMM",
+                        CultureInfo.CreateSpecificCulture("ro-RO"));
+                }
+                @(date[0].ToString().ToUpper() + date[1..])
+            </h4>
+        </div>
+        <hr />
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between">
+                <span><strong>@Model.ServiceType</strong></span>
+                <span><strong>@Model.ServicePrice @Model.Currency</strong></span>
+            </div>
+            <span>@($"{@Model.HairStyleName} - {@Model.SalonName}")</span>
+            <p>@($"{@Model.StartDate:HH:mm} - {@Model.EndDate:HH:mm} ({(Model.EndDate - Model.StartDate):mm} min)")</p>
+        </div>
+    </div>
+</div>

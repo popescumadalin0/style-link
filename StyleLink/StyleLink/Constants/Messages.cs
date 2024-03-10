@@ -16,6 +16,10 @@ public static class Messages
 
     public const string NameIsMandatory = "Numele este obligatoriu!";
 
+    public const string PhoneNumberIsMandatory = "Numărul de telefon este obligatoriu!";
+
+    public const string PhoneNumberNotValidMessage = "Numărul de telefon nu este valid!";
+
     public const string PasswordNotValidMessage = "Parola trebuie să conțină cel puțin 8 caractere: literă mare, literă mică, număr și un caracter special [@$!%*?&]";
 
     public const string AcceptTermsAndConditions = "Trebuie să fii de acord cu termenii și condițiile!";

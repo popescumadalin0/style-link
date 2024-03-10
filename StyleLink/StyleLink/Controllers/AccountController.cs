@@ -57,6 +57,34 @@ public class AccountController : Controller
 
     public IActionResult Details()
     {
-        return View();
+        //get user details
+
+        var user = new UpdateUserModel()
+        {
+            Email = "test@test.com",
+            PhoneNumber = "0763519884",
+            FirstName = "Madalin",
+            LastName = "Popescu"
+        };
+
+        return View(user);
+    }
+
+    [HttpPost]
+    public IActionResult Details(UpdateUserModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(model);
+        }
+
+        //todo: save
+        return View(model);
+    }
+
+    public IActionResult DeleteAccount(UpdateUserModel model)
+    {
+        //todo: delete user
+        return RedirectToAction("Logout", "Account");
     }
 }

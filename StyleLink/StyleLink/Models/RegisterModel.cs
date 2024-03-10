@@ -18,6 +18,11 @@ public class RegisterModel
     [EmailAddress(ErrorMessage = Messages.EmailAddressIsInvalid)]
     public string Email { get; set; }
 
+    [Display(Name = Names.PhoneNumber)]
+    [Required(ErrorMessage = Messages.PhoneNumberIsMandatory)]
+    [RegularExpression(Values.PhoneNumberRegex, ErrorMessage = Messages.PhoneNumberNotValidMessage)]
+    public string PhoneNumber { get; set; }
+
     [Display(Name = Names.Password)]
     [Required(ErrorMessage = Messages.PasswordIsMandatory)]
     [DataType(DataType.Password)]
@@ -32,5 +37,7 @@ public class RegisterModel
 
     [Range(typeof(bool), Values.BooleanTrueValue, Values.BooleanTrueValue, ErrorMessage = Messages.AcceptTermsAndConditions)]
     public bool AgreeWithTermsAndConditions { get; set; }
+
+    //todo: add image
 
 }

@@ -58,6 +58,22 @@
                     @class = "text-danger"
                 })
             </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PhoneNumber)
+                @Html.EditorFor(model => model.PhoneNumber, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceți numărul de telefon",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
             <div class="form-group">
                 @Html.LabelFor(model => model.Password)
                 @Html.EditorFor(model => model.Password, new
@@ -97,7 +113,7 @@
                         @class = "form-check-input",
                     }
                 })
-                <label class="form-check-label" for="@nameof(Model.AgreeWithTermsAndConditions)">Acceptați <a href="/">Termenii și condițiile</a></label>
+                <label class="form-check-label" for="@nameof(Model.AgreeWithTermsAndConditions)">Acceptați <a asp-area="" asp-controller="TermsAndConditions" asp-action="TermsAndConditions">Termenii și condițiile</a></label>
                 <br/>
                 @Html.ValidationMessageFor(model => model.AgreeWithTermsAndConditions, "", new
                 {
@@ -105,7 +121,7 @@
                 })
             </div>
             <button type="submit" class="btn btn-primary">Înregistrare</button>
-            <label>Ai deja cont? <a asp-area="" asp-controller="Account" asp-action="Login">Intră în cont</a></label>
+            <label>Ai deja cont? <a asp-area="" asp-Scontroller="Account" asp-action="Login">Intră în cont</a></label>
         </div>
     }
 </section>
