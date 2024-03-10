@@ -79,4 +79,12 @@ public class FavoriteController : Controller
 
         return View(mockFavorites);
     }
+
+    [HttpDelete]
+    public IActionResult DeleteFavorite(string id)
+    {
+        //todo: delete favorite
+
+        return RedirectToAction("Favorite", "Favorite");
+    }
 }

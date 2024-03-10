@@ -81,4 +81,9 @@ public class AppointmentsController : Controller
 
         return View(mockAppointments);
     }
+
+    public IActionResult AppointmentDetails()
+    {
+        return View();
+    }
 }

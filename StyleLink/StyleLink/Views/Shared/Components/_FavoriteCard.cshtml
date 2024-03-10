@@ -5,13 +5,18 @@
         <div class="position-relative">
             <div class="overflow-auto no-scrollbar" style="width: 100%;">
                 <div class="d-flex px-1" style="width: max-content;">
-                @foreach (var image in Model.ImagesTest)
-                {
-                    <div class="position-relative rounded-pill ml-0" style="height: 200px; width: 200px;">
+                    @foreach (var image in Model.ImagesTest)
+                    {
+                        <div class="position-relative rounded-pill ml-0" style="height: 200px; width: 200px;">
                             <img src="@Url.Content(image)" style="height: 200px; width: 200px;" alt="Salon Image" />
-                    </div>
-                }
-            </div>
+                        </div>
+                    }
+                </div>
+                <div class="position-absolute heart-button">
+                    <a asp-area="" asp-controller="Favorite" asp-action="DeleteFavorite" asp-route-id="test">
+                        <i class="bi bi-heart fs-3 text-danger"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="d-flex flex-row justify-content-between">
@@ -29,4 +34,5 @@
             </div>
         </div>
     </div>
+    <a asp-area="" asp-controller="Home" asp-action="Salon" class="stretched-link"></a>
 </div>
