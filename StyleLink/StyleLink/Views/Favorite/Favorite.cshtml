@@ -1,6 +1,23 @@
-﻿@{
+﻿@model List<StyleLink.Models.FavoriteModel>
+@{
     ViewData["Title"] = "Favorite";
     ViewData["HasFooter"] = false;
 }
 
-TODO: Favorite
+<h1 class="font-weight-bold">Favorite</h1>
+@if (!Model.Any())
+{
+    <p>Nu există favorite adăugate!</p>
+}
+
+@if (Model.Count() > 0)
+{
+    <div class="row p-2 g-4">
+        @foreach (var favorite in Model)
+        {
+            <div class="col col-md-4">
+                @await Html.PartialAsync("Components/_FavoriteCard", favorite)
+            </div>
+        }
+    </div>
+}

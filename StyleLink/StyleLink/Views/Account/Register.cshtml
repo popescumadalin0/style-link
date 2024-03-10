@@ -120,8 +120,14 @@
                     @class = "text-danger"
                 })
             </div>
+            @*todo:*@
+            <div class="form-group">
+                <label for="profileImage" class="form-label">Imagine de profil</label>
+                <input type="file" name="profileImage" id="profileImage" onchange="fileCheck(this);" />
+            </div>
+
             <button type="submit" class="btn btn-primary">Înregistrare</button>
             <label>Ai deja cont? <a asp-area="" asp-Scontroller="Account" asp-action="Login">Intră în cont</a></label>
         </div>
     }
-</section>
+</section>  

@@ -39,5 +39,5 @@ public class RegisterModel
     public bool AgreeWithTermsAndConditions { get; set; }
 
     //todo: add image
-
+    public byte[] ProfileImage { get; set; }
 }

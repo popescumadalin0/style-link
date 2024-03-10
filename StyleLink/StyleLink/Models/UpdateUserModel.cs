@@ -23,6 +23,5 @@ public class UpdateUserModel
     [RegularExpression(Values.PhoneNumberRegex, ErrorMessage = Messages.PhoneNumberNotValidMessage)]
     public string PhoneNumber { get; set; }
 
-    //todo: add image
-
+    public byte[] ProfileImage { get; set; }
 }

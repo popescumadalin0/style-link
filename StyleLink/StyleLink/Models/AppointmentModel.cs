@@ -1,12 +1,12 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using StyleLink.Constants;
 using StyleLink.Enums;
 
 namespace StyleLink.Models;
 
 public class AppointmentModel
 {
+    public Guid Id { get; set; }
+
     public AppointmentStatus AppointmentStatus { get; set; }
 
     public DateTime StartDate { get; set; }

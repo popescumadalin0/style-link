@@ -22,7 +22,7 @@ public class AppointmentsController : Controller
 
         var mockAppointments = new List<AppointmentModel>()
         {
-            new AppointmentModel()
+            new()
             {
                 AppointmentStatus = AppointmentStatus.Finished,
                 Currency = "RON",
@@ -33,7 +33,7 @@ public class AppointmentsController : Controller
                 ServiceType = "Tuns",
                 StartDate = DateTime.Now.AddDays(-1),
             },
-            new AppointmentModel()
+            new()
             {
                 AppointmentStatus = AppointmentStatus.Finished,
                 Currency = "RON",
@@ -44,7 +44,7 @@ public class AppointmentsController : Controller
                 ServiceType = "Tuns",
                 StartDate = DateTime.Now.AddDays(-1),
             },
-            new AppointmentModel()
+            new()
             {
                 AppointmentStatus = AppointmentStatus.Finished,
                 Currency = "RON",
@@ -55,7 +55,7 @@ public class AppointmentsController : Controller
                 ServiceType = "Tuns",
                 StartDate = DateTime.Now.AddDays(-1),
             },
-            new AppointmentModel()
+            new()
             {
                 AppointmentStatus = AppointmentStatus.Finished,
                 Currency = "RON",
@@ -66,7 +66,7 @@ public class AppointmentsController : Controller
                 ServiceType = "Tuns",
                 StartDate = DateTime.Now.AddDays(-1),
             },
-            new AppointmentModel()
+            new()
             {
                 AppointmentStatus = AppointmentStatus.Finished,
                 Currency = "RON",

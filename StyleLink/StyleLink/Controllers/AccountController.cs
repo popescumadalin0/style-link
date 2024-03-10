@@ -73,6 +73,7 @@ public class AccountController : Controller
     [HttpPost]
     public IActionResult Details(UpdateUserModel model)
     {
+        //HttpPostedFileBase file = Request.Files["ImageData"];
         if (!ModelState.IsValid)
         {
             return View(model);

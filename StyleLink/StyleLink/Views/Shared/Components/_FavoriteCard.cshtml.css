@@ -1,0 +1,21 @@
+﻿.gray-color {
+    color: gray;
+}
+
+.rating-color {
+    color: var(--bs-rating-color);
+}
+
+.container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+div {
+    outline: none;
+}
