@@ -26,7 +26,7 @@ body {
     margin-bottom: 60px;
     font-size: 14px;
     font-family: 'Open Sans' !important;
-    color: var(--bs-dark-rgb)
+    color: var(--bs-dark-rgb);
 }
 
 .logo {
@@ -50,5 +50,9 @@ body {
 
 .blue-background-color:hover{
     color:white;
-    background-color: var(--bs-dark-blue-color)
+    background-color: var(--bs-dark-blue-color);
+}
+
+.footer-color {
+    background-color: var(--bs-gray-color);
 }
