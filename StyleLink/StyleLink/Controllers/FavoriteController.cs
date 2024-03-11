@@ -80,8 +80,8 @@ public class FavoriteController : Controller
         return View(mockFavorites);
     }
 
-    [HttpDelete]
-    public IActionResult DeleteFavorite(string id)
+    [HttpPost]
+    public IActionResult DeleteFavorite(FavoriteModel model)
     {
         //todo: delete favorite
 
