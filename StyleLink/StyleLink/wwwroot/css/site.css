@@ -42,3 +42,13 @@ body {
 .dropdown-item:active {
     background-color: #E0E0E1;
 }
+
+.blue-background-color {
+    color: white;
+    background-color: var(--bs-blue-color);
+}
+
+.blue-background-color:hover{
+    color:white;
+    background-color: var(--bs-dark-blue-color)
+}

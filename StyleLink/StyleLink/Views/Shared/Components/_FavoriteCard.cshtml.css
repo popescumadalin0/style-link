@@ -26,5 +26,8 @@ div {
     right: 0.5rem;
     height: 2rem;
     width: 2rem;
+}
+
+.index-up {
     z-index: 2;
 }
