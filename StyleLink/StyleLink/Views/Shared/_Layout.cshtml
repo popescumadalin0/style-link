@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - StyleLink</title>
-    
+
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant">
@@ -30,9 +30,9 @@
 
     @if ((bool)Html.ViewData["HasFooter"])
     {
-        <footer class="d-flex footer-color" style="height:max-content;">
+        <footer class="d-flex footer-color justify-content-center">
             <div class="container border-top footer text-muted">
-            @await Html.PartialAsync("Footer/_Footer")
+                @await Html.PartialAsync("Footer/_Footer")
             </div>
         </footer>
     }

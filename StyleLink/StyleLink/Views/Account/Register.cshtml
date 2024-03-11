@@ -113,7 +113,7 @@
                         @class = "form-check-input",
                     }
                 })
-                <label class="form-check-label" for="@nameof(Model.AgreeWithTermsAndConditions)">Acceptați <a asp-area="" asp-controller="TermsAndConditions" asp-action="TermsAndConditions">Termenii și condițiile</a></label>
+                <label class="form-check-label" for="@nameof(Model.AgreeWithTermsAndConditions)">Acceptați <a target="_blank" asp-area="" asp-controller="Information" asp-action="TermsAndConditions">Termenii și condițiile</a></label>
                 <br/>
                 @Html.ValidationMessageFor(model => model.AgreeWithTermsAndConditions, "", new
                 {
