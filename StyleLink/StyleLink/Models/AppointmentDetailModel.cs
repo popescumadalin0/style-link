@@ -15,7 +15,7 @@ public class AppointmentDetailModel
 
     public string ServiceType { get; set; }
 
-    public string HairStyleName { get; set; }
+    public string HairStylistName { get; set; }
 
     public string SalonName { get; set; }
 
