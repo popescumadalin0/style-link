@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace StyleLink.Models;
 
 public class FavoriteModel
 {
+    public Guid Id { get; set; }
+
     public int NumberOfEvaluations { get; set; }
 
     public double SalonRating { get; set; }

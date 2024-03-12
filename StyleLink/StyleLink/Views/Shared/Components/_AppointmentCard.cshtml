@@ -26,5 +26,5 @@
             <p>@($"{@Model.StartDate:HH:mm} - {@Model.EndDate:HH:mm} ({(Model.EndDate - Model.StartDate):mm} min)")</p>
         </div>
     </div>
-    <a asp-area="" asp-controller="Appointments" asp-action="AppointmentDetails" class="stretched-link"></a>
+    <a asp-area="" asp-controller="Appointments" asp-action="AppointmentDetails" asp-route-id="@Model.Id.ToString()" class="stretched-link"></a>
 </div>

@@ -1,10 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using StyleLink.Constants;
 
 namespace StyleLink.Models;
 
 public class UpdateUserModel
 {
+    public Guid Id { get; set; }
+
     [Display(Name = Names.EmailAddress)]
     [Required(ErrorMessage = Messages.EmailAddressIsMandatory)]
     [EmailAddress(ErrorMessage = Messages.EmailAddressIsInvalid)]
