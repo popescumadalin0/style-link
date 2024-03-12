@@ -11,6 +11,8 @@ public class AppointmentDetailModel
 
     public DateTime StartDate { get; set; }
 
+    public DateTime EndDate { get; set; }
+
     public string ServiceType { get; set; }
 
     public string HairStyleName { get; set; }

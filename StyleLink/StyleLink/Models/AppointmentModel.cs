@@ -22,6 +22,4 @@ public class AppointmentModel
     public int ServicePrice { get; set; }
 
     public string Currency { get; set; }
-
-    public bool InPast => StartDate < DateTime.UtcNow;
 }

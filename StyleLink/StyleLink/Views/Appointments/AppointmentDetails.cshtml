@@ -1,12 +1,40 @@
-﻿@model StyleLink.Models.AppointmentDetailModel
+﻿@using System.Globalization
+@model StyleLink.Models.AppointmentDetailModel
 @{
     ViewData["Title"] = "Programări";
     ViewData["HasFooter"] = false;
 }
 <div class="d-flex justify-content-center">
     <div class="d-flex flex-row w-100">
-        <div class="card">
+        <div class="card border-0 rounded-end-pill shadow">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body w-100 align-items-center">
+                    <span class="card-title">Detalii Programare</span>
+                </div>
+            </div>
             <div class="card-body">
+                <div class="card border-0 rounded-pill shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex flex-column gap-2">
+                            <div class="d-flex flex-column gap-2">
+                                <span>@Model.AppointmentStatus.ToString()</span>
+                                <h3>
+                                    @($"{Model.StartDate.ToString("ddd d MMM",
+                                        CultureInfo.CreateSpecificCulture("ro-RO"))} - {Model.StartDate:HH:mm}")
+                                </h3>
+                            </div>
+                            <hr/>
+                            <div class="d-flex flex-column gap-2">
+                                <div></div>
+                                <span class="text-muted">@($"({(Model.EndDate - Model.StartDate):mm} min)")</span>
+                            </div>
+                            <hr/>
+                            <div>
+                                <button class="btn blue-background-color rounded-pill">Programează din nou</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <h1>Details</h1>
                 @*todo:card*@
             </div>

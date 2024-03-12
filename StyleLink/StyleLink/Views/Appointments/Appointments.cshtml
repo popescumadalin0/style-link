@@ -1,4 +1,5 @@
-﻿@model List<StyleLink.Models.AppointmentModel>
+﻿@using StyleLink.Enums
+@model List<StyleLink.Models.AppointmentModel>
 @{
     ViewData["Title"] = "Programări";
     ViewData["HasFooter"] = false;
@@ -11,13 +12,13 @@
 }
 
 @{
-    var countInPast = @Model.Count(model => model.InPast);
+    var countInPast = @Model.Count(model => model.AppointmentStatus >= AppointmentStatus.Finished);
 }
 @if (Model.Count() - countInPast > 0)
 {
     <p>În viitor (@(Model.Count() - countInPast))</p>
     <div class="row p-2 g-4">
-        @foreach (var appointment in Model.Where(model => !model.InPast))
+        @foreach (var appointment in Model.Where(model => !(model.AppointmentStatus >= AppointmentStatus.Finished)))
         {
             <div class="col col-md-4">
                 @await Html.PartialAsync("Components/_AppointmentCard", appointment)
@@ -29,7 +30,7 @@
 {
     <p>În trecut (@countInPast)</p>
     <div class="row p-2 g-4">
-        @foreach (var appointment in Model.Where(model => model.InPast))
+        @foreach (var appointment in Model.Where(model => model.AppointmentStatus >= AppointmentStatus.Finished))
         {
             <div class="col col-md-4">
                 @await Html.PartialAsync("Components/_AppointmentCard", appointment)
