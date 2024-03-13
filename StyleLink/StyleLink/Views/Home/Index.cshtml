@@ -1,8 +1,43 @@
-﻿@{
+﻿@model List<StyleLink.Models.SalonModel>
+
+@{
     ViewData["Title"] = "Style Link";
     ViewData["HasFooter"] = true;
 }
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<p class="badge text-muted">Still in progress</p>
+<div class="card description-background-color w-100 border-0">
+    <div class="card-body">
+        <div class="d-flex flex-row justify-content-between">
+            <h2 class="font-weight-bold">Programează-te online
+                simplu și rapid</h2>
+            <div class="d-flex fw-bold">
+                <a class="navbar-brand fs-3 mb-0 logo" asp-area="" asp-controller="Home" asp-action="Index">
+                    STYLE LINK
+                </a>
+            </div>
+        </div>
+        <div class="d-flex flex-row  gap-1">
+            <h3>Dacă și tu ai un salon și vrei îl înregistrezi în platorma noastră</h3>
+            <a asp-area="" asp-controller="Information" asp-action="AboutUs"><h3>contactează-ne.</h3></a>
+        </div>
+    </div>
 </div>
+
+
+<h1 class="font-weight-bold">Saloane</h1>
+@if (!Model.Any())
+{
+    <p>Nu există saloane adăugate!</p>
+}
+
+@if (Model.Any())
+{
+    <div class="row p-2 g-4">
+        @foreach (var salon in Model)
+        {
+            <div class="col col-md-4">
+                @await Html.PartialAsync("Components/_SalonCard", salon)
+            </div>
+        }
+    </div>
+}

@@ -18,7 +18,7 @@ public class SalonController : Controller
     [HttpGet]
     public IActionResult Salon(string id)
     {
-        var mock = new SalonModel()
+        var mock = new SalonDetailModel()
         {
             ImagesTest = new List<string>() { "~/images/my-baby.jpg", "~/images/my-baby.jpg", "~/images/my-baby.jpg", "~/images/my-baby.jpg", "~/images/my-baby.jpg" },
             SalonName = "VintageSalon",

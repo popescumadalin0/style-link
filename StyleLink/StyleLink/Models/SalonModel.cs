@@ -7,28 +7,20 @@ public class SalonModel
 {
     public Guid Id { get; set; }
 
-    public string SalonAddress { get; set; }
-
-    public string SalonName { get; set; }
-
-    public string MapsUrl { get; set; }
-
-    public List<string> ImagesTest { get; set; }
-
-    public string ProfileImageTest { get; set; }
-
-    //todo
-    public List<byte[]> Images { get; set; }
-
-    public byte[] ProfileImage { get; set; }
-
-    public List<ServiceModel> Services { get; set; }
-
-    public List<HairStylist> HairStylists { get; set; }
-
-    public TimeSchedule TimeSchedule { get; set; }
+    public int NumberOfEvaluations { get; set; }
 
     public double SalonRating { get; set; }
 
-    public int NumberOfEvaluations { get; set; }
+    public string SalonName { get; set; }
+
+    public string Address { get; set; }
+
+    public string ProfileImageTest { get; set; }
+
+    public List<string> ImagesTest { get; set; } = new();
+
+    //todo
+    public List<byte[]> Images { get; set; } = new();
+
+    public string ProfileImage { get; set; }
 }

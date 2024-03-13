@@ -1,0 +1,29 @@
+﻿.gray-color {
+    color: gray;
+}
+
+.container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+div {
+    outline: none;
+}
+
+.heart-button {
+    color: red;
+    top: 0rem;
+    right: 0.7rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.index-up {
+    z-index: 2;
+}
