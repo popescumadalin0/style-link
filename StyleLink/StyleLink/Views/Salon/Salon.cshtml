@@ -1,18 +1,19 @@
-﻿@model StyleLink.Models.SalonModel
+﻿@using StyleLink.Constants
+@model StyleLink.Models.SalonModel
 @{
     ViewData["Title"] = Model.SalonName;
     ViewData["HasFooter"] = true;
 }
 <p class="badge text-muted">Still in progress</p>
-<div class="d-flex flex-column">
-    <div class="d-flex flex-row justify-content-evenly">
-        <div class="d-flex flex-column">
-            <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                </ol>
+<div class="d-flex flex-row justify-content-evenly">
+    <div class="d-flex flex-column">
+        <div class="container-fluid">
+            <div id="carouselIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="height: 300px; width: 500px;">
                         <img class="d-block w-100 rounded" src="@Url.Content(Model.ImagesTest.First())" style="height: 300px; width: 500px;" alt="First slide">
@@ -24,72 +25,121 @@
                         </div>
                     }
                 </div>
-                <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <div class="d-flex flex-row justify-content-between pt-3">
-                <div class="d-flex flex-column justify-content-between">
-                    <h5><strong>@Model.SalonName</strong></h5>
-                    <div class="d-flex flex-row gap-1">
-                        <i class="bi bi-star-fill rating-color"></i>
-                        <strong>@Model.SalonRating</strong>
-                        <p>@($"({Model.NumberOfEvaluations} evaluări)")</p>
-                    </div>
-                    <h6 class="text-muted">@Model.SalonAddress</h6>
-                </div>
-                <div class="d-flex flex-column align-content-center justify-content-center">
-                    <img class="rounded-circle" width="60px" height="60px" src="@Url.Content(Model.ProfileImageTest)" alt="Profile Image"></img>
-                </div>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
-        <div class="card gray-background border-0 rounded-end-pill">
-            <div class="card-body d-flex flex-column">
-                <div class="d-flex flex-row mb-3 rounded">
-                    <iframe src="@Url.Content(Model.MapsUrl)" width="400" height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="d-flex flex-row justify-content-between pt-3">
+            <div class="d-flex flex-column justify-content-between">
+                <h5><strong>@Model.SalonName</strong></h5>
+                <div class="d-flex flex-row gap-1">
+                    <i class="bi bi-star-fill rating-color"></i>
+                    <strong>@Model.SalonRating</strong>
+                    <p>@($"({Model.NumberOfEvaluations} evaluări)")</p>
                 </div>
-                <div class="d-flex flex-row gap-3">
-                    <i class="bi bi-geo-alt text-muted fs-5"></i>
-                    <span class="fs-6">@Model.SalonAddress</span>
+                <h6 class="text-muted">@Model.SalonAddress</h6>
+            </div>
+            <div class="d-flex flex-column align-content-center justify-content-center">
+                <img class="rounded-circle" width="60px" height="60px" src="@Url.Content(Model.ProfileImageTest)" alt="Profile Image"></img>
+            </div>
+        </div>
+        @{
+            var dictGroup = Model.Services.GroupBy(s => s.ServiceCategory).ToDictionary(k => k.Key, v => v.ToList());
+        }
+        <div class="d-flex flex-column gap-2">
+            <h5 class="font-weight-bold">Servicii</h5>
+            @foreach (var group in dictGroup)
+            {
+                <div class="d-flex flex-column gap-2">
+                    <strong class="text-muted">@group.Key</strong>
+                    <div class="d-flex flex-column gap-1">
+                        @foreach (var service in group.Value)
+                        {
+                            <div class="d-flex flex-row justify-content-between">
+                                <div class="d-flex flex-column gap-1">
+                                    <strong class="fs-6">@service.ServiceName</strong>
+                                    @{
+                                        var minDuration = service.MinServiceDuration.ToString("HH") == "00" ?
+                                        service.MinServiceDuration.ToString("mm") : service.MinServiceDuration.ToString("HH:mm");
+
+                                        var maxDuration = service.MaxServiceDuration.ToString("HH") == "00" ?
+                                        service.MaxServiceDuration.ToString("mm") : service.MaxServiceDuration.ToString("HH:mm");
+
+                                        var duration = service.MinServiceDuration >= service.MaxServiceDuration ? minDuration : $"{minDuration} - {maxDuration}";
+
+                                        var price = service.MinPrice >= service.MaxPrice ? service.MinPrice.ToString() : service.MinPrice + " - " + service.MaxPrice;
+                                    }
+                                    <strong>@($"{duration}, {price} {service.Currency} ")</strong>
+                                </div>
+                                <button type="submit" class="btn blue-background-color rounded-pill">Programează</button>
+                            </div>
+                            <hr />
+                        }
+                    </div>
                 </div>
-                <hr />
-                <div class="d-flex flex-row gap-3">
-                    <i class="bi bi-clock text-muted fs-6"></i>
-                    <div class="d-flex flex-column text-muted w-100 gap-1">
-                        <span class="fs-6 text-dark">Program de lucru</span>
-                        <div class="d-flex flex-row justify-content-between">
-                            <span>Luni</span>
-                            <span>@Model.TimeSchedule.Monday</span>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between">
-                            <span>Marti</span>
-                            <span>@Model.TimeSchedule.Tuesday</span>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between">
-                            <span>Miercuri</span>
-                            <span>@Model.TimeSchedule.Wednesday</span>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between">
-                            <span>Joi</span>
-                            <span>@Model.TimeSchedule.Thursday</span>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between">
-                            <span>Vineri</span>
-                            <span>@Model.TimeSchedule.Friday</span>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between">
-                            <span>Sâmbătă</span>
-                            <span>@Model.TimeSchedule.Saturday</span>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between">
-                            <span>Duminică</span>
-                            <span>@Model.TimeSchedule.Sunday</span>
-                        </div>
+            }
+        </div>
+
+        <div class="d-flex flex-column gap-3">
+            <h5 class="font-weight-bold">Specialiști</h5>
+            @foreach (var hairStyle in Model.HairStylists)
+            {
+                <div class="d-flex flex-row gap-2 align-items-center">
+                    <div class="d-flex flex-column align-content-center justify-content-center">
+                        <img class="rounded-circle" width="40px" height="40px" src="@Url.Content(hairStyle.ProfileImageTest)" alt="Profile Image"></img>
+                    </div>
+                    <strong class="fs-6">@hairStyle.Name</strong>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="card gray-background border-0 rounded-end-pill" style="height: max-content;">
+        <div class="card-body d-flex flex-column">
+            <div class="d-flex flex-row mb-3 rounded">
+                <iframe src="@Url.Content(Model.MapsUrl)" width="300" height="150" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="d-flex flex-row gap-3">
+                <i class="bi bi-geo-alt text-muted fs-5"></i>
+                <span class="fs-6">@Model.SalonAddress</span>
+            </div>
+            <hr />
+            <div class="d-flex flex-row gap-3">
+                <i class="bi bi-clock text-muted fs-6"></i>
+                <div class="d-flex flex-column text-muted w-100 gap-1">
+                    <span class="fs-6 text-dark">Program de lucru</span>
+                    <div class="d-flex flex-row justify-content-between">
+                        <span>Luni</span>
+                        <span>@Model.TimeSchedule.Monday</span>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between">
+                        <span>Marti</span>
+                        <span>@Model.TimeSchedule.Tuesday</span>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between">
+                        <span>Miercuri</span>
+                        <span>@Model.TimeSchedule.Wednesday</span>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between">
+                        <span>Joi</span>
+                        <span>@Model.TimeSchedule.Thursday</span>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between">
+                        <span>Vineri</span>
+                        <span>@Model.TimeSchedule.Friday</span>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between">
+                        <span>Sâmbătă</span>
+                        <span>@Model.TimeSchedule.Saturday</span>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between">
+                        <span>Duminică</span>
+                        <span>@Model.TimeSchedule.Sunday</span>
                     </div>
                 </div>
             </div>

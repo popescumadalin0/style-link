@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\salon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\salon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\controllers\\saloncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\controllers\\saloncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\salon.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\salon.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\salonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\salonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\account\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\account\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\shared\\components\\_favoritecard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\shared\\components\\_favoritecard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -19,24 +47,8 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\shared\\components\\_favoritecard.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\salon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\salon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\controllers\\saloncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\controllers\\saloncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\salonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\salonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\salon.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\salon.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\salon.cshtml.css||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -99,10 +111,6 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\shared\\header\\_navigationbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\account\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\account\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\information\\termsandconditions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\information\\termsandconditions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -162,16 +170,8 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\stylelink.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\account\\details.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\account\\details.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -274,89 +274,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Salon.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\Salon.cshtml",
               "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml",
               "RelativeToolTip": "StyleLink\\Views\\Salon\\Salon.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAhAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADgAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-10T16:10:23.51Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SalonModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\SalonModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\SalonModel.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAiwA8AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T17:56:33.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SalonController.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\SalonController.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Controllers\\SalonController.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\SalonController.cs",
-              "RelativeToolTip": "StyleLink\\Controllers\\SalonController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBYAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T17:54:29.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_FavoriteCard.cshtml.css",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
-              "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-10T12:41:13.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_FavoriteCard.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-10T12:27:37.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "StyleLink\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "StyleLink\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAADUAAAAAAAAAAAAowDsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-06T18:58:04.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "FavoriteModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\FavoriteModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\FavoriteModel.cs",
@@ -369,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "FavoriteController.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\FavoriteController.cs",
               "RelativeDocumentMoniker": "StyleLink\\Controllers\\FavoriteController.cs",
@@ -382,20 +317,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Salon.cshtml.css",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml.css",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\Salon.cshtml.css",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml.css",
-              "RelativeToolTip": "StyleLink\\Views\\Salon\\Salon.cshtml.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-13T21:01:52.603Z",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Details.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Details.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Details.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Account\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-07T21:20:05.525Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "Salon.cshtml.css",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml.css",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\Salon.cshtml.css",
@@ -408,7 +343,111 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAowBYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-05T19:12:03.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SalonController.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\SalonController.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Controllers\\SalonController.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\SalonController.cs",
+              "RelativeToolTip": "StyleLink\\Controllers\\SalonController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T17:54:29.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\RegisterModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\RegisterModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\RegisterModel.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAIAwwCoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T13:52:11.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_FavoriteCard.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-10T12:27:37.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SalonModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\SalonModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\SalonModel.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAcwBwAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T17:56:33.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_FavoriteCard.cshtml.css",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
+              "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-10T12:41:13.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "StyleLink\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "StyleLink\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAADUAAAAAAAAAAAAowDsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-06T18:58:04.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Salon.cshtml.css",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml.css",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\Salon.cshtml.css",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml.css",
+              "RelativeToolTip": "StyleLink\\Views\\Salon\\Salon.cshtml.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-13T21:01:52.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "TimeSchedule.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\TimeSchedule.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\TimeSchedule.cs",
@@ -421,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "AppointmentDetails.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Appointments\\AppointmentDetails.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Appointments\\AppointmentDetails.cshtml",
@@ -434,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "HairStylist.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\HairStylist.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\HairStylist.cs",
@@ -447,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "variables.css",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\css\\variables.css",
               "RelativeDocumentMoniker": "StyleLink\\wwwroot\\css\\variables.css",
@@ -460,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "ServiceModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ServiceModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\ServiceModel.cs",
@@ -473,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "AppointmentDetails.cshtml.css",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Appointments\\AppointmentDetails.cshtml.css",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Appointments\\AppointmentDetails.cshtml.css",
@@ -486,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Favorite.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Favorite\\Favorite.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Favorite\\Favorite.cshtml",
@@ -499,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Home\\Index.cshtml",
@@ -512,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "AppointmentDetailModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AppointmentDetailModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\AppointmentDetailModel.cs",
@@ -525,7 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "AboutUs.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Information\\AboutUs.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Information\\AboutUs.cshtml",
@@ -538,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "_AppointmentCard.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_AppointmentCard.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_AppointmentCard.cshtml",
@@ -551,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "Appointments.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Appointments\\Appointments.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Appointments\\Appointments.cshtml",
@@ -564,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "AppointmentModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AppointmentModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\AppointmentModel.cs",
@@ -577,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "_NavigationBar.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Header\\_NavigationBar.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Header\\_NavigationBar.cshtml",
@@ -590,19 +629,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Details.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Details.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Details.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Account\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-07T21:20:05.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "TermsAndConditions.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Information\\TermsAndConditions.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Information\\TermsAndConditions.cshtml",
@@ -614,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\LoginModel.cs",
@@ -626,7 +653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "AppointmentsController.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\AppointmentsController.cs",
               "RelativeDocumentMoniker": "StyleLink\\Controllers\\AppointmentsController.cs",
@@ -638,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "StyleLink\\Controllers\\HomeController.cs",
@@ -650,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "StyleLink\\wwwroot\\js\\site.js",
@@ -662,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Appointments.cshtml.css",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Appointments\\Appointments.cshtml.css",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Appointments\\Appointments.cshtml.css",
@@ -674,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "_AppointmentCard.cshtml.css",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_AppointmentCard.cshtml.css",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_AppointmentCard.cshtml.css",
@@ -686,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "AppointmentStatus.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Enums\\AppointmentStatus.cs",
               "RelativeDocumentMoniker": "StyleLink\\Enums\\AppointmentStatus.cs",
@@ -698,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\_ViewStart.cshtml",
@@ -710,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\_ViewImports.cshtml",
@@ -722,7 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "bootstrap.css",
               "DocumentMoniker": "C:\\Users\\dizzy\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Users\\dizzy\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
@@ -735,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "InformationController.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\InformationController.cs",
               "RelativeDocumentMoniker": "StyleLink\\Controllers\\InformationController.cs",
@@ -747,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "_Footer.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Footer\\_Footer.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Footer\\_Footer.cshtml",
@@ -759,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "StyleLink\\Controllers\\AccountController.cs",
@@ -771,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "StyleLink.csproj",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\StyleLink.csproj",
               "RelativeDocumentMoniker": "StyleLink\\StyleLink.csproj",
@@ -783,19 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "RegisterModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\RegisterModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\RegisterModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\RegisterModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\RegisterModel.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAIAwwCkAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T13:52:11.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Details.cshtml.css",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Details.cshtml.css",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Details.cshtml.css",
@@ -804,18 +819,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-03-10T12:52:44.561Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-05T19:12:03.078Z"
             },
             {
               "$type": "Document",
