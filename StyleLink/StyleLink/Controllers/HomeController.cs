@@ -16,9 +16,4 @@ public class HomeController : Controller
     {
         return View();
     }
-
-    public IActionResult Salon()
-    {
-        return View();
-    }
 }
