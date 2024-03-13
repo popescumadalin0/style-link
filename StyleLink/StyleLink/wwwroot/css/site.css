@@ -56,3 +56,7 @@ body {
 .footer-color {
     background-color: var(--bs-gray-color);
 }
+
+.rating-color {
+    color: var(--bs-rating-color);
+}

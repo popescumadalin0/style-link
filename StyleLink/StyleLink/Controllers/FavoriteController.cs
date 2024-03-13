@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StyleLink.Models;
@@ -29,7 +30,10 @@ public class FavoriteController : Controller
                 ImagesTest = new List<string>()
                 {
                     "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                }
+                },
+                SalonId = Guid.NewGuid().ToString(),
+                ProfileImageTest =  "~/images/fb.jpg"
+
             },
             new()
             {
@@ -40,7 +44,9 @@ public class FavoriteController : Controller
                 ImagesTest = new List<string>()
                 {
                     "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                }
+                },
+                SalonId = Guid.NewGuid().ToString(),
+                ProfileImageTest =  "~/images/fb.jpg"
             },
             new()
             {
@@ -51,7 +57,9 @@ public class FavoriteController : Controller
                 ImagesTest = new List<string>()
                 {
                     "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                }
+                },
+                SalonId = Guid.NewGuid().ToString(),
+                ProfileImageTest =  "~/images/fb.jpg"
             },
             new()
             {
@@ -62,7 +70,9 @@ public class FavoriteController : Controller
                 ImagesTest = new List<string>()
                 {
                     "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                }
+                },
+                SalonId = Guid.NewGuid().ToString(),
+                ProfileImageTest =  "~/images/fb.jpg"
             },
             new()
             {
@@ -73,7 +83,9 @@ public class FavoriteController : Controller
                 ImagesTest = new List<string>()
                 {
                     "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                }
+                },
+                SalonId = Guid.NewGuid().ToString(),
+                ProfileImageTest =  "~/images/fb.jpg"
             },
         };
 

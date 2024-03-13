@@ -5,6 +5,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Views\Salon\Salon.cshtml.css" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Views\Salon\Salon.cshtml.css" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="bootstrap" Version="5.3.3" />
 	</ItemGroup>
 		</Project>
