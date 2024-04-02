@@ -16,7 +16,7 @@ public class SalonController : Controller
     }
 
     [HttpGet]
-    public IActionResult Salon(string id)
+    public IActionResult Salon(Guid Id)
     {
         var mock = new SalonDetailModel()
         {

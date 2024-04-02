@@ -5,16 +5,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Views\Home\Index.cshtml.css" />
-	  <None Remove="Views\Salon\Salon.cshtml.css" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="Views\Home\Index.cshtml.css" />
-	  <Content Include="Views\Salon\Salon.cshtml.css" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="bootstrap" Version="5.3.3" />
 	</ItemGroup>
-		</Project>
+
+	<ItemGroup>
+		<ProjectReference Include="..\DatabaseLayout\DatabaseLayout.csproj" />
+	</ItemGroup>
+</Project>

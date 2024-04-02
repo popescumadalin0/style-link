@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StyleLink.Enums;
 using StyleLink.Models;
-using static System.Net.WebRequestMethods;
+using StyleLink.Repositories;
 
 namespace StyleLink.Controllers;
 
@@ -12,79 +12,85 @@ public class AppointmentsController : Controller
 {
     private readonly ILogger<AppointmentsController> _logger;
 
-    public AppointmentsController(ILogger<AppointmentsController> logger)
+    private readonly IAppointmentRepository _appointmentRepository;
+
+    public AppointmentsController(
+        ILogger<AppointmentsController> logger,
+        IAppointmentRepository appointmentRepository)
     {
         _logger = logger;
+        _appointmentRepository = appointmentRepository;
     }
 
-    public IActionResult Appointments()
+    public async Task<IActionResult> AppointmentsAsync()
     {
-        //todo: get appointments
 
-        var mockAppointments = new List<AppointmentModel>()
-        {
-            new()
-            {
-                AppointmentStatus = AppointmentStatus.Finished,
-                Currency = "RON",
-                EndDate = DateTime.Now,
-                HairStylistName = "Gabriel Ceranu",
-                SalonName = "Vintage Salon",
-                ServicePrice = 50,
-                ServiceType = "Tuns",
-                StartDate = DateTime.Now.AddDays(-1),
-            },
-            new()
-            {
-                AppointmentStatus = AppointmentStatus.Finished,
-                Currency = "RON",
-                EndDate = DateTime.Now,
-                HairStylistName = "Gabriel Ceranu",
-                SalonName = "Vintage Salon",
-                ServicePrice = 50,
-                ServiceType = "Tuns",
-                StartDate = DateTime.Now.AddDays(-1),
-            },
-            new()
-            {
-                AppointmentStatus = AppointmentStatus.Finished,
-                Currency = "RON",
-                EndDate = DateTime.Now,
-                HairStylistName = "Gabriel Ceranu",
-                SalonName = "Vintage Salon",
-                ServicePrice = 50,
-                ServiceType = "Tuns",
-                StartDate = DateTime.Now.AddDays(-1),
-            },
-            new()
-            {
-                AppointmentStatus = AppointmentStatus.Finished,
-                Currency = "RON",
-                EndDate = DateTime.Now,
-                HairStylistName = "Gabriel Ceranu",
-                SalonName = "Vintage Salon",
-                ServicePrice = 50,
-                ServiceType = "Tuns",
-                StartDate = DateTime.Now.AddDays(-1),
-            },
-            new()
-            {
-                AppointmentStatus = AppointmentStatus.Finished,
-                Currency = "RON",
-                EndDate = DateTime.Now,
-                HairStylistName = "Gabriel Ceranu",
-                SalonName = "Vintage Salon",
-                ServicePrice = 50,
-                ServiceType = "Tuns",
-                StartDate = DateTime.Now.AddDays(-1),
-            }
-        };
+        var appointments = await _appointmentRepository.GetAppointmentsAsync();
 
-        return View(mockAppointments);
+        // var mockAppointments = new List<AppointmentModel>()
+        // {
+        //     new()
+        //     {
+        //         AppointmentStatus = AppointmentStatus.Finished,
+        //         Currency = "RON",
+        //         EndDate = DateTime.Now,
+        //         HairStylistName = "Gabriel Ceranu",
+        //         SalonName = "Vintage Salon",
+        //         ServicePrice = 50,
+        //         ServiceType = "Tuns",
+        //         StartDate = DateTime.Now.AddDays(-1),
+        //     },
+        //     new()
+        //     {
+        //         AppointmentStatus = AppointmentStatus.Finished,
+        //         Currency = "RON",
+        //         EndDate = DateTime.Now,
+        //         HairStylistName = "Gabriel Ceranu",
+        //         SalonName = "Vintage Salon",
+        //         ServicePrice = 50,
+        //         ServiceType = "Tuns",
+        //         StartDate = DateTime.Now.AddDays(-1),
+        //     },
+        //     new()
+        //     {
+        //         AppointmentStatus = AppointmentStatus.Finished,
+        //         Currency = "RON",
+        //         EndDate = DateTime.Now,
+        //         HairStylistName = "Gabriel Ceranu",
+        //         SalonName = "Vintage Salon",
+        //         ServicePrice = 50,
+        //         ServiceType = "Tuns",
+        //         StartDate = DateTime.Now.AddDays(-1),
+        //     },
+        //     new()
+        //     {
+        //         AppointmentStatus = AppointmentStatus.Finished,
+        //         Currency = "RON",
+        //         EndDate = DateTime.Now,
+        //         HairStylistName = "Gabriel Ceranu",
+        //         SalonName = "Vintage Salon",
+        //         ServicePrice = 50,
+        //         ServiceType = "Tuns",
+        //         StartDate = DateTime.Now.AddDays(-1),
+        //     },
+        //     new()
+        //     {
+        //         AppointmentStatus = AppointmentStatus.Finished,
+        //         Currency = "RON",
+        //         EndDate = DateTime.Now,
+        //         HairStylistName = "Gabriel Ceranu",
+        //         SalonName = "Vintage Salon",
+        //         ServicePrice = 50,
+        //         ServiceType = "Tuns",
+        //         StartDate = DateTime.Now.AddDays(-1),
+        //     }
+        // };
+
+        return View(appointments);
     }
 
     [HttpGet]
-    public IActionResult AppointmentDetails(string id)
+    public IActionResult AppointmentDetails(Guid Id)
     {
         //todo: get appointment detail
         var mock = new AppointmentDetailModel()

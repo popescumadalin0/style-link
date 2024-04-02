@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleLink", "StyleLink\StyleLink.csproj", "{5D43A81A-DF20-45EF-BFA7-F11E8A899091}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleLink", "StyleLink\StyleLink.csproj", "{5D43A81A-DF20-45EF-BFA7-F11E8A899091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseLayout", "DatabaseLayout\DatabaseLayout.csproj", "{01BC586E-B884-4870-8FC5-4A17412C1C5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5D43A81A-DF20-45EF-BFA7-F11E8A899091}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D43A81A-DF20-45EF-BFA7-F11E8A899091}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D43A81A-DF20-45EF-BFA7-F11E8A899091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01BC586E-B884-4870-8FC5-4A17412C1C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01BC586E-B884-4870-8FC5-4A17412C1C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01BC586E-B884-4870-8FC5-4A17412C1C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01BC586E-B884-4870-8FC5-4A17412C1C5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
