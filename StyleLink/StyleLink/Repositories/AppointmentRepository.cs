@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using DatabaseLayout;
+using DatabaseLayout.Models;
 using Microsoft.EntityFrameworkCore;
-using StyleLink.Models;
 
 namespace StyleLink.Repositories;
 
@@ -17,43 +16,32 @@ public class AppointmentRepository : IAppointmentRepository
         _context = context;
     }
 
-    public async Task<List<AppointmentModel>> GetAppointmentsAsync()
+    public async Task<List<Appointment>> GetAppointmentsAsync()
     {
         var appointments = await _context.Appointments.ToListAsync();
 
-        var appointmentsDto = appointments.Select(a => new AppointmentModel()
-        {
-            AppointmentStatus = a.Status,
-            Currency = a.HairStylistSalonService?.Service.Currency,
-            EndDate = a.StartDate.AddTicks(a.HairStylistSalonService?.Service.Time.Ticks ?? 0),
-            StartDate = a.StartDate,
-            HairStylistName = a.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName + a.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName,
-            Id = a.Id,
-            SalonName = a.HairStylistSalonService?.HairStylistSalon.Salon.Name,
-            ServicePrice = a.HairStylistSalonService?.Service.Price ?? 0,
-            ServiceType = a.HairStylistSalonService?.Service.ServiceType.Name,
-        });
-
-        return appointmentsDto.ToList();
+        return appointments;
     }
 
-    public Task<AppointmentModel> GetAppointmentAsync(Guid id)
+    public async Task<Appointment> GetAppointmentAsync(Guid id)
     {
-        throw new System.NotImplementedException();
+        var appointment = await _context.Appointments.FirstAsync(a => a.Id == id);
+
+        return appointment;
     }
 
-    public Task DeleteAppointmentAsync(AppointmentModel model)
+    public async Task DeleteAppointmentAsync(Guid id)
     {
-        throw new System.NotImplementedException();
+        var appointment = await _context.Appointments.FirstAsync(a => a.Id == id);
+        _context.Appointments.Remove(appointment);
+
+        await _context.SaveChangesAsync();
     }
 
-    public Task CreateAppointmentAsync(AppointmentModel model)
+    public async Task CreateAppointmentAsync(Appointment model)
     {
-        throw new System.NotImplementedException();
-    }
+        await _context.Appointments.AddAsync(model);
 
-    public Task UpdateAppointmentAsync(AppointmentModel model)
-    {
-        throw new System.NotImplementedException();
+        await _context.SaveChangesAsync();
     }
 }

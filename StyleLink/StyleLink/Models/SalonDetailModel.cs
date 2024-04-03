@@ -24,7 +24,7 @@ public class SalonDetailModel
 
     public List<ServiceModel> Services { get; set; }
 
-    public List<HairStylist> HairStylists { get; set; }
+    public List<HairStylistModel> HairStylists { get; set; }
 
     public TimeSchedule TimeSchedule { get; set; }
 

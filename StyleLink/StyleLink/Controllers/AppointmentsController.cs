@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using StyleLink.Enums;
 using StyleLink.Models;
 using StyleLink.Repositories;
 
@@ -24,93 +24,46 @@ public class AppointmentsController : Controller
 
     public async Task<IActionResult> AppointmentsAsync()
     {
-
         var appointments = await _appointmentRepository.GetAppointmentsAsync();
-
-        // var mockAppointments = new List<AppointmentModel>()
-        // {
-        //     new()
-        //     {
-        //         AppointmentStatus = AppointmentStatus.Finished,
-        //         Currency = "RON",
-        //         EndDate = DateTime.Now,
-        //         HairStylistName = "Gabriel Ceranu",
-        //         SalonName = "Vintage Salon",
-        //         ServicePrice = 50,
-        //         ServiceType = "Tuns",
-        //         StartDate = DateTime.Now.AddDays(-1),
-        //     },
-        //     new()
-        //     {
-        //         AppointmentStatus = AppointmentStatus.Finished,
-        //         Currency = "RON",
-        //         EndDate = DateTime.Now,
-        //         HairStylistName = "Gabriel Ceranu",
-        //         SalonName = "Vintage Salon",
-        //         ServicePrice = 50,
-        //         ServiceType = "Tuns",
-        //         StartDate = DateTime.Now.AddDays(-1),
-        //     },
-        //     new()
-        //     {
-        //         AppointmentStatus = AppointmentStatus.Finished,
-        //         Currency = "RON",
-        //         EndDate = DateTime.Now,
-        //         HairStylistName = "Gabriel Ceranu",
-        //         SalonName = "Vintage Salon",
-        //         ServicePrice = 50,
-        //         ServiceType = "Tuns",
-        //         StartDate = DateTime.Now.AddDays(-1),
-        //     },
-        //     new()
-        //     {
-        //         AppointmentStatus = AppointmentStatus.Finished,
-        //         Currency = "RON",
-        //         EndDate = DateTime.Now,
-        //         HairStylistName = "Gabriel Ceranu",
-        //         SalonName = "Vintage Salon",
-        //         ServicePrice = 50,
-        //         ServiceType = "Tuns",
-        //         StartDate = DateTime.Now.AddDays(-1),
-        //     },
-        //     new()
-        //     {
-        //         AppointmentStatus = AppointmentStatus.Finished,
-        //         Currency = "RON",
-        //         EndDate = DateTime.Now,
-        //         HairStylistName = "Gabriel Ceranu",
-        //         SalonName = "Vintage Salon",
-        //         ServicePrice = 50,
-        //         ServiceType = "Tuns",
-        //         StartDate = DateTime.Now.AddDays(-1),
-        //     }
-        // };
-
-        return View(appointments);
+        var appointmentsDto = appointments.Select(a => new AppointmentModel()
+        {
+            AppointmentStatus = a.Status,
+            Currency = a.HairStylistSalonService?.Service.Currency,
+            EndDate = a.StartDate.AddTicks(a.HairStylistSalonService?.Service.Time.Ticks ?? 0),
+            StartDate = a.StartDate,
+            HairStylistName = a.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName + " " + a.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName,
+            Id = a.Id,
+            SalonName = a.HairStylistSalonService?.HairStylistSalon.Salon.Name,
+            ServicePrice = a.HairStylistSalonService?.Service.Price ?? 0,
+            ServiceType = a.HairStylistSalonService?.Service.ServiceType.Name,
+        }).ToList();
+        return View(appointmentsDto);
     }
 
     [HttpGet]
-    public IActionResult AppointmentDetails(Guid Id)
+    public async Task<IActionResult> AppointmentDetailsAsync(Guid id)
     {
-        //todo: get appointment detail
-        var mock = new AppointmentDetailModel()
+        var appointment = await _appointmentRepository.GetAppointmentAsync(id);
+
+        var appointmentDto = new AppointmentDetailModel()
         {
-            SalonAddress = "Calea București 105, Craiova 200477, România",
-            AppointmentStatus = AppointmentStatus.Finished,
-            Currency = "RON",
-            HairStylistName = "Gabriel Ceranu",
-            MapsUrl =
-                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2854.6821616514094!2d23.817478476558076!3d44.3164842092794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4752d700473c2c27%3A0xae7b558912b0012c!2sVintage%20Salon!5e0!3m2!1sen!2sro!4v1710195231230!5m2!1sen!2sro",
-            UserRating = 5,
-            SalonName = "VintageSalon",
-            SalonPhoneNumber = "0771 143 646",
-            ServicePrice = 50,
-            ServiceType = "Tuns",
-            StartDate = DateTime.Now,
-            EndDate = DateTime.Now.AddDays(1),
-            SalonId = Guid.NewGuid().ToString(),
+            StartDate = appointment.StartDate,
+            ServiceType = appointment.HairStylistSalonService.Service.ServiceType.Name,
+            Currency = appointment.HairStylistSalonService.Service.Currency,
+            AppointmentStatus = appointment.Status,
+            EndDate = appointment.StartDate.AddTicks(appointment.HairStylistSalonService?.Service.Time.Ticks ?? 0),
+            HairStylistName = appointment.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName +
+                              appointment.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName,
+            Id = appointment.Id,
+            MapsUrl = appointment.HairStylistSalonService.HairStylistSalon.Salon.GoogleMapsAddress,
+            SalonAddress = appointment.HairStylistSalonService.HairStylistSalon.Salon.Address,
+            SalonId = appointment.HairStylistSalonService.HairStylistSalon.Salon.Id,
+            SalonName = appointment.HairStylistSalonService.HairStylistSalon.Salon.Name,
+            SalonPhoneNumber = appointment.HairStylistSalonService.HairStylistSalon.HairStylist.PhoneNumber,
+            ServicePrice = appointment.HairStylistSalonService.Service.Price,
+            UserRating = appointment.HairStylistSalonService.HairStylistSalon.Salon.Rating,
         };
 
-        return View(mock);
+        return View(appointmentDto);
     }
 }

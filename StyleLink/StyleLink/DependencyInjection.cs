@@ -12,6 +12,7 @@ public static class DependencyInjection
         services.AddDatabaseLayout(config);
 
         services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+        services.AddScoped<ISalonRepository, SalonRepository>();
 
         return services;
     }

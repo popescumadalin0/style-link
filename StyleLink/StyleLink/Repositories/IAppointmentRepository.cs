@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using StyleLink.Models;
+using DatabaseLayout.Models;
 
 namespace StyleLink.Repositories;
 
 public interface IAppointmentRepository
 {
-    Task<List<AppointmentModel>> GetAppointmentsAsync();
+    Task<List<Appointment>> GetAppointmentsAsync();
 
-    Task<AppointmentModel> GetAppointmentAsync(Guid id);
+    Task<Appointment> GetAppointmentAsync(Guid id);
 
-    Task DeleteAppointmentAsync(AppointmentModel model);
+    Task DeleteAppointmentAsync(Guid id);
 
-    Task CreateAppointmentAsync(AppointmentModel model);
-
-    Task UpdateAppointmentAsync(AppointmentModel model);
+    Task CreateAppointmentAsync(Appointment model);
 }

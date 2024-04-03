@@ -19,13 +19,13 @@ public class AppointmentDetailModel
 
     public string SalonName { get; set; }
 
-    public string SalonId { get; set; }
+    public Guid SalonId { get; set; }
 
     public int ServicePrice { get; set; }
 
     public string Currency { get; set; }
 
-    public int UserRating { get; set; } = 0;
+    public double UserRating { get; set; } = 0;
 
     public string SalonAddress { get; set; }
 
