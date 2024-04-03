@@ -9,5 +9,5 @@ public class Feature
 
     public string HTMLFlag { get; set; }
 
-    public virtual ICollection<Role> Roles { get; set; }
+    public virtual ICollection<Role> Roles { get; set; } = new List<Role>();
 }

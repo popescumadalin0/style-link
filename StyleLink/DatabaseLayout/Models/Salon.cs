@@ -21,11 +21,11 @@ public class Salon
     public string? ProfileImage { get; set; } = default!;
 
     [Required]
-    public virtual WorkProgram WorkProgram { get; set; }
+    public virtual WorkProgram WorkProgram { get; set; } = new WorkProgram();
 
-    public ICollection<SalonImage> SalonImages { get; set; } = default!;
+    public ICollection<SalonImage> SalonImages { get; set; } = new List<SalonImage>();
 
-    public ICollection<HairStylistSalon> HairStylistSalons { get; set; }
+    public ICollection<HairStylistSalon> HairStylistSalons { get; set; } = new List<HairStylistSalon>();
 
-    public ICollection<Favorite> Favorites { get; set; }
+    public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
 }

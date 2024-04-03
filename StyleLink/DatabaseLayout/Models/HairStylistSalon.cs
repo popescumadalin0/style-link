@@ -14,5 +14,5 @@ public class HairStylistSalon
     [Required]
     public Salon Salon { get; set; }
 
-    public ICollection<HairStylistSalonService> HairStylistSalonServices { get; set; }
+    public ICollection<HairStylistSalonService> HairStylistSalonServices { get; set; } = new List<HairStylistSalonService>();
 }

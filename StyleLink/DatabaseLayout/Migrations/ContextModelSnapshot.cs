@@ -28,7 +28,7 @@ namespace DatabaseLayout.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("HairStylistSalonServiceId")
+                    b.Property<Guid>("HairStylistSalonServiceId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("StartDate")
@@ -375,15 +375,19 @@ namespace DatabaseLayout.Migrations
 
             modelBuilder.Entity("DatabaseLayout.Models.Appointment", b =>
                 {
-                    b.HasOne("DatabaseLayout.Models.HairStylistSalonService", null)
+                    b.HasOne("DatabaseLayout.Models.HairStylistSalonService", "HairStylistSalonService")
                         .WithMany("Appointments")
-                        .HasForeignKey("HairStylistSalonServiceId");
+                        .HasForeignKey("HairStylistSalonServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("DatabaseLayout.Models.User", "User")
                         .WithMany("Appointments")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("HairStylistSalonService");
 
                     b.Navigation("User");
                 });

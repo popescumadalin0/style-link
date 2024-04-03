@@ -2,87 +2,40 @@
 using Microsoft.Extensions.Logging;
 using StyleLink.Models;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using StyleLink.Repositories;
 
 namespace StyleLink.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly ISalonRepository _salonRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, ISalonRepository salonRepository)
     {
         _logger = logger;
+        _salonRepository = salonRepository;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        //todo: get salons
+        var salons = await _salonRepository.GetSalonsAsync();
 
-        var mockSalons = new List<SalonModel>()
+        var salonsDto = salons.Select(s => new SalonModel()
         {
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                ProfileImageTest =  "~/images/fb.jpg"
+            Address = s.Address,
+            Id = s.Id,
+            SalonName = s.Name,
+            ProfileImage = s.ProfileImage,
+            //Images = s.SalonImages?.Select(si => si.Content).ToList(),
+            ImagesTest = s.SalonImages?.Select(si => si.Content).ToList(),
+            NumberOfEvaluations = s.ReviewCount,
+            ProfileImageTest = s.ProfileImage,
+            SalonRating = s.Rating
+        }).ToList();
 
-            },
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                ProfileImageTest =  "~/images/fb.jpg"
-            },
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                ProfileImageTest =  "~/images/fb.jpg"
-            },
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                ProfileImageTest =  "~/images/fb.jpg"
-            },
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                ProfileImageTest =  "~/images/fb.jpg"
-            },
-        };
-
-        return View(mockSalons);
+        return View(salonsDto);
     }
 }

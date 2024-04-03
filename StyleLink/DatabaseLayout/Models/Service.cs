@@ -16,10 +16,9 @@ public class Service
 
     public DateTime Time { get; set; }
 
-    [Required]
-    public ServiceType ServiceType { get; set; }
+    [Required] public ServiceType ServiceType { get; set; }
 
-    public virtual ICollection<HairStylist> HairStylists { get; set; }
+    public virtual ICollection<HairStylist> HairStylists { get; set; } = new List<HairStylist>();
 
-    public ICollection<HairStylistSalonService> HairStylistSalonServices { get; set; }
+    public ICollection<HairStylistSalonService> HairStylistSalonServices { get; set; } = new List<HairStylistSalonService>();
 }

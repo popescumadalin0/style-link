@@ -21,8 +21,7 @@ public class HairStylist
     public string PhoneNumber { get; set; }
 
     [Required]
-    public virtual ICollection<Service> Services { get; set; }
+    public virtual ICollection<Service> Services { get; set; } = new List<Service>();
 
-    [Required]
-    public ICollection<HairStylistSalon> HairStylistSalons { get; set; }
+    [Required] public ICollection<HairStylistSalon> HairStylistSalons { get; set; } = new List<HairStylistSalon>();
 }

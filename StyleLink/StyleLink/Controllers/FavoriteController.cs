@@ -1,101 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StyleLink.Models;
+using StyleLink.Repositories;
 
 namespace StyleLink.Controllers;
 
 public class FavoriteController : Controller
 {
     private readonly ILogger<FavoriteController> _logger;
+    private readonly IFavoriteRepository _favoriteRepository;
 
-    public FavoriteController(ILogger<FavoriteController> logger)
+    public FavoriteController(ILogger<FavoriteController> logger, IFavoriteRepository favoriteRepository)
     {
         _logger = logger;
+        _favoriteRepository = favoriteRepository;
     }
 
-    public IActionResult Favorite()
+    public async Task<IActionResult> FavoriteAsync()
     {
-        //todo: get favorites
+        var favorites = await _favoriteRepository.GetFavoritesAsync();
 
-        var mockFavorites = new List<FavoriteModel>()
+        var favoritesDto = favorites.Select(f => new FavoriteModel()
         {
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                SalonId = Guid.NewGuid().ToString(),
-                ProfileImageTest =  "~/images/fb.jpg"
+            Address = f.Salon.Address,
+            Id = f.Id,
+            SalonId = f.Salon.Id,
+            SalonName = f.Salon.Name,
+            //Images = f.Salon.SalonImages.Select(si => si.Content).ToList(),
+            ImagesTest = f.Salon.SalonImages.Select(si => si.Content).ToList(),
+            //ProfileImage = f.Salon.ProfileImage,
+            ProfileImageTest = f.Salon.ProfileImage,
+            NumberOfEvaluations = f.Salon.ReviewCount,
+            SalonRating = f.Salon.Rating
+        }).ToList();
 
-            },
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                SalonId = Guid.NewGuid().ToString(),
-                ProfileImageTest =  "~/images/fb.jpg"
-            },
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                SalonId = Guid.NewGuid().ToString(),
-                ProfileImageTest =  "~/images/fb.jpg"
-            },
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                SalonId = Guid.NewGuid().ToString(),
-                ProfileImageTest =  "~/images/fb.jpg"
-            },
-            new()
-            {
-                SalonName = "VintageSalon",
-                Address = "Calea București, Craiova",
-                NumberOfEvaluations = 9301,
-                SalonRating = 4.83,
-                ImagesTest = new List<string>()
-                {
-                    "~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg","~/images/fb.jpg"
-                },
-                SalonId = Guid.NewGuid().ToString(),
-                ProfileImageTest =  "~/images/fb.jpg"
-            },
-        };
-
-        return View(mockFavorites);
+        return View(favoritesDto);
     }
 
     [HttpPost]
-    public IActionResult DeleteFavorite(FavoriteModel model)
+    public async Task<IActionResult> DeleteFavoriteAsync(FavoriteModel model)
     {
-        //todo: delete favorite
+        await _favoriteRepository.DeleteFavoriteAsync(model.Id);
 
         return RedirectToAction("Favorite", "Favorite");
     }

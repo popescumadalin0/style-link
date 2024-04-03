@@ -23,7 +23,7 @@ public class User
 
     public string PhoneNumber { get; set; }
 
-    public ICollection<Favorite> Favorites { get; set; } = default!;
+    public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
 
-    public ICollection<Appointment> Appointments { get; set; } = default!;
+    public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 }

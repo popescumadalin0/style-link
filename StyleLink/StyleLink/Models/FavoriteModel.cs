@@ -13,7 +13,7 @@ public class FavoriteModel
 
     public string SalonName { get; set; }
 
-    public string SalonId { get; set; }
+    public Guid SalonId { get; set; }
 
     public string Address { get; set; }
 
@@ -24,5 +24,5 @@ public class FavoriteModel
     //todo
     public List<byte[]> Images { get; set; } = new();
 
-    public string ProfileImage { get; set; }
+    public byte[] ProfileImage { get; set; }
 }

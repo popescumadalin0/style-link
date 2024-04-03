@@ -15,7 +15,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="height: 300px; width: 500px;">
-                        <img class="d-block w-100 rounded" src="@Url.Content(Model.ImagesTest.First())" style="height: 300px; width: 500px;" alt="First slide">
+                        <img class="d-block w-100 rounded" src="@Url.Content(Model.ImagesTest.FirstOrDefault())" style="height: 300px; width: 500px;" alt="First slide">
                     </div>
                     @foreach (var image in Model.ImagesTest.Skip(1))
                     {

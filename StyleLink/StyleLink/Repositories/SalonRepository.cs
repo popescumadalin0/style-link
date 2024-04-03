@@ -16,16 +16,16 @@ public class SalonRepository : ISalonRepository
         _context = context;
     }
 
-    public Task<List<Salon>> GetSalonsAsync()
+    public async Task<List<Salon>> GetSalonsAsync()
     {
-        var salons = _context.Salons.ToListAsync();
+        var salons = await _context.Salons.ToListAsync();
 
         return salons;
     }
 
-    public Task<Salon> GetSalonAsync(Guid id)
+    public async Task<Salon> GetSalonAsync(Guid id)
     {
-        var salon = _context.Salons.FirstAsync(s => s.Id == id);
+        var salon = await _context.Salons.FirstOrDefaultAsync(s => s.Id == id);
 
         return salon;
     }
