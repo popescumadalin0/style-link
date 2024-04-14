@@ -48,11 +48,14 @@ public class SalonController : Controller
     [HttpGet]
     public async Task<IActionResult> AddSalonAsync()
     {
-        var haistylists = await _hairStylistService.GetAddHairStylistsAsync();
-        return View(new AddSalonModel()
+        var hairstylists = await _hairStylistService.GetAddHairStylistsAsync();
+
+        ViewBag.HairStylists = hairstylists.Select(h => new SelectListItem()
         {
-            Hairstylists = haistylists
-        });
+            Text = h.FirstName + " " + h.LastName,
+            Value = h.Id.ToString(),
+        }).ToList();
+        return View();
     }
 
     [HttpPost]
@@ -72,11 +75,13 @@ public class SalonController : Controller
     public async Task<IActionResult> AddHairStylistAsync()
     {
         var services = await _serviceSalonService.GetAddServicesAsync();
-        var hairStylist = new AddHairStylistModel()
+
+        ViewBag.Services = services.Select(h => new SelectListItem()
         {
-            Services = services
-        };
-        return View(hairStylist);
+            Text = h.Name,
+            Value = h.Id.ToString(),
+        }).ToList();
+        return View();
     }
 
     [HttpPost]
@@ -96,9 +101,11 @@ public class SalonController : Controller
     public async Task<IActionResult> AddServiceAsync()
     {
         var serviceTypes = await _serviceTypeRepository.GetServiceTypesAsync();
-        var list = new SelectList(serviceTypes.Select(x => new SelectListItem(x.Name, x.Name)).ToList(), "Value",
-            "ServiceType.Name");
-        ViewBag.ServiceTypes = list;
+        ViewBag.ServiceTypes = serviceTypes.Select(h => new SelectListItem()
+        {
+            Text = h.Name,
+            Value = h.Name,
+        }).ToList();
         return View();
     }
 
@@ -120,9 +127,9 @@ public class SalonController : Controller
     {
         await _serviceTypeRepository.CreateServiceTypeAsync(new ServiceType()
         {
-            Name = model.Name,
+            Name = model.ServiceType,
         });
 
-        return null;
+        return RedirectToAction("AddService", "Salon");
     }
 }

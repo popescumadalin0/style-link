@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DatabaseLayout.Models;
 
@@ -16,7 +17,8 @@ public class Service
 
     public DateTime Time { get; set; }
 
-    [Required] public ServiceType ServiceType { get; set; }
+    [ForeignKey("Name")]
+    public ServiceType ServiceType { get; set; }
 
     public virtual ICollection<HairStylist> HairStylists { get; set; } = new List<HairStylist>();
 

@@ -79,23 +79,41 @@
                     })
             </div>
             <div class="form-group">
-                @Html.LabelFor(model => model.ServiceType.Name)
-                @Html.DropDownListFor(model => model.ServiceType.Name, ViewBag.ServiceTypes as SelectList, new
+                @Html.LabelFor(model => model.ServiceType)
+                <button type="button" class="list-group-item list-group-item-action active" data-toggle="modal" data-target="#serviceTypeModal">
+                    Adaugă un nou tip de serviciu
+                </button>
+                @Html.DropDownListFor(model => model.ServiceType, new SelectList(ViewBag.ServiceTypes, "Value", "Text"), new
                 {
                     @class = "form-control"
                 })
-                @Html.ValidationMessageFor(model => model.ServiceType.Name, "", new
+                @Html.ValidationMessageFor(model => model.ServiceType, "", new
                 {
                     @class = "text-danger"
                 })
-                <div class="d-flex flex-row gap-2">
-                    @using (Html.BeginForm("AddServiceType", "Salon", FormMethod.Post, htmlAttributes: new
-                    {
-                        id = "serviceTypeForm"
-                    }))
-                    {
-                        <div class="form-group w-100">
-                            @Html.EditorFor(model => model.ServiceType.Name, new
+            </div>
+            <button type="submit" form="serviceForm" class="btn blue-background-color rounded-pill">Adaugă serviciu</button>
+        </div>
+    }
+</section>
+
+<div class="modal fade" id="serviceTypeModal" tabindex="-1" role="dialog" aria-labelledby="serviceTypeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="serviceTypeModalLabel">Adaugă tipul serviciului</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("AddServiceType", "Salon", FormMethod.Post, htmlAttributes: new
+                {
+                    id = "serviceTypeForm"
+                }))
+                {
+                    <div class="form-group w-100">
+                        @Html.EditorFor(model => model.ServiceType, new
                             {
                                 htmlAttributes = new
                                 {
@@ -103,17 +121,17 @@
                                     @class = "form-control",
                                 }
                             })
-                            @Html.ValidationMessageFor(model => model.ServiceType.Name, "", new
+                        @Html.ValidationMessageFor(model => model.ServiceType, "", new
                             {
                                 @class = "text-danger"
                             })
-                        </div>
-                        <button type="submit" class="btn my-2 my-sm-0 blue-background-color rounded-pill">+</button>
-                    }
-                </div>
-
+                    </div>
+                }
             </div>
-            <button type="submit" form="serviceForm" class="btn blue-background-color rounded-pill">Adaugă serviciu</button>
+            <div class="modal-footer">
+                <button type="button" class="btn rounded-pill btn-secondary" data-dismiss="modal">Anulează</button>
+                <button type="submit" form="serviceTypeForm" class="btn blue-background-color rounded-pill">Adaugă tipul de serviciu</button>
+            </div>
         </div>
-    }
-</section>
+    </div>
+</div>

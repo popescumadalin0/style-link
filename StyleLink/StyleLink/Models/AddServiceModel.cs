@@ -25,5 +25,7 @@ public class AddServiceModel
     [Required(ErrorMessage = Messages.TimeIsMandatory)]
     public DateTime Time { get; set; }
 
-    public ServiceTypeModel ServiceType { get; set; }
+    [Display(Name = Names.ServiceTypeName)]
+    [Required(ErrorMessage = Messages.ServiceTypeNameIsMandatory)]
+    public string ServiceType { get; set; }
 }

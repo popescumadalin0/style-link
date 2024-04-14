@@ -12,10 +12,14 @@ namespace StyleLink.Services;
 public class SalonService : ISalonService
 {
     private readonly ISalonRepository _salonRepository;
+    private readonly IHairStylistSalonRepository _hairStylistSalonRepository;
+    private readonly IHairStylistRepository _hairStylistRepository;
 
-    public SalonService(ISalonRepository salonRepository)
+    public SalonService(ISalonRepository salonRepository, IHairStylistSalonRepository hairStylistSalonRepository, IHairStylistRepository hairStylistRepository)
     {
         _salonRepository = salonRepository;
+        _hairStylistSalonRepository = hairStylistSalonRepository;
+        _hairStylistRepository = hairStylistRepository;
     }
 
     public async Task<List<SalonModel>> GetSalonsAsync()
@@ -93,12 +97,13 @@ public class SalonService : ISalonService
 
     public async Task AddSalonAsync(AddSalonModel model)
     {
+        var id = Guid.NewGuid();
         var salon = new Salon()
         {
             Address = model.Address,
             GoogleMapsAddress = model.GoogleMapsAddress,
             Name = model.SalonName,
-            Id = Guid.NewGuid(),
+            Id = id,
             WorkProgram = new WorkProgram()
             {
                 Monday = model.WorkProgram.Monday,
@@ -114,5 +119,17 @@ public class SalonService : ISalonService
         };
 
         await _salonRepository.CreateSalonAsync(salon);
+        var salonRef = await _salonRepository.GetSalonAsync(id);
+        var hairStylistSalons = model.Hairstylists.Select(async h => new HairStylistSalon()
+        {
+            Id = Guid.NewGuid(),
+            Salon = salonRef,
+            HairStylist = await _hairStylistRepository.GetHairStylistAsync(Guid.Parse(h))
+        }).ToList();
+
+        foreach (var hs in hairStylistSalons)
+        {
+            await _hairStylistSalonRepository.CreateHairStylistSalonAsync(await hs);
+        }
     }
 }

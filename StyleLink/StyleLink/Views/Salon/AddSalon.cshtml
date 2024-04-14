@@ -207,11 +207,24 @@
             <div class="card rounded-4 border-0 shadow">
                 <div class="card-body">
                     <div class="card-title font-weight-bold">Hairstyliști</div>
+                    <a class="list-group-item list-group-item-action active" asp-area="" asp-controller="Salon" asp-action="AddHairStylist">
+                        Adaugă un nou hairstylist
+                    </a>
+                    @Html.ListBoxFor(m => m.Hairstylists, new SelectList(ViewBag.HairStylists, "Value", "Text"), htmlAttributes:
+                             new
+                             {
+                                 @class = "form-control",
+                             })
+                </div>
+            </div>
+            @*<div class="card rounded-4 border-0 shadow">
+                <div class="card-body">
+                    <div class="card-title font-weight-bold">Hairstyliști</div>
                     <ul class="list-group">
                         <a class="list-group-item list-group-item-action active" asp-area="" asp-controller="Salon" asp-action="AddHairStylist">
                             Adaugă un nou hairstylist
                         </a>
-                        @foreach (var hairstylist in Model.Hairstylists)
+                        @foreach (var hairstylist in ViewBag.HairStylists)
                         {
                             <li class="list-group-item">
                                 <input class="form-check-input me-1" type="checkbox" value="" id="@hairstylist.Id">
@@ -221,7 +234,7 @@
                         }
                     </ul>
                 </div>
-            </div>
+            </div>*@
             <button type="submit" class="btn blue-background-color rounded-pill">Adaugă salon</button>
         </div>
     }

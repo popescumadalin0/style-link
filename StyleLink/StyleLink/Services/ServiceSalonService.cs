@@ -12,10 +12,12 @@ namespace StyleLink.Services;
 public class ServiceSalonService : IServiceSalonService
 {
     private readonly IServiceRepository _serviceSalonRepository;
+    private readonly IServiceTypeRepository _serviceTypeRepository;
 
-    public ServiceSalonService(IServiceRepository serviceSalonRepository)
+    public ServiceSalonService(IServiceRepository serviceSalonRepository, IServiceTypeRepository serviceTypeRepository)
     {
         _serviceSalonRepository = serviceSalonRepository;
+        _serviceTypeRepository = serviceTypeRepository;
     }
 
     public async Task<List<AddServiceModel>> GetAddServicesAsync()
@@ -27,7 +29,7 @@ public class ServiceSalonService : IServiceSalonService
             Id = s.Id,
             Currency = s.Currency,
             Name = s.Name,
-            ServiceType = new ServiceTypeModel() { Name = s.ServiceType.Name },
+            ServiceType = s.ServiceType.Name,
             Price = s.Price,
             Time = s.Time
         }).ToList();
@@ -37,12 +39,13 @@ public class ServiceSalonService : IServiceSalonService
 
     public async Task AddServiceAsync(AddServiceModel model)
     {
+        var serviceType = await _serviceTypeRepository.GetServiceTypeAsync(model.ServiceType);
         var service = new Service()
         {
             Currency = model.Currency,
             Name = model.Name,
             Price = model.Price,
-            ServiceType = new ServiceType() { Name = model.ServiceType.Name },
+            ServiceType = serviceType,
             Time = model.Time,
             Id = Guid.NewGuid(),
         };

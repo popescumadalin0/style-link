@@ -12,10 +12,12 @@ namespace StyleLink.Services;
 public class HairStylistService : IHairStylistService
 {
     private readonly IHairStylistRepository _hairStylistRepository;
+    private readonly IServiceRepository _serviceRepository;
 
-    public HairStylistService(IHairStylistRepository hairStylistRepository)
+    public HairStylistService(IHairStylistRepository hairStylistRepository, IServiceRepository serviceRepository)
     {
         _hairStylistRepository = hairStylistRepository;
+        _serviceRepository = serviceRepository;
     }
 
     public async Task<List<AddHairStylistModel>> GetAddHairStylistsAsync()
@@ -26,15 +28,6 @@ public class HairStylistService : IHairStylistService
         {
             Id = h.Id,
             //ProfileImage = h.ProfileImage,
-            Services = h.Services.Select(s => new AddServiceModel()
-            {
-                Currency = s.Currency,
-                Id = s.Id,
-                ServiceType = new ServiceTypeModel() { Name = s.ServiceType.Name },
-                Name = s.ServiceType.Name,
-                Price = s.Price,
-                Time = s.Time,
-            }).ToList(),
             ConfirmPassword = h.Password,
             Email = h.Email,
             FirstName = h.FirstName,
@@ -49,6 +42,8 @@ public class HairStylistService : IHairStylistService
 
     public async Task AddHairStylistAsync(AddHairStylistModel model)
     {
+
+        var services = model.Services.Select(async s => await _serviceRepository.GetServiceAsync(Guid.Parse(s)));
         var hairStylist = new HairStylist()
         {
             Email = model.Email,
@@ -57,15 +52,7 @@ public class HairStylistService : IHairStylistService
             Password = model.Password,
             PhoneNumber = model.PhoneNumber,
             //ProfileImage = model.ProfileImage,
-            Services = model.Services.Select(s => new Service()
-            {
-                Currency = s.Currency,
-                Name = s.Name,
-                Price = s.Price,
-                Time = s.Time,
-                Id = s.Id,
-                ServiceType = new ServiceType() { Name = s.ServiceType.Name }
-            }).ToList(),
+            Services = (ICollection<Service>)services,
             Id = Guid.NewGuid(),
         };
 

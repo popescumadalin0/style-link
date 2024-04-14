@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DatabaseLayout.Migrations
 {
     /// <inheritdoc />
-    public partial class InitiateDatabase : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -200,18 +200,17 @@ namespace DatabaseLayout.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Price = table.Column<int>(type: "int", nullable: false),
                     Currency = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Time = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ServiceTypeName = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    Time = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Services", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Services_ServiceTypes_ServiceTypeName",
-                        column: x => x.ServiceTypeName,
+                        name: "FK_Services_ServiceTypes_Name",
+                        column: x => x.Name,
                         principalTable: "ServiceTypes",
                         principalColumn: "Name",
                         onDelete: ReferentialAction.Cascade);
@@ -374,9 +373,9 @@ namespace DatabaseLayout.Migrations
                 column: "SalonId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Services_ServiceTypeName",
+                name: "IX_Services_Name",
                 table: "Services",
-                column: "ServiceTypeName");
+                column: "Name");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_RoleName",

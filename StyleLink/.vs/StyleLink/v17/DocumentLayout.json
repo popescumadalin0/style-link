@@ -3,16 +3,76 @@
   "WorkspaceRootPath": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\addservice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\addservice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\services\\servicesalonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\servicesalonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Migrations\\20240414231219_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DatabaseLayout\\Migrations\\20240414231219_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\repositories\\interfaces\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\interfaces\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\models\\servicetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\models\\servicetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\repositories\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\repositories\\interfaces\\iservicetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\interfaces\\iservicetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Migrations\\20240414225845_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DatabaseLayout\\Migrations\\20240414225845_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\icontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\icontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\controllers\\saloncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\controllers\\saloncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\repositories\\servicetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\servicetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\addservice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\addservice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\addsalon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\addsalon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\addhairstylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\addhairstylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\services\\salonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\salonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\services\\hairstylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\hairstylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\addservicemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +83,16 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\servicetypemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\addhairstylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\addhairstylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\addhairstylistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\addhairstylistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\addsalon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\addsalon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\services\\salonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\salonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\addsalonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\addsalonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\models\\workprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,14 +115,6 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\interfaces\\ihairstylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\services\\servicesalonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\servicesalonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\services\\hairstylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\hairstylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\services\\favoriteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\favoriteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -73,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\appointments\\appointments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -143,10 +191,6 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\salonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\migrations\\20240403182359_initiate-database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\migrations\\20240403182359_initiate-database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -163,10 +207,6 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\addsalonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\addsalonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\models\\hairstylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\models\\hairstylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -177,18 +217,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\salon\\salon.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\views\\salon\\salon.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\addhairstylistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\addhairstylistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\repositories\\interfaces\\iservicetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\interfaces\\iservicetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\repositories\\servicetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\servicetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\salondetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -203,20 +231,12 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\constants\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\models\\servicetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\models\\servicetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\models\\hairstylistsalon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\models\\hairstylistsalon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\hairstylistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\hairstylistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\servicemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -229,10 +249,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\appointmentdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\appointmentdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\controllers\\favoritecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -307,10 +323,6 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\interfaces\\iworkprogramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\repositories\\interfaces\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\interfaces\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\repositories\\interfaces\\ihairstylistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\interfaces\\ihairstylistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -359,10 +371,6 @@
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\salonimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\repositories\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\repositories\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -381,10 +389,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\models\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|solutionrelative:stylelink\\models\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\databaselayout\\icontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01BC586E-B884-4870-8FC5-4A17412C1C5B}|DatabaseLayout\\DatabaseLayout.csproj|solutionrelative:databaselayout\\icontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D43A81A-DF20-45EF-BFA7-F11E8A899091}|StyleLink\\StyleLink.csproj|c:\\tools\\tools\\work\\teme facultate\\projectpaw\\stylelink\\stylelink\\stylelink\\views\\shared\\components\\_appointmentcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -414,726 +418,232 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddService.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddService.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\AddService.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddService.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Salon\\AddService.cshtml",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAUwE8AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T12:07:50.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SalonController.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\SalonController.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Controllers\\SalonController.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\SalonController.cs",
-              "RelativeToolTip": "StyleLink\\Controllers\\SalonController.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAEwGcAAAAAAAAA",
+              "Title": "20240414231219_initial.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Migrations\\20240414231219_initial.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Migrations\\20240414231219_initial.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Migrations\\20240414231219_initial.cs",
+              "RelativeToolTip": "DatabaseLayout\\Migrations\\20240414231219_initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T13:08:17.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ISalonService.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\ISalonService.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Services\\Interfaces\\ISalonService.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\ISalonService.cs",
-              "RelativeToolTip": "StyleLink\\Services\\Interfaces\\ISalonService.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAADgvwkAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:21:05.596Z",
+              "WhenOpened": "2024-04-14T23:12:19.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "SalonService.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\SalonService.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Services\\SalonService.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\SalonService.cs",
-              "RelativeToolTip": "StyleLink\\Services\\SalonService.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAowHMAAAA3AAAA",
+              "Title": "20240414225845_initial.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Migrations\\20240414225845_initial.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Migrations\\20240414225845_initial.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Migrations\\20240414225845_initial.cs",
+              "RelativeToolTip": "DatabaseLayout\\Migrations\\20240414225845_initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:19:12.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Salon.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Salon.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Salon.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Salon.cs",
-              "RelativeToolTip": "DatabaseLayout\\Models\\Salon.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAwwBsAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:04:17.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WorkProgram.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\WorkProgram.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\WorkProgram.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\WorkProgram.cs",
-              "RelativeToolTip": "DatabaseLayout\\Models\\WorkProgram.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:08:40.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddServiceModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddServiceModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\AddServiceModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddServiceModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\AddServiceModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T21:10:33.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ServiceTypeModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ServiceTypeModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\ServiceTypeModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ServiceTypeModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\ServiceTypeModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T07:47:04.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IServiceSalonService.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IServiceSalonService.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Services\\Interfaces\\IServiceSalonService.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IServiceSalonService.cs",
-              "RelativeToolTip": "StyleLink\\Services\\Interfaces\\IServiceSalonService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T12:04:18.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T10:47:41.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddHairStylist.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddHairStylist.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\AddHairStylist.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddHairStylist.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Salon\\AddHairStylist.cshtml",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGUAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T09:55:34.104Z",
+              "WhenOpened": "2024-04-14T22:58:45.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AddSalon.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddSalon.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\AddSalon.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddSalon.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Salon\\AddSalon.cshtml",
-              "ViewState": "AQIAAMkAAAAAAAAAAAAAAN4AAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T12:39:53.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FavoriteService.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\FavoriteService.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Services\\FavoriteService.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\FavoriteService.cs",
-              "RelativeToolTip": "StyleLink\\Services\\FavoriteService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBgAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:15:01.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "HairStylistService.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\HairStylistService.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Services\\HairStylistService.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\HairStylistService.cs",
-              "RelativeToolTip": "StyleLink\\Services\\HairStylistService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T08:34:17.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IHairStylistService.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IHairStylistService.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Services\\Interfaces\\IHairStylistService.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IHairStylistService.cs",
-              "RelativeToolTip": "StyleLink\\Services\\Interfaces\\IHairStylistService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T08:40:40.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ServiceSalonService.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\ServiceSalonService.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Services\\ServiceSalonService.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\ServiceSalonService.cs",
-              "RelativeToolTip": "StyleLink\\Services\\ServiceSalonService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCUAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T12:01:38.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "RegisterModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\RegisterModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\RegisterModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\RegisterModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\RegisterModel.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBYAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T18:11:55.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Context.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Context.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Context.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Context.cs",
-              "RelativeToolTip": "DatabaseLayout\\Context.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAgwBUAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T20:25:32.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Appointments.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Appointments\\Appointments.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Appointments\\Appointments.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Appointments\\Appointments.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Appointments\\Appointments.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-02T19:12:37.489Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Account\\Register.cshtml",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAowIQAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T18:12:00.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Details.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Details.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Details.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Account\\Details.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAABMAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-02T19:06:29.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "StyleLink\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAIwDYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:35:39.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-02T19:10:42.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "_FavoriteCard.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACIAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T18:07:55.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Salon.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\Salon.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Salon\\Salon.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-01T20:34:40.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "StyleLink\\DependencyInjection.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\DependencyInjection.cs",
-              "RelativeToolTip": "StyleLink\\DependencyInjection.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAhwA4AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:36:03.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "StyleLink\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "StyleLink\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-14T14:54:38.66Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T14:54:47.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\DependencyInjection.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\DependencyInjection.cs",
-              "RelativeToolTip": "DatabaseLayout\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T20:15:44.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Program.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Program.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Program.cs",
-              "RelativeToolTip": "StyleLink\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T20:15:58.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "_SalonCard.cshtml",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_SalonCard.cshtml",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_SalonCard.cshtml",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_SalonCard.cshtml",
-              "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_SalonCard.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T15:12:26.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "SalonModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\SalonModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\SalonModel.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA9wBYAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T15:13:09.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "SalonRepository.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\SalonRepository.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Repositories\\SalonRepository.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\SalonRepository.cs",
-              "RelativeToolTip": "StyleLink\\Repositories\\SalonRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T13:15:07.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Index.cshtml.css",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Home\\Index.cshtml.css",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Home\\Index.cshtml.css",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Home\\Index.cshtml.css",
-              "RelativeToolTip": "StyleLink\\Views\\Home\\Index.cshtml.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-13T12:47:02.66Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "20240403182359_Initiate-Database.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Migrations\\20240403182359_Initiate-Database.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Migrations\\20240403182359_Initiate-Database.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Migrations\\20240403182359_Initiate-Database.cs",
-              "RelativeToolTip": "DatabaseLayout\\Migrations\\20240403182359_Initiate-Database.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T18:23:59.809Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "StyleLink\\appsettings.Development.json",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\appsettings.Development.json",
-              "RelativeToolTip": "StyleLink\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-31T20:24:03.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Role.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Role.cs",
-              "RelativeToolTip": "DatabaseLayout\\Models\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T15:25:52.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Feature.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Feature.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Feature.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Feature.cs",
-              "RelativeToolTip": "DatabaseLayout\\Models\\Feature.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T15:27:40.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Favorite.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Favorite.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Favorite.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Favorite.cs",
-              "RelativeToolTip": "DatabaseLayout\\Models\\Favorite.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:01:53.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "StyleLink\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:34:39.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "AddSalonModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddSalonModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\AddSalonModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddSalonModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\AddSalonModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T12:58:57.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "HairStylist.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\HairStylist.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\HairStylist.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\HairStylist.cs",
-              "RelativeToolTip": "DatabaseLayout\\Models\\HairStylist.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAowBIAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T19:56:50.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "HairStylistRepository.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\HairStylistRepository.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Repositories\\HairStylistRepository.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\HairStylistRepository.cs",
-              "RelativeToolTip": "StyleLink\\Repositories\\HairStylistRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T16:38:49.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Salon.cshtml.css",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml.css",
-              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\Salon.cshtml.css",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml.css",
-              "RelativeToolTip": "StyleLink\\Views\\Salon\\Salon.cshtml.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-13T12:46:45.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "AddHairStylistModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddHairStylistModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\AddHairStylistModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddHairStylistModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\AddHairStylistModel.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAcwCsAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T21:08:17.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "SalonDetailModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonDetailModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\SalonDetailModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonDetailModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\SalonDetailModel.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAIA0wBoAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T13:20:08.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
               "Title": "IServiceTypeRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IServiceTypeRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IServiceTypeRepository.cs",
               "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IServiceTypeRepository.cs",
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IServiceTypeRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAcwAoAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T16:43:58.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 10,
               "Title": "ServiceTypeRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\ServiceTypeRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\ServiceTypeRepository.cs",
               "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\ServiceTypeRepository.cs",
               "RelativeToolTip": "StyleLink\\Repositories\\ServiceTypeRepository.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAmwAwAAAAAAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAIA7wC4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T16:42:43.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "Names.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Constants\\Names.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Constants\\Names.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Constants\\Names.cs",
-              "RelativeToolTip": "StyleLink\\Constants\\Names.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACMAAAAkAAAA",
+              "DocumentIndex": 5,
+              "Title": "ServiceRepository.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\ServiceRepository.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Repositories\\ServiceRepository.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\ServiceRepository.cs",
+              "RelativeToolTip": "StyleLink\\Repositories\\ServiceRepository.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAlwBUAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T13:57:50.234Z",
+              "WhenOpened": "2024-04-03T16:40:51.24Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Messages.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Constants\\Messages.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Constants\\Messages.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Constants\\Messages.cs",
-              "RelativeToolTip": "StyleLink\\Constants\\Messages.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABQAAAA",
+              "DocumentIndex": 8,
+              "Title": "IContext.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\IContext.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\IContext.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\IContext.cs",
+              "RelativeToolTip": "DatabaseLayout\\IContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAowBEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T10:51:22.011Z",
+              "WhenOpened": "2024-03-31T20:43:25.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "ServiceType.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\ServiceType.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\ServiceType.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\ServiceType.cs",
-              "RelativeToolTip": "DatabaseLayout\\Models\\ServiceType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T20:42:29.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "HairStylistSalon.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\HairStylistSalon.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\HairStylistSalon.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\HairStylistSalon.cs",
-              "RelativeToolTip": "DatabaseLayout\\Models\\HairStylistSalon.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:03:29.604Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "HairStylistModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\HairStylistModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\HairStylistModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\HairStylistModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\HairStylistModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:34:39.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "ServiceModel.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ServiceModel.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Models\\ServiceModel.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ServiceModel.cs",
-              "RelativeToolTip": "StyleLink\\Models\\ServiceModel.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:34:39.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 3,
               "Title": "Service.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Service.cs",
               "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Service.cs",
               "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Service.cs",
               "RelativeToolTip": "DatabaseLayout\\Models\\Service.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAuwBIAAAA7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-01T20:12:32.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 4,
+              "Title": "ServiceType.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\ServiceType.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\ServiceType.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\ServiceType.cs",
+              "RelativeToolTip": "DatabaseLayout\\Models\\ServiceType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T20:42:29.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceSalonService.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\ServiceSalonService.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Services\\ServiceSalonService.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\ServiceSalonService.cs",
+              "RelativeToolTip": "StyleLink\\Services\\ServiceSalonService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA9wBoAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T12:01:38.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IServiceRepository.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IServiceRepository.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IServiceRepository.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IServiceRepository.cs",
+              "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IServiceRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T16:41:17.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SalonController.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\SalonController.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Controllers\\SalonController.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\SalonController.cs",
+              "RelativeToolTip": "StyleLink\\Controllers\\SalonController.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAiwEwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T13:08:17.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddService.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddService.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\AddService.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddService.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Salon\\AddService.cshtml",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAUwIcAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-14T12:07:50.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AddSalon.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddSalon.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\AddSalon.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddSalon.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Salon\\AddSalon.cshtml",
+              "ViewState": "AQIAAMkAAAAAAAAAAAAgwNEAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-13T12:39:53.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddHairStylist.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddHairStylist.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\AddHairStylist.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddHairStylist.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Salon\\AddHairStylist.cshtml",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAmwGsAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-14T09:55:34.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SalonService.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\SalonService.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Services\\SalonService.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\SalonService.cs",
+              "RelativeToolTip": "StyleLink\\Services\\SalonService.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAwwGYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T09:19:12.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HairStylistService.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\HairStylistService.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Services\\HairStylistService.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\HairStylistService.cs",
+              "RelativeToolTip": "StyleLink\\Services\\HairStylistService.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA5wDUAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T08:34:17.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Context.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Context.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Context.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Context.cs",
+              "RelativeToolTip": "DatabaseLayout\\Context.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T20:25:32.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "AppointmentService.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\AppointmentService.cs",
               "RelativeDocumentMoniker": "StyleLink\\Services\\AppointmentService.cs",
@@ -1146,7 +656,516 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ServiceTypeModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ServiceTypeModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\ServiceTypeModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ServiceTypeModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\ServiceTypeModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T07:47:04.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AddServiceModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddServiceModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\AddServiceModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddServiceModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\AddServiceModel.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAqwBwAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T21:10:33.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AddHairStylistModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddHairStylistModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\AddHairStylistModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddHairStylistModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\AddHairStylistModel.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowDIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T21:08:17.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AddSalonModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddSalonModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\AddSalonModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AddSalonModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\AddSalonModel.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA1wCcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T12:58:57.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-03T10:47:41.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IServiceSalonService.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IServiceSalonService.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Services\\Interfaces\\IServiceSalonService.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IServiceSalonService.cs",
+              "RelativeToolTip": "StyleLink\\Services\\Interfaces\\IServiceSalonService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T12:04:18.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "WorkProgram.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\WorkProgram.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\WorkProgram.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\WorkProgram.cs",
+              "RelativeToolTip": "DatabaseLayout\\Models\\WorkProgram.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T20:08:40.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Salon.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Salon.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Salon.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Salon.cs",
+              "RelativeToolTip": "DatabaseLayout\\Models\\Salon.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAwwBsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T20:04:17.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ISalonService.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\ISalonService.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Services\\Interfaces\\ISalonService.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\ISalonService.cs",
+              "RelativeToolTip": "StyleLink\\Services\\Interfaces\\ISalonService.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAADgvwkAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T09:21:05.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "FavoriteService.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\FavoriteService.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Services\\FavoriteService.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\FavoriteService.cs",
+              "RelativeToolTip": "StyleLink\\Services\\FavoriteService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBgAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T09:15:01.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IHairStylistService.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IHairStylistService.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Services\\Interfaces\\IHairStylistService.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IHairStylistService.cs",
+              "RelativeToolTip": "StyleLink\\Services\\Interfaces\\IHairStylistService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T08:40:40.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\RegisterModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\RegisterModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\RegisterModel.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T18:11:55.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Appointments.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Appointments\\Appointments.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Appointments\\Appointments.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Appointments\\Appointments.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Appointments\\Appointments.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T19:12:37.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Account\\Register.cshtml",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAowIQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-03T18:12:00.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Details.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Details.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Details.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Account\\Details.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAABMAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T19:06:29.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "StyleLink\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAIwDYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T19:35:39.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T19:10:42.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "_FavoriteCard.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-03T18:07:55.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Salon.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\Salon.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Salon\\Salon.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-01T20:34:40.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "StyleLink\\DependencyInjection.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\DependencyInjection.cs",
+              "RelativeToolTip": "StyleLink\\DependencyInjection.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAhwA4AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T19:36:03.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "StyleLink\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "StyleLink\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-14T14:54:38.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-14T14:54:47.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\DependencyInjection.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\DependencyInjection.cs",
+              "RelativeToolTip": "DatabaseLayout\\DependencyInjection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T20:15:44.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Program.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Program.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Program.cs",
+              "RelativeToolTip": "StyleLink\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T20:15:58.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "_SalonCard.cshtml",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_SalonCard.cshtml",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_SalonCard.cshtml",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_SalonCard.cshtml",
+              "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_SalonCard.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-13T15:12:26.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "SalonModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\SalonModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\SalonModel.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA9wBYAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T15:13:09.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "SalonRepository.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\SalonRepository.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Repositories\\SalonRepository.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\SalonRepository.cs",
+              "RelativeToolTip": "StyleLink\\Repositories\\SalonRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T13:15:07.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Index.cshtml.css",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Home\\Index.cshtml.css",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Home\\Index.cshtml.css",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Home\\Index.cshtml.css",
+              "RelativeToolTip": "StyleLink\\Views\\Home\\Index.cshtml.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-13T12:47:02.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "StyleLink\\appsettings.Development.json",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\appsettings.Development.json",
+              "RelativeToolTip": "StyleLink\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-31T20:24:03.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Role.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Role.cs",
+              "RelativeToolTip": "DatabaseLayout\\Models\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T15:25:52.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Feature.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Feature.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Feature.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Feature.cs",
+              "RelativeToolTip": "DatabaseLayout\\Models\\Feature.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T15:27:40.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Favorite.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Favorite.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Favorite.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Favorite.cs",
+              "RelativeToolTip": "DatabaseLayout\\Models\\Favorite.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T20:01:53.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "StyleLink\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T20:34:39.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "HairStylist.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\HairStylist.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\HairStylist.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\HairStylist.cs",
+              "RelativeToolTip": "DatabaseLayout\\Models\\HairStylist.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAowBIAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T19:56:50.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "HairStylistRepository.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\HairStylistRepository.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Repositories\\HairStylistRepository.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\HairStylistRepository.cs",
+              "RelativeToolTip": "StyleLink\\Repositories\\HairStylistRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T16:38:49.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Salon.cshtml.css",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml.css",
+              "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\Salon.cshtml.css",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\Salon.cshtml.css",
+              "RelativeToolTip": "StyleLink\\Views\\Salon\\Salon.cshtml.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-13T12:46:45.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "SalonDetailModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonDetailModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\SalonDetailModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\SalonDetailModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\SalonDetailModel.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAIA0wBoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T13:20:08.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Names.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Constants\\Names.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Constants\\Names.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Constants\\Names.cs",
+              "RelativeToolTip": "StyleLink\\Constants\\Names.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T13:57:50.234Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 56,
+              "Title": "Messages.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Constants\\Messages.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Constants\\Messages.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Constants\\Messages.cs",
+              "RelativeToolTip": "StyleLink\\Constants\\Messages.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T10:51:22.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "HairStylistSalon.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\HairStylistSalon.cs",
+              "RelativeDocumentMoniker": "DatabaseLayout\\Models\\HairStylistSalon.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\HairStylistSalon.cs",
+              "RelativeToolTip": "DatabaseLayout\\Models\\HairStylistSalon.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T20:03:29.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "HairStylistModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\HairStylistModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\HairStylistModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\HairStylistModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\HairStylistModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T20:34:39.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "ServiceModel.cs",
+              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ServiceModel.cs",
+              "RelativeDocumentMoniker": "StyleLink\\Models\\ServiceModel.cs",
+              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ServiceModel.cs",
+              "RelativeToolTip": "StyleLink\\Models\\ServiceModel.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T20:34:39.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
               "Title": "AppointmentDetailModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AppointmentDetailModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\AppointmentDetailModel.cs",
@@ -1154,12 +1173,11 @@
               "RelativeToolTip": "StyleLink\\Models\\AppointmentDetailModel.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAwwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:45:09.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T19:45:09.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "FavoriteController.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\FavoriteController.cs",
               "RelativeDocumentMoniker": "StyleLink\\Controllers\\FavoriteController.cs",
@@ -1167,12 +1185,11 @@
               "RelativeToolTip": "StyleLink\\Controllers\\FavoriteController.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAgwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T20:44:34.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-31T20:44:34.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "WorkProgramModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\WorkProgramModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\WorkProgramModel.cs",
@@ -1180,12 +1197,11 @@
               "RelativeToolTip": "StyleLink\\Models\\WorkProgramModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T14:37:23.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T14:37:23.103Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 60,
               "Title": "AppointmentDetails.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Appointments\\AppointmentDetails.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Appointments\\AppointmentDetails.cshtml",
@@ -1193,12 +1209,11 @@
               "RelativeToolTip": "StyleLink\\Views\\Appointments\\AppointmentDetails.cshtml",
               "ViewState": "AQIAAC0AAAAAAAAAAAAowDsAAAB3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-02T19:12:35.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T19:12:35.422Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "SalonImage.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\SalonImage.cs",
               "RelativeDocumentMoniker": "DatabaseLayout\\Models\\SalonImage.cs",
@@ -1206,12 +1221,11 @@
               "RelativeToolTip": "DatabaseLayout\\Models\\SalonImage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:06:33.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T20:06:33.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "AppointmentsController.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\AppointmentsController.cs",
               "RelativeDocumentMoniker": "StyleLink\\Controllers\\AppointmentsController.cs",
@@ -1219,12 +1233,11 @@
               "RelativeToolTip": "StyleLink\\Controllers\\AppointmentsController.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:34:39.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T20:34:39.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "FavoriteModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\FavoriteModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\FavoriteModel.cs",
@@ -1232,12 +1245,11 @@
               "RelativeToolTip": "StyleLink\\Models\\FavoriteModel.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAWwBcAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T18:07:40.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T18:07:40.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "_NavigationBar.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Header\\_NavigationBar.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Header\\_NavigationBar.cshtml",
@@ -1245,12 +1257,11 @@
               "RelativeToolTip": "StyleLink\\Views\\Shared\\Header\\_NavigationBar.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T18:12:04.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T18:12:04.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "_FavoriteCard.cshtml.css",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
@@ -1258,12 +1269,11 @@
               "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_FavoriteCard.cshtml.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-13T12:45:42.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T12:45:42.638Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "AddSalon.cshtml.css",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Salon\\AddSalon.cshtml.css",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Salon\\AddSalon.cshtml.css",
@@ -1271,12 +1281,11 @@
               "RelativeToolTip": "StyleLink\\Views\\Salon\\AddSalon.cshtml.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-13T12:45:51.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T12:45:51.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "InformationController.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\InformationController.cs",
               "RelativeDocumentMoniker": "StyleLink\\Controllers\\InformationController.cs",
@@ -1284,12 +1293,11 @@
               "RelativeToolTip": "StyleLink\\Controllers\\InformationController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T18:12:53.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T18:12:53.666Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "IFavoriteService.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IFavoriteService.cs",
               "RelativeDocumentMoniker": "StyleLink\\Services\\Interfaces\\IFavoriteService.cs",
@@ -1297,12 +1305,11 @@
               "RelativeToolTip": "StyleLink\\Services\\Interfaces\\IFavoriteService.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAQwAgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:17:29.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T09:17:29.242Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 72,
               "Title": "AboutUs.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Information\\AboutUs.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Information\\AboutUs.cshtml",
@@ -1310,12 +1317,11 @@
               "RelativeToolTip": "StyleLink\\Views\\Information\\AboutUs.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T09:25:59.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T09:25:59.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 73,
               "Title": "ISalonRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\ISalonRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\ISalonRepository.cs",
@@ -1323,12 +1329,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\ISalonRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T13:13:00.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T13:13:00.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 75,
               "Title": "IHairStylistSalonRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IHairStylistSalonRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IHairStylistSalonRepository.cs",
@@ -1336,12 +1341,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IHairStylistSalonRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T17:57:11.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T17:57:11.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 76,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IUserRepository.cs",
@@ -1349,12 +1353,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IUserRepository.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAqwA0AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T18:01:09.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T18:01:09.441Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 74,
               "Title": "ErrorController.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Controllers\\ErrorController.cs",
               "RelativeDocumentMoniker": "StyleLink\\Controllers\\ErrorController.cs",
@@ -1362,12 +1365,11 @@
               "RelativeToolTip": "StyleLink\\Controllers\\ErrorController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T18:12:30.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T18:12:30.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 77,
               "Title": "IHairStylistSalonServiceRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IHairStylistSalonServiceRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IHairStylistSalonServiceRepository.cs",
@@ -1375,12 +1377,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IHairStylistSalonServiceRepository.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAAAAsAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T17:59:38.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T17:59:38.153Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 78,
               "Title": "ISalonImageRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\ISalonImageRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\ISalonImageRepository.cs",
@@ -1388,12 +1389,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\ISalonImageRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T17:54:55.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T17:54:55.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 79,
               "Title": "IWorkProgramRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IWorkProgramRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IWorkProgramRepository.cs",
@@ -1401,25 +1401,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IWorkProgramRepository.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAqwA8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T17:53:04.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T17:53:04.809Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "IServiceRepository.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IServiceRepository.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IServiceRepository.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IServiceRepository.cs",
-              "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IServiceRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T16:41:17.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 80,
               "Title": "IHairStylistRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IHairStylistRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IHairStylistRepository.cs",
@@ -1427,12 +1413,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IHairStylistRepository.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T16:39:39.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T16:39:39.523Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 81,
               "Title": "IFavoriteRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IFavoriteRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IFavoriteRepository.cs",
@@ -1440,12 +1425,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IFavoriteRepository.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAAAAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T15:25:16.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T15:25:16.562Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 82,
               "Title": "IAppointmentService.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Services\\Interfaces\\IAppointmentService.cs",
               "RelativeDocumentMoniker": "StyleLink\\Services\\Interfaces\\IAppointmentService.cs",
@@ -1453,12 +1437,11 @@
               "RelativeToolTip": "StyleLink\\Services\\Interfaces\\IAppointmentService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:11:20.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T09:11:20.521Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 83,
               "Title": "StyleLink.csproj",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\StyleLink.csproj",
               "RelativeDocumentMoniker": "StyleLink\\StyleLink.csproj",
@@ -1466,12 +1449,11 @@
               "RelativeToolTip": "StyleLink\\StyleLink.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-31T20:21:20.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-31T20:21:20.46Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 84,
               "Title": "IAppointmentRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\Interfaces\\IAppointmentRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\Interfaces\\IAppointmentRepository.cs",
@@ -1479,12 +1461,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\Interfaces\\IAppointmentRepository.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAewA0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:16:57.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T19:16:57.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 85,
               "Title": "WorkProgramRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\WorkProgramRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\WorkProgramRepository.cs",
@@ -1492,12 +1473,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\WorkProgramRepository.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAowBwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T17:51:58.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T17:51:58.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 86,
               "Title": "FavoriteRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\FavoriteRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\FavoriteRepository.cs",
@@ -1505,12 +1485,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\FavoriteRepository.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAUwBwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T15:23:52.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T15:23:52.487Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 87,
               "Title": "HairStylistSalonServiceRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\HairStylistSalonServiceRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\HairStylistSalonServiceRepository.cs",
@@ -1518,12 +1497,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\HairStylistSalonServiceRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T17:59:02.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T17:59:02.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 88,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\UserRepository.cs",
@@ -1531,12 +1509,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\UserRepository.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAywBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T18:00:34.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T18:00:34.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 89,
               "Title": "HairStylistSalonRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\HairStylistSalonRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\HairStylistSalonRepository.cs",
@@ -1544,12 +1521,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\HairStylistSalonRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T17:56:16.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T17:56:16.018Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 90,
               "Title": "AppointmentRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\AppointmentRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\AppointmentRepository.cs",
@@ -1557,12 +1533,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\AppointmentRepository.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:20:17.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T19:20:17.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 91,
               "Title": "SalonImageRepository.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\SalonImageRepository.cs",
               "RelativeDocumentMoniker": "StyleLink\\Repositories\\SalonImageRepository.cs",
@@ -1570,25 +1545,11 @@
               "RelativeToolTip": "StyleLink\\Repositories\\SalonImageRepository.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T17:54:03.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T17:54:03.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
-              "Title": "ServiceRepository.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\ServiceRepository.cs",
-              "RelativeDocumentMoniker": "StyleLink\\Repositories\\ServiceRepository.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Repositories\\ServiceRepository.cs",
-              "RelativeToolTip": "StyleLink\\Repositories\\ServiceRepository.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAcwAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T16:40:51.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 94,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\User.cs",
               "RelativeDocumentMoniker": "DatabaseLayout\\Models\\User.cs",
@@ -1596,12 +1557,11 @@
               "RelativeToolTip": "DatabaseLayout\\Models\\User.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAIBJwBMAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T15:22:20.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T15:22:20.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 93,
               "Title": "HairStylistSalonService.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\HairStylistSalonService.cs",
               "RelativeDocumentMoniker": "DatabaseLayout\\Models\\HairStylistSalonService.cs",
@@ -1609,12 +1569,11 @@
               "RelativeToolTip": "DatabaseLayout\\Models\\HairStylistSalonService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T19:47:25.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T19:47:25.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 92,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "DatabaseLayout\\Models\\Appointment.cs",
@@ -1622,12 +1581,11 @@
               "RelativeToolTip": "DatabaseLayout\\Models\\Appointment.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T15:31:17.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T15:31:17.502Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 95,
               "Title": "TimeSchedule.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\TimeSchedule.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\TimeSchedule.cs",
@@ -1635,25 +1593,11 @@
               "RelativeToolTip": "StyleLink\\Models\\TimeSchedule.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwAQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:34:39.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T20:34:39.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
-              "Title": "IContext.cs",
-              "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\IContext.cs",
-              "RelativeDocumentMoniker": "DatabaseLayout\\IContext.cs",
-              "ToolTip": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\IContext.cs",
-              "RelativeToolTip": "DatabaseLayout\\IContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T20:43:25.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 96,
               "Title": "AppointmentModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\AppointmentModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\AppointmentModel.cs",
@@ -1661,12 +1605,11 @@
               "RelativeToolTip": "StyleLink\\Models\\AppointmentModel.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwAUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:23:03.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T19:23:03.48Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 97,
               "Title": "_AppointmentCard.cshtml",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Views\\Shared\\Components\\_AppointmentCard.cshtml",
               "RelativeDocumentMoniker": "StyleLink\\Views\\Shared\\Components\\_AppointmentCard.cshtml",
@@ -1674,12 +1617,11 @@
               "RelativeToolTip": "StyleLink\\Views\\Shared\\Components\\_AppointmentCard.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T12:55:19.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T12:55:19.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 98,
               "Title": "AppointmentStatus.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Enums\\AppointmentStatus.cs",
               "RelativeDocumentMoniker": "DatabaseLayout\\Enums\\AppointmentStatus.cs",
@@ -1687,12 +1629,11 @@
               "RelativeToolTip": "DatabaseLayout\\Enums\\AppointmentStatus.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T10:48:13.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T10:48:13.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 99,
               "Title": "DatabaseLayout.csproj",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\DatabaseLayout.csproj",
               "RelativeDocumentMoniker": "DatabaseLayout\\DatabaseLayout.csproj",
@@ -1700,12 +1641,11 @@
               "RelativeToolTip": "DatabaseLayout\\DatabaseLayout.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-31T20:21:14.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-31T20:21:14.124Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 100,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\StyleLink\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "StyleLink\\Models\\ErrorViewModel.cs",
@@ -1713,12 +1653,11 @@
               "RelativeToolTip": "StyleLink\\Models\\ErrorViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:32:16.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T19:32:16.548Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 101,
               "Title": "20240402184916_Initiate-Database.cs",
               "DocumentMoniker": "C:\\Tools\\Tools\\Work\\Teme Facultate\\ProjectPaw\\StyleLink\\StyleLink\\DatabaseLayout\\Migrations\\20240402184916_Initiate-Database.cs",
               "RelativeDocumentMoniker": "DatabaseLayout\\Migrations\\20240402184916_Initiate-Database.cs",

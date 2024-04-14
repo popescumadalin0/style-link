@@ -91,33 +91,29 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.ConfirmPassword)
                 @Html.EditorFor(model => model.ConfirmPassword, new
+                {
+                    htmlAttributes = new
                     {
-                        htmlAttributes = new
-                        {
-                            placeholder = "Reintroduceți parola",
-                            @class = "form-control",
-                        }
-                    })
+                        placeholder = "Reintroduceți parola",
+                        @class = "form-control",
+                    }
+                })
                 @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new
-                    {
-                        @class = "text-danger"
-                    })
+                {
+                    @class = "text-danger"
+                })
             </div>
             <div class="card rounded-4 border-0 shadow">
                 <div class="card-body">
                     <div class="card-title font-weight-bold">Servicii</div>
-                    <ul class="list-group">
-                        <a class="list-group-item list-group-item-action active" asp-area="" asp-controller="Salon" asp-action="AddService">
-                            Adaugă un nou serviciu
-                        </a>
-                        @foreach (var service in Model.Services)
+                    <a class="list-group-item list-group-item-action active" asp-area="" asp-controller="Salon" asp-action="AddService">
+                        Adaugă un nou serviciu
+                    </a>
+                    @Html.ListBoxFor(m => m.Services, new SelectList(ViewBag.Services, "Value", "Text"), htmlAttributes:
+                        new
                         {
-                            <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="" id="@service.Id">
-                                <label class="form-check-label stretched-link" for="@service.Id">@service.ServiceType.Name</label>
-                            </li>
-                        }
-                    </ul>
+                            @class = "form-control",
+                        })
                 </div>
             </div>
             <button type="submit" class="btn blue-background-color rounded-pill">Adaugă hairstylist</button>

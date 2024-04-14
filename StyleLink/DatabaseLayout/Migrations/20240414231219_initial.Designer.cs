@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseLayout.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240403182359_Initiate-Database")]
-    partial class InitiateDatabase
+    [Migration("20240414231219_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -238,21 +238,17 @@ namespace DatabaseLayout.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
-
-                    b.Property<string>("ServiceTypeName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("Time")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ServiceTypeName");
+                    b.HasIndex("Name");
 
                     b.ToTable("Services");
                 });
@@ -467,7 +463,7 @@ namespace DatabaseLayout.Migrations
                 {
                     b.HasOne("DatabaseLayout.Models.ServiceType", "ServiceType")
                         .WithMany("Services")
-                        .HasForeignKey("ServiceTypeName")
+                        .HasForeignKey("Name")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
