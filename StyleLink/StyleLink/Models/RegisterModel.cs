@@ -10,7 +10,7 @@ public class RegisterModel
     public string FirstName { get; set; }
 
     [Display(Name = Names.LastName)]
-    [Required(ErrorMessage = Messages.NameIsMandatory)]
+    [Required(ErrorMessage = Messages.LastNameIsMandatory)]
     public string LastName { get; set; }
 
     [Display(Name = Names.EmailAddress)]

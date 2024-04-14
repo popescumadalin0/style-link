@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using DatabaseLayout;
 using DatabaseLayout.Models;
 using Microsoft.EntityFrameworkCore;
+using StyleLink.Repositories.Interfaces;
 
 namespace StyleLink.Repositories;
 

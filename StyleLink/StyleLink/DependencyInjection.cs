@@ -2,6 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StyleLink.Repositories;
+using StyleLink.Repositories.Interfaces;
+using StyleLink.Services;
+using StyleLink.Services.Interfaces;
 
 namespace StyleLink;
 
@@ -22,6 +25,12 @@ public static class DependencyInjection
         services.AddScoped<IWorkProgramRepository, WorkProgramRepository>();
         services.AddScoped<IServiceRepository, ServiceRepository>();
         services.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();
+
+        services.AddScoped<IAppointmentService, AppointmentService>();
+        services.AddScoped<IFavoriteService, FavoriteService>();
+        services.AddScoped<ISalonService, SalonService>();
+        services.AddScoped<IHairStylistService, HairStylistService>();
+        services.AddScoped<IServiceSalonService, ServiceSalonService>();
 
         return services;
     }

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StyleLink.Models;
-using StyleLink.Repositories;
+using StyleLink.Repositories.Interfaces;
+using StyleLink.Services.Interfaces;
 
 namespace StyleLink.Controllers;
 
@@ -13,37 +11,31 @@ public class FavoriteController : Controller
 {
     private readonly ILogger<FavoriteController> _logger;
     private readonly IFavoriteRepository _favoriteRepository;
+    private readonly IFavoriteService _favoriteService;
 
-    public FavoriteController(ILogger<FavoriteController> logger, IFavoriteRepository favoriteRepository)
+    public FavoriteController(
+        ILogger<FavoriteController> logger,
+        IFavoriteRepository favoriteRepository,
+        IFavoriteService favoriteService)
     {
         _logger = logger;
         _favoriteRepository = favoriteRepository;
+        _favoriteService = favoriteService;
     }
 
     public async Task<IActionResult> FavoriteAsync()
     {
-        var favorites = await _favoriteRepository.GetFavoritesAsync();
+        _logger.LogInformation($"{nameof(FavoriteAsync)} was called!");
 
-        var favoritesDto = favorites.Select(f => new FavoriteModel()
-        {
-            Address = f.Salon.Address,
-            Id = f.Id,
-            SalonId = f.Salon.Id,
-            SalonName = f.Salon.Name,
-            //Images = f.Salon.SalonImages.Select(si => si.Content).ToList(),
-            ImagesTest = f.Salon.SalonImages.Select(si => si.Content).ToList(),
-            //ProfileImage = f.Salon.ProfileImage,
-            ProfileImageTest = f.Salon.ProfileImage,
-            NumberOfEvaluations = f.Salon.ReviewCount,
-            SalonRating = f.Salon.Rating
-        }).ToList();
+        var favorites = await _favoriteService.GetFavoritesAsync();
 
-        return View(favoritesDto);
+        return View(favorites);
     }
 
     [HttpPost]
     public async Task<IActionResult> DeleteFavoriteAsync(FavoriteModel model)
     {
+        _logger.LogInformation($"{nameof(DeleteFavoriteAsync)} was called!");
         await _favoriteRepository.DeleteFavoriteAsync(model.Id);
 
         return RedirectToAction("Favorite", "Favorite");

@@ -11,4 +11,4 @@
 	<ItemGroup>
 		<ProjectReference Include="..\DatabaseLayout\DatabaseLayout.csproj" />
 	</ItemGroup>
-</Project>
+		</Project>

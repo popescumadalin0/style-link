@@ -1,0 +1,126 @@
+﻿@using StyleLink.Models
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model AddHairStylistModel
+
+@{
+    ViewData["Title"] = "Add a new hairstylist";
+    ViewData["HasFooter"] = true;
+}
+<p class="badge text-muted">Still in progress</p>
+<section class="custom-container-sm mx-auto px-2 pt-3">
+    <h2 class="text-center mt-3">Adaugă un hairstylist</h2>
+    @using (Html.BeginForm("AddHairStylist", "Salon", FormMethod.Post))
+    {
+        <div class="d-flex flex-column gap-2">
+            <div class="form-group">
+                @Html.LabelFor(model => model.FirstName)
+                @Html.EditorFor(model => model.FirstName, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceți prenumele hairstylistului",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastName)
+                @Html.EditorFor(model => model.LastName, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceți numele hairstylistului",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.LastName, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email)
+                @Html.EditorFor(model => model.Email, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceți email-ul hairstylistului",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.Email, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.PhoneNumber)
+                @Html.EditorFor(model => model.PhoneNumber, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceți numărul de telefon al hairstylistului",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password)
+                @Html.EditorFor(model => model.Password, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceți o parolă",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.Password, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ConfirmPassword)
+                @Html.EditorFor(model => model.ConfirmPassword, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Reintroduceți parola",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
+            <div class="card rounded-4 border-0 shadow">
+                <div class="card-body">
+                    <div class="card-title font-weight-bold">Servicii</div>
+                    <ul class="list-group">
+                        <a class="list-group-item list-group-item-action active" asp-area="" asp-controller="Salon" asp-action="AddService">
+                            Adaugă un nou serviciu
+                        </a>
+                        @foreach (var service in Model.Services)
+                        {
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" id="@service.Id">
+                                <label class="form-check-label stretched-link" for="@service.Id">@service.ServiceType.Name</label>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <button type="submit" class="btn blue-background-color rounded-pill">Adaugă hairstylist</button>
+        </div>
+    }
+</section>

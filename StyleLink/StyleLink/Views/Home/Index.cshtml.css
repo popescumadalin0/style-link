@@ -1,3 +1,10 @@
 ﻿.description-background-color {
     background-color: var(--bs-gray-description-color);
 }
+
+.add-button {
+    position: absolute;
+    color: white;
+    bottom: 5rem;
+    right: 5rem;
+}

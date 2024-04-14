@@ -1,0 +1,228 @@
+﻿@using System.Linq
+@using StyleLink.Models
+
+@model AddSalonModel
+
+@{
+    ViewData["Title"] = "Add a new salon";
+    ViewData["HasFooter"] = true;
+}
+<p class="badge text-muted">Still in progress</p>
+
+<section class="custom-container-sm mx-auto px-2 pt-3">
+    <h2 class="text-center mt-3">Adaugă un salon</h2>
+    @using (Html.BeginForm("AddSalon", "Salon", FormMethod.Post))
+    {
+        <div class="d-flex flex-column gap-2">
+            @Html.ValidationSummary(true, "", new
+                {
+                    @class = "text-danger"
+                })
+            <div class="form-group">
+                @Html.LabelFor(model => model.SalonName)
+                @Html.EditorFor(model => model.SalonName, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceți numele salonului",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.SalonName, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address)
+                @Html.EditorFor(model => model.Address, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceți adresa salonului",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.Address, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
+            @*<div class="form-group">
+        @Html.LabelFor(model => model.ProfileImage)
+        @Html.EditorFor(model => model.ProfileImage, new
+        {
+        htmlAttributes = new
+        {
+        placeholder = "Introduceți adresa de profil",
+        @class = "form-control",
+        }
+        })
+        @Html.ValidationMessageFor(model => model.ProfileImage, "", new
+        {
+        @class = "text-danger"
+        })
+        </div>
+
+        <div class="form-group">
+        @Html.LabelFor(model => model.Images)
+        @Html.EditorFor(model => model.Images, new
+        {
+        htmlAttributes = new
+        {
+        placeholder = "Introduceți imaginile salonului",
+        @class = "form-control",
+        }
+        })
+        @Html.ValidationMessageFor(model => model.Images, "", new
+        {
+        @class = "text-danger"
+        })
+        </div>*@
+            <div class="form-group">
+                @Html.LabelFor(model => model.GoogleMapsAddress)
+                @Html.EditorFor(model => model.GoogleMapsAddress, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceți adresa din Google Maps",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.GoogleMapsAddress, "", new
+                    {
+                        @class = "text-danger"
+                    })
+            </div>
+            <div class="card rounded-4 border-0 shadow">
+                <div class="card-body">
+                    <div class="card-title font-weight-bold">Programul de lucru</div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.WorkProgram.Monday)
+                        @Html.EditorFor(model => model.WorkProgram.Monday, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    placeholder = "Introduceți programul de luni",
+                                    @class = "form-control",
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.WorkProgram.Monday, "", new
+                            {
+                                @class = "text-danger"
+                            })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.WorkProgram.Tuesday)
+                        @Html.EditorFor(model => model.WorkProgram.Tuesday, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    placeholder = "Introduceți programul de marți",
+                                    @class = "form-control",
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.WorkProgram.Tuesday, "", new
+                            {
+                                @class = "text-danger"
+                            })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.WorkProgram.Wednesday)
+                        @Html.EditorFor(model => model.WorkProgram.Wednesday, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    placeholder = "Introduceți programul de miercuri",
+                                    @class = "form-control",
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.WorkProgram.Wednesday, "", new
+                            {
+                                @class = "text-danger"
+                            })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.WorkProgram.Thursday)
+                        @Html.EditorFor(model => model.WorkProgram.Thursday, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    placeholder = "Introduceți programul de joi",
+                                    @class = "form-control",
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.WorkProgram.Thursday, "", new
+                            {
+                                @class = "text-danger"
+                            })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.WorkProgram.Friday)
+                        @Html.EditorFor(model => model.WorkProgram.Friday, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    placeholder = "Introduceți programul de vineri",
+                                    @class = "form-control",
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.WorkProgram.Friday, "", new
+                            {
+                                @class = "text-danger"
+                            })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.WorkProgram.Saturday)
+                        @Html.EditorFor(model => model.WorkProgram.Saturday, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    placeholder = "Introduceți programul de sâmbătă",
+                                    @class = "form-control",
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.WorkProgram.Saturday, "", new
+                            {
+                                @class = "text-danger"
+                            })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.WorkProgram.Sunday)
+                        @Html.EditorFor(model => model.WorkProgram.Sunday, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    placeholder = "Introduceți programul de duminică",
+                                    @class = "form-control",
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.WorkProgram.Sunday, "", new
+                            {
+                                @class = "text-danger"
+                            })
+                    </div>
+                </div>
+            </div>
+            <div class="card rounded-4 border-0 shadow">
+                <div class="card-body">
+                    <div class="card-title font-weight-bold">Hairstyliști</div>
+                    <ul class="list-group">
+                        <a class="list-group-item list-group-item-action active" asp-area="" asp-controller="Salon" asp-action="AddHairStylist">
+                            Adaugă un nou hairstylist
+                        </a>
+                        @foreach (var hairstylist in Model.Hairstylists)
+                        {
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" id="@hairstylist.Id">
+                                <label class="form-check-label stretched-link" for="@hairstylist.Id">@hairstylist.FirstName + @hairstylist.LastName</label>
+                                <label class="form-check-label stretched-link" for="@hairstylist.Id">@hairstylist.Email</label>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <button type="submit" class="btn blue-background-color rounded-pill">Adaugă salon</button>
+        </div>
+    }
+</section>
