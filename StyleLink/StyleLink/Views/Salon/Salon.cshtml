@@ -4,6 +4,7 @@
     ViewData["HasFooter"] = true;
 }
 <p class="badge text-muted">Still in progress</p>
+@*todo: fix carousel + insert images*@
 <div class="d-flex flex-row justify-content-evenly">
     <div class="d-flex flex-column">
         <div class="container-fluid">
@@ -65,10 +66,10 @@
                                     <strong class="fs-6">@service.ServiceName</strong>
                                     @{
                                         var minDuration = service.MinServiceDuration.ToString("HH") == "00" ?
-                                        service.MinServiceDuration.ToString("mm") : service.MinServiceDuration.ToString("HH:mm");
+                                            service.MinServiceDuration.ToString("mm") : service.MinServiceDuration.ToString("HH:mm");
 
                                         var maxDuration = service.MaxServiceDuration.ToString("HH") == "00" ?
-                                        service.MaxServiceDuration.ToString("mm") : service.MaxServiceDuration.ToString("HH:mm");
+                                            service.MaxServiceDuration.ToString("mm") : service.MaxServiceDuration.ToString("HH:mm");
 
                                         var duration = service.MinServiceDuration >= service.MaxServiceDuration ? minDuration : $"{minDuration} - {maxDuration}";
 
@@ -76,6 +77,7 @@
                                     }
                                     <strong>@($"{duration}, {price} {service.Currency} ")</strong>
                                 </div>
+                                @*todo: connect with database*@
                                 <button type="submit" class="btn blue-background-color rounded-pill">Programează</button>
                             </div>
                             <hr />

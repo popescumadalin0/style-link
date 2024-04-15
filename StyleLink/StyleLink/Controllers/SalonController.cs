@@ -11,7 +11,7 @@ using StyleLink.Repositories.Interfaces;
 using StyleLink.Services.Interfaces;
 
 namespace StyleLink.Controllers;
-
+/*todo: split this in multiple controllers*/
 public class SalonController : Controller
 {
     private readonly ILogger<SalonController> _logger;
@@ -81,6 +81,7 @@ public class SalonController : Controller
             Text = h.Name,
             Value = h.Id.ToString(),
         }).ToList();
+
         return View();
     }
 
@@ -106,6 +107,7 @@ public class SalonController : Controller
             Text = h.Name,
             Value = h.Name,
         }).ToList();
+
         return View();
     }
 
