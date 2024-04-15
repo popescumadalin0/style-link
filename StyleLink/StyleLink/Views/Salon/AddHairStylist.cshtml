@@ -114,6 +114,10 @@
                         {
                             @class = "form-control",
                         })
+                    @Html.ValidationMessageFor(model => model.Services, "", new
+                    {
+                        @class = "text-danger"
+                    })
                 </div>
             </div>
             <button type="submit" class="btn blue-background-color rounded-pill">Adaugă hairstylist</button>

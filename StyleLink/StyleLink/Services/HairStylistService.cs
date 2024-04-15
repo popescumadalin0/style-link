@@ -42,8 +42,8 @@ public class HairStylistService : IHairStylistService
 
     public async Task AddHairStylistAsync(AddHairStylistModel model)
     {
-
-        var services = model.Services.Select(async s => await _serviceRepository.GetServiceAsync(Guid.Parse(s)));
+        var services = await _serviceRepository.GetServicesAsync();
+        var servicesDto = model.Services.Select(s => services.First(ss=> ss.Id == Guid.Parse(s))).ToList();
         var hairStylist = new HairStylist()
         {
             Email = model.Email,
@@ -52,7 +52,7 @@ public class HairStylistService : IHairStylistService
             Password = model.Password,
             PhoneNumber = model.PhoneNumber,
             //ProfileImage = model.ProfileImage,
-            Services = (ICollection<Service>)services,
+            Services = servicesDto,
             Id = Guid.NewGuid(),
         };
 

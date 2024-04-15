@@ -19,7 +19,7 @@ public class ServiceRepository : IServiceRepository
 
     public async Task<List<Service>> GetServicesAsync()
     {
-        var services = await _context.Services.ToListAsync();
+        var services = await _context.Services.Include(x=> x.ServiceType).ToListAsync();
 
         return services;
     }

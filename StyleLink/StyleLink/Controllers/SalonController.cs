@@ -61,6 +61,13 @@ public class SalonController : Controller
     [HttpPost]
     public async Task<IActionResult> AddSalonAsync(AddSalonModel model)
     {
+        var hairstylists = await _hairStylistService.GetAddHairStylistsAsync();
+
+        ViewBag.HairStylists = hairstylists.Select(h => new SelectListItem()
+        {
+            Text = h.FirstName + " " + h.LastName,
+            Value = h.Id.ToString(),
+        }).ToList();
         if (!ModelState.IsValid)
         {
             return View(model);
@@ -88,6 +95,13 @@ public class SalonController : Controller
     [HttpPost]
     public async Task<IActionResult> AddHairStylistAsync(AddHairStylistModel model)
     {
+        var services = await _serviceSalonService.GetAddServicesAsync();
+
+        ViewBag.Services = services.Select(h => new SelectListItem()
+        {
+            Text = h.Name,
+            Value = h.Id.ToString(),
+        }).ToList();
         if (!ModelState.IsValid)
         {
             return View(model);

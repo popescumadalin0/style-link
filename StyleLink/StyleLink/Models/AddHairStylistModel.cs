@@ -48,5 +48,6 @@ public class AddHairStylistModel
     [RegularExpression(Values.PhoneNumberRegex, ErrorMessage = Messages.PhoneNumberNotValidMessage)]
     public string PhoneNumber { get; set; }
 
+    [Required(ErrorMessage = Messages.PhoneNumberIsMandatory)]
     public List<string> Services { get; set; } = new();
 }
