@@ -5,7 +5,7 @@
         <div class="position-relative">
             <div class="overflow-auto no-scrollbar" style="width: 100%;">
                 <div class="d-flex px-1 gap-2" style="width: max-content;">
-                    @foreach (var image in Model.ImagesTest)
+                    @foreach (var image in ViewBag.Images)
                     {
                         <div class="position-relative ml-0 index-up" style="height: 200px; width: 200px;">
                             <img src="@Url.Content(image)" class="rounded" style="height: 200px; width: 200px;" alt="Salon Image" />
@@ -26,7 +26,7 @@
                 <h6 class="gray-color">@Model.Address</h6>
             </div>
             <div class="d-flex flex-column align-content-center justify-content-center" style="height: 60px; width: 60px;">
-                <img class="rounded-circle" src="@Url.Content(Model.ProfileImageTest)" width="60px" height="60px" alt="Profile Image"></img>
+                <img class="rounded-circle" src="@Url.Content(ViewBag.ProfileImage)" width="60px" height="60px" alt="Profile Image"></img>
             </div>
         </div>
     </div>

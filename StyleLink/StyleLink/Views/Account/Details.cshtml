@@ -15,7 +15,7 @@
     </div>
     <h2 class="mt-3">Detalii cont</h2>
     <div class="d-flex flex-column">
-        @using (Html.BeginForm("Details", "Account", FormMethod.Post))
+        @using (Html.BeginForm("Details", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             <div class="d-flex flex-column gap-2">
                 @Html.ValidationSummary(true, "", new
@@ -83,8 +83,19 @@
                     })
                 </div>
                 <div class="form-group">
-                    <label for="profileImage" class="form-label">Imagine de profil</label>
-                    <input type="file" name="profileImage" id="profileImage" onchange="fileCheck(this);"/>
+                    @Html.LabelFor(model => model.ProfileImage)
+                    @Html.EditorFor(model => model.ProfileImage, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceti imaginea de profil",
+                            @class = "form-control",
+                        }
+                    })
+                    @Html.ValidationMessageFor(model => model.ProfileImage, "", new
+                    {
+                        @class = "text-danger"
+                    })
                 </div>
 
                 <button type="submit" class="btn blue-background-color rounded-pill">Salvează modificările</button>

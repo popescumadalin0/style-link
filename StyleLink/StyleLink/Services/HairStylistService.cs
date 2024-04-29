@@ -14,28 +14,44 @@ public class HairStylistService : IHairStylistService
     private readonly IHairStylistRepository _hairStylistRepository;
     private readonly IServiceRepository _serviceRepository;
 
-    public HairStylistService(IHairStylistRepository hairStylistRepository, IServiceRepository serviceRepository)
+    private readonly IImageConvertorService _imageConvertorService;
+
+
+    public HairStylistService(
+        IHairStylistRepository hairStylistRepository,
+        IServiceRepository serviceRepository,
+        IImageConvertorService imageConvertorService)
     {
         _hairStylistRepository = hairStylistRepository;
         _serviceRepository = serviceRepository;
+        _imageConvertorService = imageConvertorService;
     }
 
     public async Task<List<AddHairStylistModel>> GetAddHairStylistsAsync()
     {
         var hairStylists = await _hairStylistRepository.GetHairStylistsAsync();
-
-        var hairStylistsDto = hairStylists.Select(h => new AddHairStylistModel()
+        var hairStylistsDto = new List<AddHairStylistModel>();
+        foreach (var h in hairStylists)
         {
-            Id = h.Id,
-            //ProfileImage = h.ProfileImage,
-            ConfirmPassword = h.Password,
-            Email = h.Email,
-            FirstName = h.FirstName,
-            LastName = h.LastName,
-            Password = h.Password,
-            PhoneNumber = h.PhoneNumber,
-            //ProfileImageTest = h.ProfileImageTest,
-        }).ToList();
+            var profileImage = await _imageConvertorService.ConvertByteArrayToFileFormAsync(new ImageDto()
+            {
+                Name = h.ProfileImageName,
+                Content = h.ProfileImage,
+                FileName = h.ProfileImageFileName
+            });
+
+            hairStylistsDto.Add(new AddHairStylistModel()
+            {
+                Id = h.Id,
+                ProfileImage = profileImage,
+                ConfirmPassword = h.Password,
+                Email = h.Email,
+                FirstName = h.FirstName,
+                LastName = h.LastName,
+                Password = h.Password,
+                PhoneNumber = h.PhoneNumber,
+            });
+        }
 
         return hairStylistsDto;
     }
@@ -43,7 +59,7 @@ public class HairStylistService : IHairStylistService
     public async Task AddHairStylistAsync(AddHairStylistModel model)
     {
         var services = await _serviceRepository.GetServicesAsync();
-        var servicesDto = model.Services.Select(s => services.First(ss=> ss.Id == Guid.Parse(s))).ToList();
+        var servicesDto = model.Services.Select(s => services.First(ss => ss.Id == Guid.Parse(s))).ToList();
         var hairStylist = new HairStylist()
         {
             Email = model.Email,
@@ -51,9 +67,11 @@ public class HairStylistService : IHairStylistService
             LastName = model.LastName,
             Password = model.Password,
             PhoneNumber = model.PhoneNumber,
-            //ProfileImage = model.ProfileImage,
             Services = servicesDto,
             Id = Guid.NewGuid(),
+            ProfileImage = await _imageConvertorService.ConvertFileFormToByteArrayAsync(model.ProfileImage),
+            ProfileImageFileName = model.ProfileImage.FileName,
+            ProfileImageName = model.ProfileImage.Name,
         };
 
         await _hairStylistRepository.CreateHairStylistAsync(hairStylist);

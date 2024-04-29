@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
 namespace StyleLink.Models;
 
@@ -35,13 +36,9 @@ public class AddHairStylistModel
     [Compare(nameof(Password), ErrorMessage = Messages.PasswordAndPasswordConfirmationDismatch)]
     public string ConfirmPassword { get; set; }
 
-    [Display(Name = Names.Images)]
-    [Required(ErrorMessage = Messages.ImagesAreMandatory)]
-    public string? ProfileImageTest { get; set; } = default!;
-
-    [Display(Name = Names.Images)]
-    [Required(ErrorMessage = Messages.ImagesAreMandatory)]
-    public byte[] ProfileImage { get; set; } = default!;
+    [Display(Name = Names.ProfileImage)]
+    [Required(ErrorMessage = Messages.ProfileImageIsMandatory)]
+    public IFormFile ProfileImage { get; set; } = default!;
 
     [Display(Name = Names.PhoneNumber)]
     [Required(ErrorMessage = Messages.PhoneNumberIsMandatory)]

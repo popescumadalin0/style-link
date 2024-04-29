@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 using StyleLink.Constants;
 
 namespace StyleLink.Models;
@@ -26,5 +27,7 @@ public class UpdateUserModel
     [RegularExpression(Values.PhoneNumberRegex, ErrorMessage = Messages.PhoneNumberNotValidMessage)]
     public string PhoneNumber { get; set; }
 
-    public byte[] ProfileImage { get; set; }
+    [Display(Name = Names.ProfileImage)]
+    [Required(ErrorMessage = Messages.ProfileImageIsMandatory)]
+    public IFormFile ProfileImage { get; set; }
 }

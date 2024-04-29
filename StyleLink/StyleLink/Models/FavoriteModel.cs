@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 
 namespace StyleLink.Models;
@@ -17,12 +18,7 @@ public class FavoriteModel
 
     public string Address { get; set; }
 
-    public string ProfileImageTest { get; set; }
+    public ICollection<IFormFile> Images { get; set; }
 
-    public List<string> ImagesTest { get; set; } = new();
-
-    //todo
-    public List<byte[]> Images { get; set; } = new();
-
-    public byte[] ProfileImage { get; set; }
+    public IFormFile ProfileImage { get; set; }
 }

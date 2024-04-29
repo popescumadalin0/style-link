@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 
 namespace StyleLink.Models;
 
@@ -8,7 +9,5 @@ public class HairStylistModel
 
     public string Name { get; set; }
 
-    public string ProfileImageTest { get; set; }
-
-    public byte[] ProfileImage { get; set; }
+    public IFormFile ProfileImage { get; set; }
 }

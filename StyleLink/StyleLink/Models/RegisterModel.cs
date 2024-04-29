@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 using StyleLink.Constants;
 
 namespace StyleLink.Models;
@@ -38,6 +39,7 @@ public class RegisterModel
     [Range(typeof(bool), Values.BooleanTrueValue, Values.BooleanTrueValue, ErrorMessage = Messages.AcceptTermsAndConditions)]
     public bool AgreeWithTermsAndConditions { get; set; }
 
-    //todo: add image
-    public byte[] ProfileImage { get; set; }
+    [Display(Name = Names.ProfileImage)]
+    [Required(ErrorMessage = Messages.ProfileImageIsMandatory)]
+    public IFormFile ProfileImage { get; set; }
 }

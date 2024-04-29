@@ -1,5 +1,4 @@
-﻿@using System.Linq
-@using StyleLink.Models
+﻿@using StyleLink.Models
 
 @model AddSalonModel
 
@@ -11,7 +10,7 @@
 
 <section class="custom-container-sm mx-auto px-2 pt-3">
     <h2 class="text-center mt-3">Adaugă un salon</h2>
-    @using (Html.BeginForm("AddSalon", "Salon", FormMethod.Post))
+    @using (Html.BeginForm("AddSalon", "Salon", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         <div class="d-flex flex-column gap-2">
             @Html.ValidationSummary(true, "", new
@@ -69,109 +68,139 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.WorkProgram.Monday)
                         @Html.EditorFor(model => model.WorkProgram.Monday, new
+                        {
+                            htmlAttributes = new
                             {
-                                htmlAttributes = new
-                                {
-                                    placeholder = "Introduceți programul de luni",
-                                    @class = "form-control",
-                                }
-                            })
+                                placeholder = "Introduceți programul de luni",
+                                @class = "form-control",
+                            }
+                        })
                         @Html.ValidationMessageFor(model => model.WorkProgram.Monday, "", new
-                            {
-                                @class = "text-danger"
-                            })
+                        {
+                            @class = "text-danger"
+                        })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.WorkProgram.Tuesday)
                         @Html.EditorFor(model => model.WorkProgram.Tuesday, new
+                        {
+                            htmlAttributes = new
                             {
-                                htmlAttributes = new
-                                {
-                                    placeholder = "Introduceți programul de marți",
-                                    @class = "form-control",
-                                }
-                            })
+                                placeholder = "Introduceți programul de marți",
+                                @class = "form-control",
+                            }
+                        })
                         @Html.ValidationMessageFor(model => model.WorkProgram.Tuesday, "", new
-                            {
-                                @class = "text-danger"
-                            })
+                        {
+                            @class = "text-danger"
+                        })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.WorkProgram.Wednesday)
                         @Html.EditorFor(model => model.WorkProgram.Wednesday, new
+                        {
+                            htmlAttributes = new
                             {
-                                htmlAttributes = new
-                                {
-                                    placeholder = "Introduceți programul de miercuri",
-                                    @class = "form-control",
-                                }
-                            })
+                                placeholder = "Introduceți programul de miercuri",
+                                @class = "form-control",
+                            }
+                        })
                         @Html.ValidationMessageFor(model => model.WorkProgram.Wednesday, "", new
-                            {
-                                @class = "text-danger"
-                            })
+                        {
+                            @class = "text-danger"
+                        })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.WorkProgram.Thursday)
                         @Html.EditorFor(model => model.WorkProgram.Thursday, new
+                        {
+                            htmlAttributes = new
                             {
-                                htmlAttributes = new
-                                {
-                                    placeholder = "Introduceți programul de joi",
-                                    @class = "form-control",
-                                }
-                            })
+                                placeholder = "Introduceți programul de joi",
+                                @class = "form-control",
+                            }
+                        })
                         @Html.ValidationMessageFor(model => model.WorkProgram.Thursday, "", new
-                            {
-                                @class = "text-danger"
-                            })
+                        {
+                            @class = "text-danger"
+                        })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.WorkProgram.Friday)
                         @Html.EditorFor(model => model.WorkProgram.Friday, new
+                        {
+                            htmlAttributes = new
                             {
-                                htmlAttributes = new
-                                {
-                                    placeholder = "Introduceți programul de vineri",
-                                    @class = "form-control",
-                                }
-                            })
+                                placeholder = "Introduceți programul de vineri",
+                                @class = "form-control",
+                            }
+                        })
                         @Html.ValidationMessageFor(model => model.WorkProgram.Friday, "", new
-                            {
-                                @class = "text-danger"
-                            })
+                        {
+                            @class = "text-danger"
+                        })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.WorkProgram.Saturday)
                         @Html.EditorFor(model => model.WorkProgram.Saturday, new
+                        {
+                            htmlAttributes = new
                             {
-                                htmlAttributes = new
-                                {
-                                    placeholder = "Introduceți programul de sâmbătă",
-                                    @class = "form-control",
-                                }
-                            })
+                                placeholder = "Introduceți programul de sâmbătă",
+                                @class = "form-control",
+                            }
+                        })
                         @Html.ValidationMessageFor(model => model.WorkProgram.Saturday, "", new
-                            {
-                                @class = "text-danger"
-                            })
+                        {
+                            @class = "text-danger"
+                        })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.WorkProgram.Sunday)
                         @Html.EditorFor(model => model.WorkProgram.Sunday, new
+                        {
+                            htmlAttributes = new
                             {
-                                htmlAttributes = new
-                                {
-                                    placeholder = "Introduceți programul de duminică",
-                                    @class = "form-control",
-                                }
-                            })
+                                placeholder = "Introduceți programul de duminică",
+                                @class = "form-control",
+                            }
+                        })
                         @Html.ValidationMessageFor(model => model.WorkProgram.Sunday, "", new
-                            {
-                                @class = "text-danger"
-                            })
+                        {
+                            @class = "text-danger"
+                        })
                     </div>
                 </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProfileImage)
+                @Html.EditorFor(model => model.ProfileImage, new
+                {
+                    htmlAttributes = new
+                    {
+                        placeholder = "Introduceți imaginea de profil",
+                        @class = "form-control",
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.ProfileImage, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Images)
+                @Html.EditorFor(model => model.Images, new
+                {
+                    htmlAttributes = new
+                    {
+                        placeholder = "Introduceți imagini din salon",
+                        @class = "form-control",
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.Images, "", new
+                {
+                    @class = "text-danger"
+                })
             </div>
             <div class="card rounded-4 border-0 shadow">
                 <div class="card-body">

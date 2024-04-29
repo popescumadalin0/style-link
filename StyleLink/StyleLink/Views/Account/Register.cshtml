@@ -6,7 +6,7 @@
 
 <section class="custom-container-sm mx-auto px-2 pt-3">
     <h2 class="text-center mt-3">Înregistrare</h2>
-    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         <div class="d-flex flex-column gap-2">
             @Html.ValidationSummary(true, "", new
@@ -120,10 +120,21 @@
                     @class = "text-danger"
                 })
             </div>
-            @*todo:*@
+
             <div class="form-group">
-                <label for="profileImage" class="form-label">Imagine de profil</label>
-                <input type="file" name="profileImage" id="profileImage" onchange="fileCheck(this);" />
+                @Html.LabelFor(model => model.ProfileImage)
+                @Html.EditorFor(model => model.ProfileImage, new
+                    {
+                        htmlAttributes = new
+                        {
+                            placeholder = "Introduceti imaginea de profil",
+                            @class = "form-control",
+                        }
+                    })
+                @Html.ValidationMessageFor(model => model.ProfileImage, "", new
+                    {
+                        @class = "text-danger"
+                    })
             </div>
 
             <button type="submit" class="btn blue-background-color rounded-pill">Înregistrare</button>

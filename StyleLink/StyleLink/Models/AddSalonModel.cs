@@ -1,4 +1,5 @@
-﻿using StyleLink.Constants;
+﻿using Microsoft.AspNetCore.Http;
+using StyleLink.Constants;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -18,22 +19,13 @@ public class AddSalonModel
     [Required(ErrorMessage = Messages.GoogleMapsAddressIsMandatory)]
     public string GoogleMapsAddress { get; set; }
 
-    [Display(Name = Names.ProfileImage)]
-    [Required(ErrorMessage = Messages.ProfileImageIsMandatory)]
-    public string ProfileImageTest { get; set; }
-
     [Display(Name = Names.Images)]
     [Required(ErrorMessage = Messages.ImagesAreMandatory)]
-    public List<string> ImagesTest { get; set; } = new();
+    public ICollection<IFormFile> Images { get; set; }
 
-    //todo: 
     [Display(Name = Names.ProfileImage)]
     [Required(ErrorMessage = Messages.ProfileImageIsMandatory)]
-    public List<byte[]> Images { get; set; } = new();
-
-    [Display(Name = Names.Images)]
-    [Required(ErrorMessage = Messages.ImagesAreMandatory)]
-    public string ProfileImage { get; set; }
+    public IFormFile ProfileImage { get; set; }
 
     public WorkProgramModel WorkProgram { get; set; }
 

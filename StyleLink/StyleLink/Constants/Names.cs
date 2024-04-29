@@ -12,7 +12,7 @@ public static class Names
 
     public const string Images = "Imagini";
 
-    public const string ProfileImage = "Imagine de profile";
+    public const string ProfileImage = "Imagine de profil";
 
     public const string FirstName = "Prenume";
 

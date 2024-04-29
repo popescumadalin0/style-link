@@ -18,7 +18,11 @@ public class Salon
 
     public string GoogleMapsAddress { get; set; }
 
-    public string? ProfileImage { get; set; } = default!;
+    public byte[] ProfileImage { get; set; } = default!;
+
+    public string ProfileImageName { get; set; } = default!;
+
+    public string ProfileImageFileName { get; set; } = default!;
 
     [Required]
     public virtual WorkProgram WorkProgram { get; set; } = new WorkProgram();

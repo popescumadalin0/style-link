@@ -16,9 +16,9 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="height: 300px; width: 500px;">
-                        <img class="d-block w-100 rounded" src="@Url.Content(Model.ImagesTest.FirstOrDefault())" style="height: 300px; width: 500px;" alt="First slide">
+                        <img class="d-block w-100 rounded" src="@Url.Content(ViewBag.Images.FirstOrDefault())" style="height: 300px; width: 500px;" alt="First slide">
                     </div>
-                    @foreach (var image in Model.ImagesTest.Skip(1))
+                    @foreach (var image in ViewBag.Images.Skip(1))
                     {
                         <div class="carousel-item" style="height: 300px; width: 500px;">
                             <img class="d-block w-100 rounded" src="@Url.Content(image)" style="height: 300px; width: 500px;" alt="Slide">
@@ -46,7 +46,7 @@
                 <h6 class="text-muted">@Model.SalonAddress</h6>
             </div>
             <div class="d-flex flex-column align-content-center justify-content-center">
-                <img class="rounded-circle" width="60px" height="60px" src="@Url.Content(Model.ProfileImageTest)" alt="Profile Image"></img>
+                <img class="rounded-circle" width="60px" height="60px" src="@Url.Content(ViewBag.ProfileImage)" alt="Profile Image"></img>
             </div>
         </div>
         @{
@@ -93,7 +93,7 @@
             {
                 <div class="d-flex flex-row gap-2 align-items-center">
                     <div class="d-flex flex-column align-content-center justify-content-center">
-                        <img class="rounded-circle" width="40px" height="40px" src="@Url.Content(hairStyle.ProfileImageTest)" alt="Profile Image"></img>
+                        <img class="rounded-circle" width="40px" height="40px" src="@Url.Content(ViewBag.HairStylists[hairStyle.Id])" alt="Profile Image"></img>
                     </div>
                     <strong class="fs-6">@hairStyle.Name</strong>
                 </div>

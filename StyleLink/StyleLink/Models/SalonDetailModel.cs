@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 
 namespace StyleLink.Models;
 
@@ -13,14 +14,9 @@ public class SalonDetailModel
 
     public string MapsUrl { get; set; }
 
-    public List<string> ImagesTest { get; set; }
+    public ICollection<IFormFile> Images { get; set; }
 
-    public string ProfileImageTest { get; set; }
-
-    //todo
-    public List<byte[]> Images { get; set; }
-
-    public byte[] ProfileImage { get; set; }
+    public IFormFile ProfileImage { get; set; }
 
     public List<ServiceModel> Services { get; set; }
 
