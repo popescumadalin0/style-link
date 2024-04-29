@@ -19,7 +19,8 @@ public class AppointmentRepository : IAppointmentRepository
 
     public async Task<List<Appointment>> GetAppointmentsAsync()
     {
-        var appointments = await _context.Appointments.ToListAsync();
+        var appointments = await _context.Appointments
+            .ToListAsync();
 
         return appointments;
     }

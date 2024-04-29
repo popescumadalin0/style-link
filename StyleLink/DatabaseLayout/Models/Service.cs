@@ -17,7 +17,7 @@ public class Service
 
     public DateTime Time { get; set; }
 
-    [ForeignKey("Name")]
+    [Required]
     public ServiceType ServiceType { get; set; }
 
     public virtual ICollection<HairStylist> HairStylists { get; set; } = new List<HairStylist>();

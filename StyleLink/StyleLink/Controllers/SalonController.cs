@@ -11,7 +11,7 @@ using StyleLink.Repositories.Interfaces;
 using StyleLink.Services.Interfaces;
 
 namespace StyleLink.Controllers;
-/*todo: split this in multiple controllers*/
+
 public class SalonController : Controller
 {
     private readonly ILogger<SalonController> _logger;
@@ -76,76 +76,5 @@ public class SalonController : Controller
         await _salonService.AddSalonAsync(model);
 
         return RedirectToAction("Index", "Home");
-    }
-
-    [HttpGet]
-    public async Task<IActionResult> AddHairStylistAsync()
-    {
-        var services = await _serviceSalonService.GetAddServicesAsync();
-
-        ViewBag.Services = services.Select(h => new SelectListItem()
-        {
-            Text = h.Name,
-            Value = h.Id.ToString(),
-        }).ToList();
-
-        return View();
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> AddHairStylistAsync(AddHairStylistModel model)
-    {
-        var services = await _serviceSalonService.GetAddServicesAsync();
-
-        ViewBag.Services = services.Select(h => new SelectListItem()
-        {
-            Text = h.Name,
-            Value = h.Id.ToString(),
-        }).ToList();
-        if (!ModelState.IsValid)
-        {
-            return View(model);
-        }
-
-        await _hairStylistService.AddHairStylistAsync(model);
-
-        return RedirectToAction("AddSalon", "Salon");
-    }
-
-    [HttpGet]
-    public async Task<IActionResult> AddServiceAsync()
-    {
-        var serviceTypes = await _serviceTypeRepository.GetServiceTypesAsync();
-        ViewBag.ServiceTypes = serviceTypes.Select(h => new SelectListItem()
-        {
-            Text = h.Name,
-            Value = h.Name,
-        }).ToList();
-
-        return View();
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> AddServiceAsync(AddServiceModel model)
-    {
-        if (!ModelState.IsValid)
-        {
-            return View(model);
-        }
-
-        await _serviceSalonService.AddServiceAsync(model);
-
-        return RedirectToAction("AddHairStylist", "Salon");
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> AddServiceTypeAsync(AddServiceModel model)
-    {
-        await _serviceTypeRepository.CreateServiceTypeAsync(new ServiceType()
-        {
-            Name = model.ServiceType,
-        });
-
-        return RedirectToAction("AddService", "Salon");
     }
 }

@@ -16,6 +16,7 @@
                 <div class="position-absolute heart-button index-up">
                     @using (Html.BeginForm("DeleteFavorite", "Favorite", FormMethod.Post))
                     {
+                        @Html.HiddenFor(model => model.Id);
                         <button type="submit" class="bg-transparent border-0">
                             <i class="bi bi-heart-fill fs-3 text-danger"></i>
                         </button>

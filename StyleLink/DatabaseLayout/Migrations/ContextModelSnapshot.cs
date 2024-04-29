@@ -235,17 +235,21 @@ namespace DatabaseLayout.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
+
+                    b.Property<string>("ServiceTypeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("Time")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Name");
+                    b.HasIndex("ServiceTypeName");
 
                     b.ToTable("Services");
                 });
@@ -460,7 +464,7 @@ namespace DatabaseLayout.Migrations
                 {
                     b.HasOne("DatabaseLayout.Models.ServiceType", "ServiceType")
                         .WithMany("Services")
-                        .HasForeignKey("Name")
+                        .HasForeignKey("ServiceTypeName")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

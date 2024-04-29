@@ -48,37 +48,6 @@
                         @class = "text-danger"
                     })
             </div>
-            @*<div class="form-group">
-        @Html.LabelFor(model => model.ProfileImage)
-        @Html.EditorFor(model => model.ProfileImage, new
-        {
-        htmlAttributes = new
-        {
-        placeholder = "Introduceți adresa de profil",
-        @class = "form-control",
-        }
-        })
-        @Html.ValidationMessageFor(model => model.ProfileImage, "", new
-        {
-        @class = "text-danger"
-        })
-        </div>
-
-        <div class="form-group">
-        @Html.LabelFor(model => model.Images)
-        @Html.EditorFor(model => model.Images, new
-        {
-        htmlAttributes = new
-        {
-        placeholder = "Introduceți imaginile salonului",
-        @class = "form-control",
-        }
-        })
-        @Html.ValidationMessageFor(model => model.Images, "", new
-        {
-        @class = "text-danger"
-        })
-        </div>*@
             <div class="form-group">
                 @Html.LabelFor(model => model.GoogleMapsAddress)
                 @Html.EditorFor(model => model.GoogleMapsAddress, new
@@ -207,7 +176,7 @@
             <div class="card rounded-4 border-0 shadow">
                 <div class="card-body">
                     <div class="card-title font-weight-bold">Hairstyliști</div>
-                    <a class="list-group-item list-group-item-action active" asp-area="" asp-controller="Salon" asp-action="AddHairStylist">
+                    <a class="list-group-item list-group-item-action active" asp-area="" asp-controller="Hairstylist" asp-action="AddHairStylist">
                         Adaugă un nou hairstylist
                     </a>
                     @Html.ListBoxFor(m => m.Hairstylists, new SelectList(ViewBag.HairStylists, "Value", "Text"), htmlAttributes:
@@ -217,24 +186,6 @@
                              })
                 </div>
             </div>
-            @*<div class="card rounded-4 border-0 shadow">
-                <div class="card-body">
-                    <div class="card-title font-weight-bold">Hairstyliști</div>
-                    <ul class="list-group">
-                        <a class="list-group-item list-group-item-action active" asp-area="" asp-controller="Salon" asp-action="AddHairStylist">
-                            Adaugă un nou hairstylist
-                        </a>
-                        @foreach (var hairstylist in ViewBag.HairStylists)
-                        {
-                            <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="" id="@hairstylist.Id">
-                                <label class="form-check-label stretched-link" for="@hairstylist.Id">@hairstylist.FirstName + @hairstylist.LastName</label>
-                                <label class="form-check-label stretched-link" for="@hairstylist.Id">@hairstylist.Email</label>
-                            </li>
-                        }
-                    </ul>
-                </div>
-            </div>*@
             <button type="submit" class="btn blue-background-color rounded-pill">Adaugă salon</button>
         </div>
     }
