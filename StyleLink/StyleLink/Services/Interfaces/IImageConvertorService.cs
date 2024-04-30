@@ -16,4 +16,6 @@ public interface IImageConvertorService
          ConvertByteArraysToFileFormsAsync(ICollection<ImageDto> inputs);
 
     Task<string> ConvertFormFileToImageAsync(IFormFile fileForm);
+
+    Task<List<string>> ConvertFormFilesToImagesAsync(ICollection<IFormFile> fileForms);
 }

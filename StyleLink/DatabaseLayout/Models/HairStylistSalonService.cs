@@ -13,5 +13,11 @@ public class HairStylistSalonService
 
     [Required] public HairStylistSalon HairStylistSalon { get; set; }
 
+    public int Price { get; set; }
+
+    public string Currency { get; set; }
+
+    public TimeOnly Time { get; set; }
+
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 }

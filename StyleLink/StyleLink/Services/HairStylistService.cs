@@ -60,6 +60,7 @@ public class HairStylistService : IHairStylistService
     {
         var services = await _serviceRepository.GetServicesAsync();
         var servicesDto = model.Services.Select(s => services.First(ss => ss.Id == Guid.Parse(s))).ToList();
+        //todo: sa adaugam si HairStylistSalonService
         var hairStylist = new HairStylist()
         {
             Email = model.Email,

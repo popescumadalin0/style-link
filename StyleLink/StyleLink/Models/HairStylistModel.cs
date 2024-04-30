@@ -9,5 +9,5 @@ public class HairStylistModel
 
     public string Name { get; set; }
 
-    public IFormFile ProfileImage { get; set; }
+    public string ProfileImage { get; set; }
 }

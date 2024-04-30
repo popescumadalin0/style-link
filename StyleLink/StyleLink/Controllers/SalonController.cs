@@ -36,17 +36,6 @@ public class SalonController : Controller
 
         var salon = await _salonService.GetSalonDetailsAsync(Guid.Parse(id));
 
-        ViewBag.ProfileImage = await _imageConvertorService.ConvertFormFileToImageAsync(salon.ProfileImage);
-        foreach (var salonImage in salon.Images)
-        {
-            ViewBag.Images.Add(await _imageConvertorService.ConvertFormFileToImageAsync(salonImage));
-        }
-
-        foreach (var salonHairStylist in salon.HairStylists)
-        {
-            ViewBag.HairStylists.Add(salonHairStylist.Id, await _imageConvertorService.ConvertFormFileToImageAsync(salonHairStylist.ProfileImage));
-        }
-
         return View(salon);
     }
 
@@ -71,6 +60,7 @@ public class SalonController : Controller
         await _salonService.AddSalonAsync(model);
 
         return RedirectToAction("Index", "Home");
+
     }
 
     private async Task SetHairStylistsInViewBag()

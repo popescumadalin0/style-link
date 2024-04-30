@@ -12,6 +12,8 @@ namespace StyleLink.Services;
 public class SalonService : ISalonService
 {
     private readonly ISalonRepository _salonRepository;
+    private readonly IHairStylistSalonServiceRepository _hairStylistSalonServiceRepository;
+    private readonly IServiceRepository _serviceRepository;
     private readonly IHairStylistSalonRepository _hairStylistSalonRepository;
     private readonly IHairStylistRepository _hairStylistRepository;
     private readonly ISalonImageRepository _salonImageRepository;
@@ -23,13 +25,17 @@ public class SalonService : ISalonService
         IHairStylistSalonRepository hairStylistSalonRepository,
         IHairStylistRepository hairStylistRepository,
         IImageConvertorService imageConvertorService,
-        ISalonImageRepository salonImageRepository)
+        ISalonImageRepository salonImageRepository,
+        IHairStylistSalonServiceRepository hairStylistSalonServiceRepository,
+        IServiceRepository serviceRepository)
     {
         _salonRepository = salonRepository;
         _hairStylistSalonRepository = hairStylistSalonRepository;
         _hairStylistRepository = hairStylistRepository;
         _imageConvertorService = imageConvertorService;
         _salonImageRepository = salonImageRepository;
+        _hairStylistSalonServiceRepository = hairStylistSalonServiceRepository;
+        _serviceRepository = serviceRepository;
     }
 
     public async Task<List<SalonModel>> GetSalonsAsync()
@@ -62,8 +68,8 @@ public class SalonService : ISalonService
                 Address = s.Address,
                 Id = s.Id,
                 SalonName = s.Name,
-                ProfileImage = profileImage,
-                Images = images,
+                ProfileImage = await _imageConvertorService.ConvertFormFileToImageAsync(profileImage),
+                Images = await _imageConvertorService.ConvertFormFilesToImagesAsync(images),
                 NumberOfEvaluations = s.ReviewCount,
                 SalonRating = s.Rating,
             });
@@ -83,18 +89,34 @@ public class SalonService : ISalonService
         var services = servicesGroup
             .SelectMany(g => g.Value.Select(hsss => new ServiceModel()
             {
-                Currency = hsss.Service.Currency,
+                Currency = hsss.Currency,
                 Id = hsss.Service.Id,
-                MaxPrice = g.Value.Max(x => x.Service.Price),
-                MaxServiceDuration = new DateTime(g.Value.Max(x => x.Service.Time.Ticks)),
-                MinPrice = g.Value.Min(x => x.Service.Price),
-                MinServiceDuration = new DateTime(g.Value.Min(x => x.Service.Time.Ticks)),
+                MaxPrice = g.Value.Max(x => x.Price),
+                MaxServiceDuration = new DateTime(g.Value.Max(x => x.Time.Ticks)),
+                MinPrice = g.Value.Min(x => x.Price),
+                MinServiceDuration = new DateTime(g.Value.Min(x => x.Time.Ticks)),
                 ServiceCategory = hsss.Service.ServiceType.Name,
                 ServiceName = g.Key,
             })).ToList();
 
         var hairStylists = new List<HairStylistModel>();
 
+        foreach (var hss in salon.HairStylistSalons)
+        {
+            var hairStylistProfileImage =
+                await _imageConvertorService.ConvertByteArrayToFileFormAsync(new ImageDto()
+                {
+                    FileName = hss.HairStylist.ProfileImageFileName,
+                    Name = hss.HairStylist.ProfileImageName,
+                    Content = hss.HairStylist.ProfileImage
+                });
+            hairStylists.Add(new HairStylistModel()
+            {
+                Id = hss.HairStylist.Id,
+                Name = $"{hss.HairStylist.FirstName} {hss.HairStylist.LastName}",
+                ProfileImage = await _imageConvertorService.ConvertFormFileToImageAsync(hairStylistProfileImage),
+            });
+        }
         var profileImage = await _imageConvertorService.ConvertByteArrayToFileFormAsync(new ImageDto()
         {
             Name = salon.ProfileImageName,
@@ -118,10 +140,10 @@ public class SalonService : ISalonService
             HairStylists = hairStylists,
             Id = salon.Id,
             SalonName = salon.Name,
-            Images = images,
+            Images = await _imageConvertorService.ConvertFormFilesToImagesAsync(images),
             MapsUrl = salon.GoogleMapsAddress,
             NumberOfEvaluations = salon.ReviewCount,
-            ProfileImage = profileImage,
+            ProfileImage = await _imageConvertorService.ConvertFormFileToImageAsync(profileImage),
             SalonAddress = salon.Address,
             SalonRating = salon.Rating,
             TimeSchedule = new TimeSchedule()
@@ -165,18 +187,48 @@ public class SalonService : ISalonService
 
         };
         await _salonRepository.CreateSalonAsync(salon);
-        var salonRef = await _salonRepository.GetSalonAsync(id);
 
+
+        await AddSalonHairstylists(model, id);
+
+        await AddSalonImagesAsync(model, id);
+    }
+
+    private async Task AddSalonHairstylists(AddSalonModel model, Guid id)
+    {
+        var salonRef = await _salonRepository.GetSalonAsync(id);
+        var hairStylists = await _hairStylistRepository.GetHairStylistsAsync();
+        var hairStylistSalons = await _hairStylistSalonRepository.GetHairStylistSalonsAsync();
+        var services = await _serviceRepository.GetServicesAsync();
         foreach (var h in model.Hairstylists)
         {
+            var hairStylistSalonId = Guid.NewGuid();
+
             var entity = new HairStylistSalon()
             {
-                Id = Guid.NewGuid(),
+                Id = hairStylistSalonId,
                 Salon = salonRef,
-                HairStylist = await _hairStylistRepository.GetHairStylistAsync(Guid.Parse(h))
+                HairStylist = hairStylists.First(x => x.Id == Guid.Parse(h)),
             };
             await _hairStylistSalonRepository.CreateHairStylistSalonAsync(entity);
+
+            var hairStylistSalon = hairStylistSalons.First(x => x.Id == hairStylistSalonId);
+
+            var service = await _serviceRepository.GetServiceAsync(id);
+            var hssService = new HairStylistSalonService()
+            {
+                HairStylistSalon = hairStylistSalon,
+                Id = Guid.NewGuid(),
+                Service = service
+            };
+
+            await _hairStylistSalonServiceRepository.CreateHairStylistSalonServiceAsync(hssService);
         }
+    }
+
+    private async Task AddSalonImagesAsync(AddSalonModel model, Guid id)
+    {
+        var salonRef = await _salonRepository.GetSalonAsync(id);
 
         foreach (var i in model.Images)
         {

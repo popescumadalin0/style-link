@@ -23,11 +23,17 @@ public class AddSalonModel
     [Required(ErrorMessage = Messages.ImagesAreMandatory)]
     public ICollection<IFormFile> Images { get; set; }
 
+    public ICollection<string> ImagesDisplay { get; set; }
+
     [Display(Name = Names.ProfileImage)]
     [Required(ErrorMessage = Messages.ProfileImageIsMandatory)]
     public IFormFile ProfileImage { get; set; }
 
+    public string ProfileImageDisplay { get; set; }
+
     public WorkProgramModel WorkProgram { get; set; }
 
     public List<string> Hairstylists { get; set; } = new();
+
+    public List<string> Services { get; set; } = new();
 }

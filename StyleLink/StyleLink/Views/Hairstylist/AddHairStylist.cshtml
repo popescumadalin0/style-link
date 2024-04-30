@@ -91,17 +91,17 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.ConfirmPassword)
                 @Html.EditorFor(model => model.ConfirmPassword, new
-                {
-                    htmlAttributes = new
                     {
-                        placeholder = "Reintroduceți parola",
-                        @class = "form-control",
-                    }
-                })
+                        htmlAttributes = new
+                        {
+                            placeholder = "Reintroduceți parola",
+                            @class = "form-control",
+                        }
+                    })
                 @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new
-                {
-                    @class = "text-danger"
-                })
+                    {
+                        @class = "text-danger"
+                    })
             </div>
 
             <div class="form-group">
@@ -135,6 +135,63 @@
                     {
                         @class = "text-danger"
                     })
+                </div>
+            </div>
+            @*todo: in functie de ce serviciu avem selectat, trebui sa punem un pret*@
+            <div class="card rounded-4 border-0 shadow">
+                <div class="card-body">
+                    @for (var i = 0; i < Model?.Services.Count; i++)
+                    {
+                        Model.ServiceDetails.Add(new HairStylistSalonModel()
+                    {
+                        ServiceId = Model.Services[i]
+                    });
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ServiceDetails[i].Price)
+                            @Html.EditorFor(model => model.ServiceDetails[i].Price, new
+                                {
+                                    htmlAttributes = new
+                                    {
+                                        placeholder = "Introduceți prețul serviciului",
+                                        @class = "form-control",
+                                    }
+                                })
+                            @Html.ValidationMessageFor(model => model.ServiceDetails[i].Price, "", new
+                                {
+                                    @class = "text-danger"
+                                })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ServiceDetails[i].Currency)
+                            @Html.EditorFor(model => model.ServiceDetails[i].Currency, new
+                                {
+                                    htmlAttributes = new
+                                    {
+                                        placeholder = "Introduceți moneda serviciului",
+                                        @class = "form-control",
+                                    }
+                                })
+                            @Html.ValidationMessageFor(model => model.ServiceDetails[i].Currency, "", new
+                                {
+                                    @class = "text-danger"
+                                })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ServiceDetails[i].Time)
+                            @Html.EditorFor(model => model.ServiceDetails[i].Time, new
+                                {
+                                    htmlAttributes = new
+                                    {
+                                        placeholder = "Introduceți durata serviciului",
+                                        @class = "form-control",
+                                    }
+                                })
+                            @Html.ValidationMessageFor(model => model.ServiceDetails[i].Time, "", new
+                                {
+                                    @class = "text-danger"
+                                })
+                        </div>
+                    }
                 </div>
             </div>
             <button type="submit" class="btn blue-background-color rounded-pill">Adaugă hairstylist</button>

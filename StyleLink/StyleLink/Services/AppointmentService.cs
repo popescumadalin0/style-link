@@ -23,13 +23,13 @@ public class AppointmentService : IAppointmentService
         var appointmentsDto = appointments.Select(a => new AppointmentModel()
         {
             AppointmentStatus = a.Status,
-            Currency = a.HairStylistSalonService?.Service.Currency,
-            EndDate = a.StartDate.AddTicks(a.HairStylistSalonService?.Service.Time.Ticks ?? 0),
+            Currency = a.HairStylistSalonService?.Currency,
+            EndDate = a.StartDate.AddTicks(a.HairStylistSalonService?.Time.Ticks ?? 0),
             StartDate = a.StartDate,
             HairStylistName = a.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName + " " + a.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName,
             Id = a.Id,
             SalonName = a.HairStylistSalonService?.HairStylistSalon.Salon.Name,
-            ServicePrice = a.HairStylistSalonService?.Service.Price ?? 0,
+            ServicePrice = a.HairStylistSalonService?.Price ?? 0,
             ServiceType = a.HairStylistSalonService?.Service.ServiceType.Name,
         }).ToList();
 
@@ -44,9 +44,9 @@ public class AppointmentService : IAppointmentService
         {
             StartDate = appointment.StartDate,
             ServiceType = appointment.HairStylistSalonService.Service.ServiceType.Name,
-            Currency = appointment.HairStylistSalonService.Service.Currency,
+            Currency = appointment.HairStylistSalonService.Currency,
             AppointmentStatus = appointment.Status,
-            EndDate = appointment.StartDate.AddTicks(appointment.HairStylistSalonService?.Service.Time.Ticks ?? 0),
+            EndDate = appointment.StartDate.AddTicks(appointment.HairStylistSalonService?.Time.Ticks ?? 0),
             HairStylistName = appointment.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName +
                               appointment.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName,
             Id = appointment.Id,
@@ -55,7 +55,7 @@ public class AppointmentService : IAppointmentService
             SalonId = appointment.HairStylistSalonService.HairStylistSalon.Salon.Id,
             SalonName = appointment.HairStylistSalonService.HairStylistSalon.Salon.Name,
             SalonPhoneNumber = appointment.HairStylistSalonService.HairStylistSalon.HairStylist.PhoneNumber,
-            ServicePrice = appointment.HairStylistSalonService.Service.Price,
+            ServicePrice = appointment.HairStylistSalonService.Price,
             UserRating = appointment.HairStylistSalonService.HairStylistSalon.Salon.Rating,
         };
 

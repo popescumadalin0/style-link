@@ -40,11 +40,16 @@ public class AddHairStylistModel
     [Required(ErrorMessage = Messages.ProfileImageIsMandatory)]
     public IFormFile ProfileImage { get; set; } = default!;
 
+    public string ProfileImageDisplay { get; set; }
+
     [Display(Name = Names.PhoneNumber)]
     [Required(ErrorMessage = Messages.PhoneNumberIsMandatory)]
     [RegularExpression(Values.PhoneNumberRegex, ErrorMessage = Messages.PhoneNumberNotValidMessage)]
     public string PhoneNumber { get; set; }
 
-    [Required(ErrorMessage = Messages.PhoneNumberIsMandatory)]
+    [Required]
     public List<string> Services { get; set; } = new();
+
+    [Required]
+    public List<HairStylistSalonModel> ServiceDetails { get; set; } = new();
 }

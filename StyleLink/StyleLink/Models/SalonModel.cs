@@ -16,7 +16,7 @@ public class SalonModel
 
     public string Address { get; set; }
 
-    public ICollection<IFormFile> Images { get; set; }
+    public ICollection<string> Images { get; set; }
 
-    public IFormFile ProfileImage { get; set; }
+    public string ProfileImage { get; set; }
 }

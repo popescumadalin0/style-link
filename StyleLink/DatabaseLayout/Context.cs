@@ -52,7 +52,7 @@ public class Context : DbContext, IContext
         modelBuilder.Entity<HairStylist>().Navigation(h => h.Services).AutoInclude();
 
         //modelBuilder.Entity<HairStylistSalonService>().Navigation(hsss => hsss.Appointments).AutoInclude();
-        modelBuilder.Entity<HairStylistSalonService>().Navigation(hsss => hsss.HairStylistSalon).AutoInclude();
+        //modelBuilder.Entity<HairStylistSalonService>().Navigation(hsss => hsss.HairStylistSalon).AutoInclude();
         modelBuilder.Entity<HairStylistSalonService>().Navigation(hsss => hsss.Service).AutoInclude();
 
 
@@ -68,7 +68,7 @@ public class Context : DbContext, IContext
         //modelBuilder.Entity<WorkProgram>().Navigation(wp => wp.Salon).AutoInclude();
 
         //modelBuilder.Entity<HairStylistSalon>().Navigation(hss => hss.Salon).AutoInclude();
-        //modelBuilder.Entity<HairStylistSalon>().Navigation(hss => hss.HairStylist).AutoInclude();
-        //modelBuilder.Entity<HairStylistSalon>().Navigation(hss => hss.HairStylistSalonServices).AutoInclude();
+        modelBuilder.Entity<HairStylistSalon>().Navigation(hss => hss.HairStylist).AutoInclude();
+        modelBuilder.Entity<HairStylistSalon>().Navigation(hss => hss.HairStylistSalonServices).AutoInclude();
     }
 }

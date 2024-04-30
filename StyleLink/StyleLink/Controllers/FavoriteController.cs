@@ -33,16 +33,6 @@ public class FavoriteController : Controller
         _logger.LogInformation($"{nameof(FavoriteAsync)} was called!");
 
         var favorites = await _favoriteService.GetFavoritesAsync();
-        foreach (var favorite in favorites)
-        {
-            ViewBag.ProfileImage.Add(favorite.Id, await _imageConvertorService.ConvertFormFileToImageAsync(favorite.ProfileImage));
-            foreach (var salonImage in favorite.Images)
-            {
-                //todo: id should be unique
-                ViewBag.Images.Add(favorite.Id, await _imageConvertorService.ConvertFormFileToImageAsync(salonImage));
-            }
-        }
-
 
         return View(favorites);
     }

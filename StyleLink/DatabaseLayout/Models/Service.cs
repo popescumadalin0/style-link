@@ -10,12 +10,6 @@ public class Service
 
     public string Name { get; set; }
 
-    public int Price { get; set; }
-
-    public string Currency { get; set; }
-
-    public DateTime Time { get; set; }
-
     [Required]
     public ServiceType ServiceType { get; set; }
 

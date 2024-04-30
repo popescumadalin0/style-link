@@ -42,7 +42,11 @@ public class ImageConvertorService : IImageConvertorService
     {
         var stream = new MemoryStream(input.Content);
 
-        IFormFile file = new FormFile(stream, 0, stream.Length, input.Name, input.FileName);
+        IFormFile file = new FormFile(stream, 0, stream.Length, input.Name, input.FileName)
+        {
+            Headers = new HeaderDictionary(),
+            ContentType = "image/jpeg",
+        };
 
         return file;
     }
@@ -66,5 +70,17 @@ public class ImageConvertorService : IImageConvertorService
         var imgDataURL = $"data:image/png;base64,{imreBase64Data}";
 
         return imgDataURL;
+    }
+
+    public async Task<List<string>> ConvertFormFilesToImagesAsync(ICollection<IFormFile> fileForms)
+    {
+        var result = new List<string>();
+        foreach (var fileForm in fileForms)
+        {
+            var fileString = await ConvertFormFileToImageAsync(fileForm);
+            result.Add(fileString);
+        }
+
+        return result;
     }
 }

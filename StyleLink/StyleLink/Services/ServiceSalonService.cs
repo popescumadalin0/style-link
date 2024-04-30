@@ -27,11 +27,8 @@ public class ServiceSalonService : IServiceSalonService
         var serviceSalonsDto = serviceSalons.Select(s => new AddServiceModel()
         {
             Id = s.Id,
-            Currency = s.Currency,
             Name = s.Name,
             ServiceType = s.ServiceType.Name,
-            Price = s.Price,
-            Time = s.Time
         }).ToList();
 
         return serviceSalonsDto;
@@ -42,11 +39,8 @@ public class ServiceSalonService : IServiceSalonService
         var serviceType = await _serviceTypeRepository.GetServiceTypeAsync(model.ServiceType);
         var service = new Service()
         {
-            Currency = model.Currency,
             Name = model.Name,
-            Price = model.Price,
             ServiceType = serviceType,
-            Time = model.Time,
             Id = Guid.NewGuid(),
         };
 

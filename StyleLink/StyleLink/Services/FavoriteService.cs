@@ -49,8 +49,8 @@ public class FavoriteService : IFavoriteService
                 Id = f.Id,
                 SalonId = f.Salon.Id,
                 SalonName = f.Salon.Name,
-                Images = images,
-                ProfileImage = profileImage,
+                Images = await _imageConvertorService.ConvertFormFilesToImagesAsync(images),
+                ProfileImage = await _imageConvertorService.ConvertFormFileToImageAsync(profileImage),
                 NumberOfEvaluations = f.Salon.ReviewCount,
                 SalonRating = f.Salon.Rating
             });
