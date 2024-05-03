@@ -1,4 +1,4 @@
-﻿@model StyleLink.Models.SalonDetailModel 
+﻿@model StyleLink.Models.SalonDetailModel
 @{
     ViewData["Title"] = Model.SalonName;
     ViewData["HasFooter"] = true;
@@ -9,6 +9,7 @@
     <div class="d-flex flex-column">
         <div class="container-fluid">
             <div id="carouselIndicators" class="carousel slide">
+                @*todo: add favorite button*@
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -33,6 +34,16 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+                <div class="position-absolute heart-button index-up">
+                    @using (Html.BeginForm("AddFavorite", "Favorite", FormMethod.Post))
+                    {
+                        @Html.HiddenFor(model => model.Id)
+                        ;
+                        <button type="submit" class="bg-transparent border-0">
+                            <i class="bi bi-heart fs-3 text-danger"></i>
+                        </button>
+                    }
+                </div>
             </div>
         </div>
         <div class="d-flex flex-row justify-content-between pt-3">
@@ -53,6 +64,8 @@
             var dictGroup = Model.Services.GroupBy(s => s.ServiceCategory).ToDictionary(k => k.Key, v => v.ToList());
         }
         <div class="d-flex flex-column gap-2">
+            <hr />
+
             <h5 class="font-weight-bold">Servicii</h5>
             @foreach (var group in dictGroup)
             {
@@ -66,10 +79,10 @@
                                     <strong class="fs-6">@service.ServiceName</strong>
                                     @{
                                         var minDuration = service.MinServiceDuration.ToString("HH") == "00" ?
-                                            service.MinServiceDuration.ToString("mm") : service.MinServiceDuration.ToString("HH:mm");
+                                        service.MinServiceDuration.ToString("mm") : service.MinServiceDuration.ToString("HH:mm");
 
                                         var maxDuration = service.MaxServiceDuration.ToString("HH") == "00" ?
-                                            service.MaxServiceDuration.ToString("mm") : service.MaxServiceDuration.ToString("HH:mm");
+                                        service.MaxServiceDuration.ToString("mm") : service.MaxServiceDuration.ToString("HH:mm");
 
                                         var duration = service.MinServiceDuration >= service.MaxServiceDuration ? minDuration : $"{minDuration} - {maxDuration}";
 
@@ -77,8 +90,7 @@
                                     }
                                     <strong>@($"{duration}, {price} {service.Currency} ")</strong>
                                 </div>
-                                @*todo: connect with database*@
-                                <button type="submit" class="btn blue-background-color rounded-pill">Programează</button>
+                                <button type="submit" class="btn blue-background-color rounded-pill" data-toggle="modal" data-target="#appointmentModal">Programează</button>
                             </div>
                             <hr />
                         }
@@ -143,6 +155,62 @@
                         <span>@Model.TimeSchedule.Sunday</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="appointmentModal" tabindex="-1" role="dialog" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="appointmentModalLabel">Programează-te</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("AddAppointment", "Appointments", FormMethod.Post, htmlAttributes: new
+                {
+                    id = "appointmentForm"
+                }))
+                {
+                    @Html.HiddenFor(x=> x.Id)
+                    <div class="form-group w-100">
+                        @Html.LabelFor(model => model.CreateAppointment.HairStylistId)
+                        @Html.DropDownListFor(model => model.CreateAppointment.HairStylistId, new SelectList(Model.HairStylists.Select(x => new SelectListItem()
+               {
+                   Value = x.Id.ToString(),
+                   Text = x.Name
+               }), "Value", "Text"), new
+                            {
+                                @class = "form-control"
+                            })
+                        @Html.ValidationMessageFor(model => model.CreateAppointment.HairStylistId, "", new
+                            {
+                                @class = "text-danger"
+                            })
+                    </div>
+                    <div class="form-group w-100">
+                        @Html.LabelFor(model => model.CreateAppointment.StartDate)
+                        @Html.EditorFor(model => model.CreateAppointment.StartDate, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    placeholder = "Introduceti data",
+                                    @class = "form-control",
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.CreateAppointment.StartDate, "", new
+                            {
+                                @class = "text-danger"
+                            })
+                    </div>
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn rounded-pill btn-secondary" data-dismiss="modal">Anulează</button>
+                <button type="submit" form="appointmentForm" class="btn blue-background-color rounded-pill">Programează</button>
             </div>
         </div>
     </div>

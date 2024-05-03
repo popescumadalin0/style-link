@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using StyleLink.Models;
 using StyleLink.Services.Interfaces;
 
 namespace StyleLink.Controllers;
@@ -37,5 +38,17 @@ public class AppointmentsController : Controller
         var appointment = await _appointmentService.GetAppointmentDetailsAsync(id);
 
         return View(appointment);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> AddAppointmentAsync(SalonDetailModel model)
+    {
+        //todo: select the available time
+        /*await _appointmentService.CreateServiceTypeAsync(new ServiceType()
+        {
+            Name = model.ServiceType,
+        });*/
+
+        return RedirectToAction("Salon", "Salon");
     }
 }

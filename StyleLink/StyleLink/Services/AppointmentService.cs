@@ -23,14 +23,14 @@ public class AppointmentService : IAppointmentService
         var appointmentsDto = appointments.Select(a => new AppointmentModel()
         {
             AppointmentStatus = a.Status,
-            Currency = a.HairStylistSalonService?.Currency,
-            EndDate = a.StartDate.AddTicks(a.HairStylistSalonService?.Time.Ticks ?? 0),
+            Currency = a.HairStylistService?.Currency,
+            EndDate = a.StartDate.AddTicks(a.HairStylistService?.Time.Ticks ?? 0),
             StartDate = a.StartDate,
-            HairStylistName = a.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName + " " + a.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName,
+            HairStylistName = a.HairStylistService?.HairStylist.FirstName + " " + a.HairStylistService?.HairStylist.LastName,
             Id = a.Id,
-            SalonName = a.HairStylistSalonService?.HairStylistSalon.Salon.Name,
-            ServicePrice = a.HairStylistSalonService?.Price ?? 0,
-            ServiceType = a.HairStylistSalonService?.Service.ServiceType.Name,
+            SalonName = a.Salon.Name,
+            ServicePrice = a.HairStylistService?.Price ?? 0,
+            ServiceType = a.HairStylistService?.Service.ServiceType.Name,
         }).ToList();
 
         return appointmentsDto;
@@ -43,20 +43,20 @@ public class AppointmentService : IAppointmentService
         var appointmentDto = new AppointmentDetailModel()
         {
             StartDate = appointment.StartDate,
-            ServiceType = appointment.HairStylistSalonService.Service.ServiceType.Name,
-            Currency = appointment.HairStylistSalonService.Currency,
+            ServiceType = appointment.HairStylistService.Service.ServiceType.Name,
+            Currency = appointment.HairStylistService.Currency,
             AppointmentStatus = appointment.Status,
-            EndDate = appointment.StartDate.AddTicks(appointment.HairStylistSalonService?.Time.Ticks ?? 0),
-            HairStylistName = appointment.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName +
-                              appointment.HairStylistSalonService?.HairStylistSalon.HairStylist.FirstName,
+            EndDate = appointment.StartDate.AddTicks(appointment.HairStylistService?.Time.Ticks ?? 0),
+            HairStylistName = appointment.HairStylistService?.HairStylist.FirstName +
+                              appointment.HairStylistService?.HairStylist.LastName,
             Id = appointment.Id,
-            MapsUrl = appointment.HairStylistSalonService.HairStylistSalon.Salon.GoogleMapsAddress,
-            SalonAddress = appointment.HairStylistSalonService.HairStylistSalon.Salon.Address,
-            SalonId = appointment.HairStylistSalonService.HairStylistSalon.Salon.Id,
-            SalonName = appointment.HairStylistSalonService.HairStylistSalon.Salon.Name,
-            SalonPhoneNumber = appointment.HairStylistSalonService.HairStylistSalon.HairStylist.PhoneNumber,
-            ServicePrice = appointment.HairStylistSalonService.Price,
-            UserRating = appointment.HairStylistSalonService.HairStylistSalon.Salon.Rating,
+            MapsUrl = appointment.Salon.GoogleMapsAddress,
+            SalonAddress = appointment.Salon.Address,
+            SalonId = appointment.Salon.Id,
+            SalonName = appointment.Salon.Name,
+            SalonPhoneNumber = appointment.HairStylistService.HairStylist.PhoneNumber,
+            ServicePrice = appointment.HairStylistService.Price,
+            UserRating = appointment.Salon.Rating,
         };
 
         return appointmentDto;

@@ -17,5 +17,8 @@ public class Appointment
     public User User { get; set; }
 
     [Required]
-    public HairStylistSalonService HairStylistSalonService { get; set; } = new();
+    public HairStylistService HairStylistService { get; set; } = new();
+
+    [Required]
+    public Salon Salon { get; set; } = new();
 }

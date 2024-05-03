@@ -10,9 +10,9 @@ public class ServiceModel
 
     public string ServiceName { get; set; }
 
-    public DateTime MinServiceDuration { get; set; }
+    public TimeOnly MinServiceDuration { get; set; }
 
-    public DateTime MaxServiceDuration { get; set; }
+    public TimeOnly MaxServiceDuration { get; set; }
 
     public int MinPrice { get; set; }
 

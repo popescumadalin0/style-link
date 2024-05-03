@@ -1,14 +1,16 @@
 ﻿using StyleLink.Constants;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Http;
 
 namespace StyleLink.Models;
 
 public class HairStylistSalonModel
 {
     public string ServiceId { get; set; }
+
+    [Display(Name = Names.ServiceUsed)]
+    [Required]
+    public bool IsUsed { get; set; }
 
     [Display(Name = Names.Price)]
     [Required(ErrorMessage = Messages.PriceIsMandatory)]
@@ -20,5 +22,6 @@ public class HairStylistSalonModel
 
     [Display(Name = Names.Time)]
     [Required(ErrorMessage = Messages.TimeIsMandatory)]
-    public DateTime Time { get; set; }
+    [DataType(DataType.Time)]
+    public TimeOnly Time { get; set; }
 }

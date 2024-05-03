@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
 
 namespace DatabaseLayout.Models;
 
@@ -22,11 +21,9 @@ public class HairStylist
 
     public string ProfileImageFileName { get; set; } = default!;
 
-
     public string PhoneNumber { get; set; }
 
-    [Required]
-    public virtual ICollection<Service> Services { get; set; } = new List<Service>();
+    public virtual ICollection<Salon> Salons { get; set; } = new List<Salon>();
 
-    [Required] public ICollection<HairStylistSalon> HairStylistSalons { get; set; } = new List<HairStylistSalon>();
+    public ICollection<HairStylistService> HairStylistServices { get; set; } = new List<HairStylistService>();
 }

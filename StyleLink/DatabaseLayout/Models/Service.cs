@@ -13,7 +13,5 @@ public class Service
     [Required]
     public ServiceType ServiceType { get; set; }
 
-    public virtual ICollection<HairStylist> HairStylists { get; set; } = new List<HairStylist>();
-
-    public ICollection<HairStylistSalonService> HairStylistSalonServices { get; set; } = new List<HairStylistSalonService>();
+    public ICollection<HairStylistService> HairStylistServices { get; set; } = new List<HairStylistService>();
 }

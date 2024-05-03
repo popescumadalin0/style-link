@@ -29,7 +29,7 @@ public class Salon
 
     public ICollection<SalonImage> SalonImages { get; set; } = new List<SalonImage>();
 
-    public ICollection<HairStylistSalon> HairStylistSalons { get; set; } = new List<HairStylistSalon>();
+    public virtual ICollection<HairStylist> HairStylists { get; set; } = new List<HairStylist>();
 
     public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
 }

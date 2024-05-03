@@ -1,10 +1,8 @@
 ﻿using System.Threading.Tasks;
-using DatabaseLayout.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StyleLink.Models;
 using StyleLink.Repositories.Interfaces;
-using StyleLink.Services;
 using StyleLink.Services.Interfaces;
 
 namespace StyleLink.Controllers;
@@ -14,7 +12,6 @@ public class FavoriteController : Controller
     private readonly ILogger<FavoriteController> _logger;
     private readonly IFavoriteRepository _favoriteRepository;
     private readonly IFavoriteService _favoriteService;
-    private readonly IImageConvertorService _imageConvertorService;
 
     public FavoriteController(
         ILogger<FavoriteController> logger,
@@ -25,7 +22,6 @@ public class FavoriteController : Controller
         _logger = logger;
         _favoriteRepository = favoriteRepository;
         _favoriteService = favoriteService;
-        _imageConvertorService = imageConvertorService;
     }
 
     public async Task<IActionResult> FavoriteAsync()
@@ -35,6 +31,15 @@ public class FavoriteController : Controller
         var favorites = await _favoriteService.GetFavoritesAsync();
 
         return View(favorites);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> AddFavoriteAsync(SalonDetailModel model)
+    {
+        _logger.LogInformation($"{nameof(AddFavoriteAsync)} was called!");
+        await _favoriteService.CreateFavoriteAsync(model.Id);
+
+        return RedirectToAction("Salon", "Salon");
     }
 
     [HttpPost]

@@ -12,12 +12,11 @@ public interface IContext
     DbSet<Appointment> Appointments { get; set; }
     DbSet<Favorite> Favorites { get; set; }
     DbSet<HairStylist> HairStylists { get; set; }
-    DbSet<HairStylistSalonService> HairStylistSalonServices { get; set; }
+    DbSet<HairStylistService> HairStylistServices { get; set; }
     DbSet<Salon> Salons { get; set; }
     DbSet<SalonImage> SalonImages { get; set; }
     DbSet<Service> Services { get; set; }
     DbSet<WorkProgram> WorkPrograms { get; set; }
-    DbSet<HairStylistSalon> HairStylistSalons { get; set; }
 
     Task<int> SaveChangesAsync();
 }

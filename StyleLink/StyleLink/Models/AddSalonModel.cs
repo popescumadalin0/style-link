@@ -34,6 +34,4 @@ public class AddSalonModel
     public WorkProgramModel WorkProgram { get; set; }
 
     public List<string> Hairstylists { get; set; } = new();
-
-    public List<string> Services { get; set; } = new();
 }

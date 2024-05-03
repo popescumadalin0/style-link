@@ -35,6 +35,7 @@ public static class Names
     public const string ServiceName = "Numele serviciului";
     public const string ServiceTypeName = "Numele tipului de serviciu";
     public const string Price = "Preț";
+    public const string ServiceUsed = "Atribuiți acest serviciu?";
     public const string Currency = "Monedă";
     public const string Time = "Durată";
 

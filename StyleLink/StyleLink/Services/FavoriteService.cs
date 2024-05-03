@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using StyleLink.Repositories.Interfaces;
 using System.Linq;
 using System.Threading.Tasks;
+using DatabaseLayout.Models;
 using StyleLink.Models;
 using StyleLink.Services.Interfaces;
 
@@ -10,14 +12,17 @@ namespace StyleLink.Services;
 public class FavoriteService : IFavoriteService
 {
     private readonly IFavoriteRepository _favoriteRepository;
+    private readonly ISalonRepository _salonRepository;
     private readonly IImageConvertorService _imageConvertorService;
 
     public FavoriteService(
         IFavoriteRepository favoriteRepository,
-        IImageConvertorService imageConvertorService)
+        IImageConvertorService imageConvertorService,
+        ISalonRepository salonRepository)
     {
         _favoriteRepository = favoriteRepository;
         _imageConvertorService = imageConvertorService;
+        _salonRepository = salonRepository;
     }
 
     public async Task<List<FavoriteModel>> GetFavoritesAsync()
@@ -57,5 +62,17 @@ public class FavoriteService : IFavoriteService
         }
 
         return favoritesDto;
+    }
+
+    public async Task CreateFavoriteAsync(Guid id)
+    {
+        var salon = await _salonRepository.GetSalonAsync(id);
+
+        await _favoriteRepository.CreateFavoriteAsync(new Favorite()
+        {
+            Id = Guid.NewGuid(),
+            Salon = salon,
+            User = new User(){}
+        });
     }
 }

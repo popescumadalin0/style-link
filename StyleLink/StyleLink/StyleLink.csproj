@@ -2,17 +2,14 @@
 
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
+		<UserSecretsId>f8066e2c-4692-4002-9886-f3bedbd5b1ff</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="bootstrap" Version="5.3.3" />
-		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\DatabaseLayout\DatabaseLayout.csproj" />
 	</ItemGroup>
-		</Project>
+</Project>

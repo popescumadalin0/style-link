@@ -4,14 +4,15 @@ using System.ComponentModel.DataAnnotations;
 namespace DatabaseLayout.Models;
 
 [PrimaryKey(nameof(Id))]
-public class HairStylistSalonService
+public class HairStylistService
 {
     public Guid Id { get; set; }
 
     [Required]
-    public Service Service { get; set; }
+    public HairStylist HairStylist { get; set; }
 
-    [Required] public HairStylistSalon HairStylistSalon { get; set; }
+    [Required]
+    public Service Service { get; set; }
 
     public int Price { get; set; }
 

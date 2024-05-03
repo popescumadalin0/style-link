@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using StyleLink.Models;
@@ -37,6 +39,22 @@ public class HairstylistController : Controller
     public async Task<IActionResult> AddHairStylistAsync(AddHairStylistModel model)
     {
         await SetViewBagServicesAsync();
+
+        for (var i = 0; i < model.ServiceDetails.Count; i++)
+        {
+            model.ServiceDetails[i].ServiceId = ViewBag.Services[i].Value;
+            if (!model.ServiceDetails[i].IsUsed)
+            {
+                model.ServiceDetails[i].Currency = "notNull";
+                model.ServiceDetails[i].Price = 0;
+                model.ServiceDetails[i].Time = TimeOnly.MinValue;
+                ModelState[$"ServiceDetails[{i}].Time"].ValidationState = ModelValidationState.Valid;
+                ModelState[$"ServiceDetails[{i}].Price"].ValidationState = ModelValidationState.Valid;
+                ModelState[$"ServiceDetails[{i}].Currency"].ValidationState = ModelValidationState.Valid;
+
+            }
+        }
+
         if (!ModelState.IsValid)
         {
             return View(model);

@@ -1,10 +1,12 @@
 ﻿using DatabaseLayout;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StyleLink.Repositories;
 using StyleLink.Repositories.Interfaces;
 using StyleLink.Services;
 using StyleLink.Services.Interfaces;
+using HairStylistService = StyleLink.Services.HairStylistService;
 
 namespace StyleLink;
 
@@ -14,14 +16,28 @@ public static class DependencyInjection
     {
         services.AddDatabaseLayout(config);
 
+        /*services.AddIdentity<User, Role>();
+
+        services.Configure<IdentityOptions>(options =>
+        {
+            options.Password.RequireDigit = true;
+
+            options.Password.RequireLowercase = true;
+
+            options.Password.RequireUppercase = true;
+
+            options.User.RequireUniqueEmail = true;
+
+            options.Password.RequiredLength = 8;
+        });*/
+
         services.AddScoped<IAppointmentRepository, AppointmentRepository>();
         services.AddScoped<ISalonRepository, SalonRepository>();
         services.AddScoped<IFavoriteRepository, FavoriteRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<ISalonImageRepository, SalonImageRepository>();
         services.AddScoped<IHairStylistRepository, HairStylistRepository>();
-        services.AddScoped<IHairStylistSalonRepository, HairStylistSalonRepository>();
-        services.AddScoped<IHairStylistSalonServiceRepository, HairStylistSalonServiceRepository>();
+        services.AddScoped<IHairStylistServiceRepository, HairStylistServiceRepository>();
         services.AddScoped<IWorkProgramRepository, WorkProgramRepository>();
         services.AddScoped<IServiceRepository, ServiceRepository>();
         services.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();

@@ -12,6 +12,7 @@ namespace StyleLink.Services;
 public class HairStylistService : IHairStylistService
 {
     private readonly IHairStylistRepository _hairStylistRepository;
+    private readonly IHairStylistServiceRepository _hairStylistServiceRepository;
     private readonly IServiceRepository _serviceRepository;
 
     private readonly IImageConvertorService _imageConvertorService;
@@ -20,11 +21,13 @@ public class HairStylistService : IHairStylistService
     public HairStylistService(
         IHairStylistRepository hairStylistRepository,
         IServiceRepository serviceRepository,
-        IImageConvertorService imageConvertorService)
+        IImageConvertorService imageConvertorService,
+        IHairStylistServiceRepository hairStylistServiceRepository)
     {
         _hairStylistRepository = hairStylistRepository;
         _serviceRepository = serviceRepository;
         _imageConvertorService = imageConvertorService;
+        _hairStylistServiceRepository = hairStylistServiceRepository;
     }
 
     public async Task<List<AddHairStylistModel>> GetAddHairStylistsAsync()
@@ -58,9 +61,7 @@ public class HairStylistService : IHairStylistService
 
     public async Task AddHairStylistAsync(AddHairStylistModel model)
     {
-        var services = await _serviceRepository.GetServicesAsync();
-        var servicesDto = model.Services.Select(s => services.First(ss => ss.Id == Guid.Parse(s))).ToList();
-        //todo: sa adaugam si HairStylistSalonService
+        var hairStylistId = Guid.NewGuid();
         var hairStylist = new HairStylist()
         {
             Email = model.Email,
@@ -68,13 +69,33 @@ public class HairStylistService : IHairStylistService
             LastName = model.LastName,
             Password = model.Password,
             PhoneNumber = model.PhoneNumber,
-            Services = servicesDto,
-            Id = Guid.NewGuid(),
+            Id = hairStylistId,
             ProfileImage = await _imageConvertorService.ConvertFileFormToByteArrayAsync(model.ProfileImage),
             ProfileImageFileName = model.ProfileImage.FileName,
             ProfileImageName = model.ProfileImage.Name,
         };
 
         await _hairStylistRepository.CreateHairStylistAsync(hairStylist);
+
+        var hairStylistNeeded = await _hairStylistRepository.GetHairStylistAsync(hairStylistId);
+
+        var services = await _serviceRepository.GetServicesAsync();
+        var necessaryServices = model.ServiceDetails.Where(x => x.IsUsed);
+
+        foreach (var service in necessaryServices)
+        {
+            var serviceDto = services.First(s => s.Id == Guid.Parse(service.ServiceId));
+            var entity = new DatabaseLayout.Models.HairStylistService()
+            {
+                Currency = service.Currency,
+                Id = new Guid(),
+                Service = serviceDto,
+                HairStylist = hairStylistNeeded,
+                Price = service.Price,
+                Time = service.Time,
+            };
+
+            await _hairStylistServiceRepository.CreateHairStylistServiceAsync(entity);
+        }
     }
 }

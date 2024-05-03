@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using Humanizer.Bytes;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Identity.Client;
 using StyleLink.Models;
 using StyleLink.Services.Interfaces;
 

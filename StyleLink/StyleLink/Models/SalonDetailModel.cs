@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Http;
 
 namespace StyleLink.Models;
 
@@ -27,4 +26,6 @@ public class SalonDetailModel
     public double SalonRating { get; set; }
 
     public int NumberOfEvaluations { get; set; }
+
+    public CreateAppointment CreateAppointment { get; set; }
 }

@@ -1,3 +1,15 @@
 ﻿.gray-background {
     background-color: var(--bs-gray-color)
 }
+
+.heart-button {
+    color: red;
+    top: 5px;
+    right: 15px;
+    height: 2rem;
+    width: 2rem;
+}
+
+.index-up {
+    z-index: 2;
+}

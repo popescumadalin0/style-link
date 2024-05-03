@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace DatabaseLayout.Models;
 
 [PrimaryKey(nameof(Id))]
-public class User
+public class User : IdentityUser
 {
     public Guid Id { get; set; }
 

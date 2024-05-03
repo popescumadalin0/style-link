@@ -48,8 +48,5 @@ public class AddHairStylistModel
     public string PhoneNumber { get; set; }
 
     [Required]
-    public List<string> Services { get; set; } = new();
-
-    [Required]
     public List<HairStylistSalonModel> ServiceDetails { get; set; } = new();
 }

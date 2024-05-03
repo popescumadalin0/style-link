@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace DatabaseLayout.Models;
 
 [PrimaryKey(nameof(Name))]
-public class Role
+public class Role : IdentityRole
 {
     public string Name { get; set; }
 

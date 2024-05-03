@@ -16,14 +16,6 @@ div {
     outline: none;
 }
 
-.heart-button {
-    color: red;
-    top: 0rem;
-    right: 0.7rem;
-    height: 2rem;
-    width: 2rem;
-}
-
 .index-up {
     z-index: 2;
 }
