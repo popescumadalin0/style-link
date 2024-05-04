@@ -1,5 +1,4 @@
 ﻿using DatabaseLayout;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StyleLink.Repositories;
@@ -15,21 +14,6 @@ public static class DependencyInjection
     public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration config)
     {
         services.AddDatabaseLayout(config);
-
-        /*services.AddIdentity<User, Role>();
-
-        services.Configure<IdentityOptions>(options =>
-        {
-            options.Password.RequireDigit = true;
-
-            options.Password.RequireLowercase = true;
-
-            options.Password.RequireUppercase = true;
-
-            options.User.RequireUniqueEmail = true;
-
-            options.Password.RequiredLength = 8;
-        });*/
 
         services.AddScoped<IAppointmentRepository, AppointmentRepository>();
         services.AddScoped<ISalonRepository, SalonRepository>();

@@ -1,16 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Threading.Tasks;
+using DatabaseLayout.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StyleLink.Models;
+using StyleLink.Repositories.Interfaces;
 
 namespace StyleLink.Controllers;
 
 public class AccountController : Controller
 {
     private readonly ILogger<AccountController> _logger;
+    private readonly IUserRepository _userRepository;
 
-    public AccountController(ILogger<AccountController> logger)
+    public AccountController(
+        ILogger<AccountController> logger,
+        IUserRepository userRepository)
     {
         _logger = logger;
+        _userRepository = userRepository;
     }
 
     public IActionResult Login()
@@ -19,21 +27,21 @@ public class AccountController : Controller
     }
 
     [HttpPost]
-    public IActionResult Login(LoginModel login)
+    public async Task<IActionResult> LoginAsync(LoginModel login)
     {
         if (!ModelState.IsValid)
         {
             return View(login);
         }
 
-        //get token
-        //save token
+        await _userRepository.SignInAsync(login.Email, login.Password);
 
         return RedirectToAction("Index", "Home");
     }
-    public IActionResult Logout()
+    public async Task<IActionResult> LogoutAsync()
     {
-        //todo: logout
+        await _userRepository.SignOutAsync();
+
         return RedirectToAction("Login", "Account");
     }
 
@@ -43,21 +51,27 @@ public class AccountController : Controller
     }
 
     [HttpPost]
-    public IActionResult Register(RegisterModel register)
+    public async Task<IActionResult> RegisterAsync(RegisterModel register)
     {
         if (!ModelState.IsValid)
         {
             return View(register);
         }
-
-        //save account
+        //todo:
+        /*await _userRepository.CreateUserAsync(new User()
+        {
+            Id = Guid.NewGuid(),
+            ProfileImage = register.ProfileImage,
+        })*/
 
         return RedirectToAction("Login", "Account");
     }
 
-    public IActionResult Details()
+    public async Task<IActionResult> DetailsAsync()
     {
         //get user details
+        //todo:
+        //var user = await _userRepository.GetUserAsync()
 
         var user = new UpdateUserModel()
         {
@@ -83,9 +97,10 @@ public class AccountController : Controller
         return View(model);
     }
 
-    public IActionResult DeleteAccount(UpdateUserModel model)
+    public async Task<IActionResult> DeleteAccountAsync()
     {
-        //todo: delete user
+        //todo:
+        //await _userRepository.DeleteUserAsync();
         return RedirectToAction("Logout", "Account");
     }
 }

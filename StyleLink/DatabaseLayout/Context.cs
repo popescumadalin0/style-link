@@ -1,15 +1,15 @@
 ﻿using DatabaseLayout.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DatabaseLayout;
 
-public class Context : IdentityDbContext<User>, IContext
+public class Context : IdentityDbContext<User, Role, Guid>, IContext
 {
     public DbSet<ServiceType> ServiceTypes { get; set; }
-    public DbSet<Feature> Features { get; set; }
-    public DbSet<Role> Roles { get; set; }
-    public DbSet<User> Users { get; set; }
+    public override DbSet<Role> Roles { get; set; }
+    public override DbSet<User> Users { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
     public DbSet<Favorite> Favorites { get; set; }
     public DbSet<HairStylist> HairStylists { get; set; }
@@ -29,8 +29,28 @@ public class Context : IdentityDbContext<User>, IContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Role>().Navigation(r => r.Features).AutoInclude();
-        modelBuilder.Entity<Role>().Navigation(r => r.Users).AutoInclude();
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.ToTable(name: "Users");
+        });
+        modelBuilder.Entity<Role>(entity =>
+        {
+            entity.ToTable(name: "Roles");
+        });
+        modelBuilder.Entity<IdentityUserClaim<Guid>>(entity =>
+        {
+            entity.ToTable(name: "UserClaims");
+        });
+        modelBuilder.Entity<IdentityUserRole<Guid>>(entity =>
+        {
+            entity.ToTable(name: "UserRoles");
+        });
+        modelBuilder.Entity<IdentityUserLogin<Guid>>(entity =>
+        {
+            entity.ToTable(name: "UserLogins");
+        });
 
 
         modelBuilder.Entity<ServiceType>().Navigation(st => st.Services).AutoInclude();
@@ -64,5 +84,7 @@ public class Context : IdentityDbContext<User>, IContext
         modelBuilder.Entity<Service>().Navigation(s => s.ServiceType).AutoInclude();
 
         //modelBuilder.Entity<WorkProgram>().Navigation(wp => wp.Salon).AutoInclude();
+
+
     }
 }

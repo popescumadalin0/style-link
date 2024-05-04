@@ -1,5 +1,8 @@
+using DatabaseLayout;
+using DatabaseLayout.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StyleLink;
@@ -11,12 +14,19 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddServices(builder.Configuration);
 
-builder.Services.AddAuthentication(o =>
+builder.Services.AddIdentity<User, Role>(options =>
     {
-        o.DefaultScheme = IdentityConstants.ApplicationScheme;
-        o.DefaultSignInScheme = IdentityConstants.ExternalScheme;
-    })
-    .AddIdentityCookies(o => { });
+        options.Password.RequireDigit = true;
+
+        options.Password.RequireLowercase = true;
+
+        options.Password.RequireUppercase = true;
+
+        options.User.RequireUniqueEmail = true;
+
+        options.Password.RequiredLength = 8;
+    }).AddEntityFrameworkStores<Context>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
