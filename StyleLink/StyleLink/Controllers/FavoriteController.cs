@@ -1,6 +1,8 @@
 ﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using StyleLink.Constants;
 using StyleLink.Models;
 using StyleLink.Repositories.Interfaces;
 using StyleLink.Services.Interfaces;
@@ -24,6 +26,7 @@ public class FavoriteController : Controller
         _favoriteService = favoriteService;
     }
 
+    [Authorize(Roles = Roles.User)]
     public async Task<IActionResult> FavoriteAsync()
     {
         _logger.LogInformation($"{nameof(FavoriteAsync)} was called!");
@@ -34,6 +37,7 @@ public class FavoriteController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = Roles.User)]
     public async Task<IActionResult> AddFavoriteAsync(SalonDetailModel model)
     {
         _logger.LogInformation($"{nameof(AddFavoriteAsync)} was called!");
@@ -43,6 +47,7 @@ public class FavoriteController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = Roles.User)]
     public async Task<IActionResult> DeleteFavoriteAsync(FavoriteModel model)
     {
         _logger.LogInformation($"{nameof(DeleteFavoriteAsync)} was called!");

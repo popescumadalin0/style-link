@@ -9,7 +9,7 @@ public class HairStylistService
     public Guid Id { get; set; }
 
     [Required]
-    public HairStylist HairStylist { get; set; }
+    public User HairStylist { get; set; }
 
     [Required]
     public Service Service { get; set; }

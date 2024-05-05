@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using StyleLink.Constants;
 using StyleLink.Models;
 using StyleLink.Services.Interfaces;
 
@@ -28,6 +30,7 @@ public class HairstylistController : Controller
 
 
     [HttpGet]
+    [Authorize(Roles = Roles.Administrator)]
     public async Task<IActionResult> AddHairStylistAsync()
     {
         await SetViewBagServicesAsync();
@@ -36,6 +39,7 @@ public class HairstylistController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = Roles.Administrator)]
     public async Task<IActionResult> AddHairStylistAsync(AddHairStylistModel model)
     {
         await SetViewBagServicesAsync();
@@ -51,7 +55,6 @@ public class HairstylistController : Controller
                 ModelState[$"ServiceDetails[{i}].Time"].ValidationState = ModelValidationState.Valid;
                 ModelState[$"ServiceDetails[{i}].Price"].ValidationState = ModelValidationState.Valid;
                 ModelState[$"ServiceDetails[{i}].Currency"].ValidationState = ModelValidationState.Valid;
-
             }
         }
 
@@ -60,9 +63,18 @@ public class HairstylistController : Controller
             return View(model);
         }
 
-        await _hairStylistService.AddHairStylistAsync(model);
+        var result = await _hairStylistService.AddHairStylistAsync(model);
+        if (result.Succeeded)
+        {
+            return RedirectToAction("AddSalon", "Salon");
+        }
 
-        return RedirectToAction("AddSalon", "Salon");
+        foreach (var identityError in result.Errors)
+        {
+            ModelState.AddModelError(identityError.Code, identityError.Description);
+        }
+
+        return View(model);
     }
 
     private async Task SetViewBagServicesAsync()

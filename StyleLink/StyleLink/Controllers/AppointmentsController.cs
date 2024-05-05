@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using StyleLink.Constants;
 using StyleLink.Models;
 using StyleLink.Services.Interfaces;
 
@@ -22,6 +24,7 @@ public class AppointmentsController : Controller
     }
 
     [HttpGet]
+    [Authorize(Roles = Roles.User)]
     public async Task<IActionResult> AppointmentsAsync()
     {
         _logger.LogInformation($"{nameof(AppointmentsAsync)} was called!");
@@ -32,6 +35,18 @@ public class AppointmentsController : Controller
     }
 
     [HttpGet]
+    [Authorize(Roles = Roles.HairStylist)]
+    public async Task<IActionResult> HairStylistAppointmentsAsync()
+    {
+        _logger.LogInformation($"{nameof(AppointmentsAsync)} was called!");
+
+        var appointments = await _appointmentService.GetHairStylistAppointmentsAsync(User.Identity?.Name);
+
+        return View("Appointments", appointments);
+    }
+
+    [HttpGet]
+    [Authorize(Roles = Roles.User)]
     public async Task<IActionResult> AppointmentDetailsAsync(Guid id)
     {
         _logger.LogInformation($"{nameof(AppointmentDetailsAsync)} was called!");
@@ -42,6 +57,7 @@ public class AppointmentsController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = Roles.User)]
     public async Task<IActionResult> AddAppointmentAsync(SalonDetailModel model)
     {
         //todo: select the available time

@@ -17,4 +17,8 @@ public class User : IdentityUser<Guid>
     public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
 
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+
+    public virtual ICollection<Salon> Salons { get; set; } = new List<Salon>();
+
+    public ICollection<HairStylistService> HairStylistServices { get; set; } = new List<HairStylistService>();
 }

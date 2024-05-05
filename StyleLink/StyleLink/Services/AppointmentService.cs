@@ -12,8 +12,7 @@ public class AppointmentService : IAppointmentService
 {
     private readonly IAppointmentRepository _appointmentRepository;
 
-    public AppointmentService(IAppointmentRepository appointmentRepository,
-        IUserRepository userRepository)
+    public AppointmentService(IAppointmentRepository appointmentRepository)
     {
         _appointmentRepository = appointmentRepository;
     }
@@ -35,6 +34,27 @@ public class AppointmentService : IAppointmentService
             ServicePrice = a.HairStylistService?.Price ?? 0,
             ServiceType = a.HairStylistService?.Service.ServiceType.Name,
         }).ToList();
+
+        return appointmentsDto;
+    }
+
+    public async Task<List<AppointmentModel>> GetHairStylistAppointmentsAsync(string userName)
+    {
+        var appointments = await _appointmentRepository.GetAppointmentsAsync();
+        var appointmentsDto = appointments
+            .Where(a => a.HairStylistService.HairStylist.UserName == userName || a.HairStylistService.HairStylist.Email == userName)
+            .Select(a => new AppointmentModel()
+            {
+                AppointmentStatus = a.Status,
+                Currency = a.HairStylistService?.Currency,
+                EndDate = a.StartDate.AddTicks(a.HairStylistService?.Time.Ticks ?? 0),
+                StartDate = a.StartDate,
+                HairStylistName = a.HairStylistService?.HairStylist.FirstName + " " + a.HairStylistService?.HairStylist.LastName,
+                Id = a.Id,
+                SalonName = a.Salon.Name,
+                ServicePrice = a.HairStylistService?.Price ?? 0,
+                ServiceType = a.HairStylistService?.Service.ServiceType.Name,
+            }).ToList();
 
         return appointmentsDto;
     }

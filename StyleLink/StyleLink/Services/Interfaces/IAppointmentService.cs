@@ -9,5 +9,7 @@ public interface IAppointmentService
 {
     Task<List<AppointmentModel>> GetAppointmentsAsync(string userName);
 
+    Task<List<AppointmentModel>> GetHairStylistAppointmentsAsync(string userName);
+
     Task<AppointmentDetailModel> GetAppointmentDetailsAsync(Guid id);
 }

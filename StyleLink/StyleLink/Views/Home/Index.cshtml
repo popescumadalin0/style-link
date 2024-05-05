@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using StyleLink.Constants
 @model List<StyleLink.Models.SalonModel>
 
 @{
@@ -47,7 +48,7 @@
         }
     </div>
 }
-@if (User.Identity.IsAuthenticated)
+@if (User.IsInRole(Roles.Administrator))
 {
     <div class="position-absolute add-button">
         <a class="btn btn-primary rounded-pill fs-3" asp-area="" asp-controller="Salon" asp-action="AddSalon"><i class="bi bi-plus"></i></a>

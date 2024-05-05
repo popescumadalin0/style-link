@@ -10,7 +10,6 @@ public interface IContext
     DbSet<User> Users { get; set; }
     DbSet<Appointment> Appointments { get; set; }
     DbSet<Favorite> Favorites { get; set; }
-    DbSet<HairStylist> HairStylists { get; set; }
     DbSet<HairStylistService> HairStylistServices { get; set; }
     DbSet<Salon> Salons { get; set; }
     DbSet<SalonImage> SalonImages { get; set; }

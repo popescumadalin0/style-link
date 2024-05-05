@@ -1,8 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using DatabaseLayout.Models;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using StyleLink.Constants;
 using StyleLink.Models;
 using StyleLink.Repositories.Interfaces;
 using StyleLink.Services.Interfaces;
@@ -90,6 +90,7 @@ public class AccountController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = Roles.User)]
     public async Task<IActionResult> DetailsAsync(UpdateUserModel model)
     {
         if (!ModelState.IsValid)
@@ -106,6 +107,8 @@ public class AccountController : Controller
         return View(model);
     }
 
+    [HttpPost]
+    [Authorize(Roles = Roles.User)]
     public async Task<IActionResult> DeleteAccountAsync()
     {
         var result = await _userRepository.DeleteUserAsync(User.Identity?.Name);

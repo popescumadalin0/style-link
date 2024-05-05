@@ -1,6 +1,8 @@
 ﻿@using StyleLink.Repositories.Interfaces
 @using StyleLink.Services.Interfaces
 @using StyleLink.Models
+@using StyleLink.Constants
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @inject IUserRepository UserRepository
 @inject IImageConvertorService ImageConvertorService
 
@@ -42,6 +44,13 @@
                             <icon class="bi bi-person-circle fs-4"></icon>
                             <span>Contul meu</span>
                         </a>
+                        @if (User.IsInRole(Roles.HairStylist))
+                        {
+                            <a class="dropdown-item gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Appointments" asp-action="Appointments">
+                                <icon class="bi bi-calendar3 fs-4"></icon>
+                                <span>HairStylist Programări</span>
+                            </a>
+                        }
                         <a class="dropdown-item gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Appointments" asp-action="Appointments">
                             <icon class="bi bi-calendar3 fs-4"></icon>
                             <span>Programări</span>

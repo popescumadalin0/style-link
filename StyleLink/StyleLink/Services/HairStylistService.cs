@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using DatabaseLayout.Models;
 using StyleLink.Models;
 using StyleLink.Services.Interfaces;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Win32;
+using StyleLink.Constants;
+using StyleLink.Repositories;
 
 namespace StyleLink.Services;
 
@@ -14,6 +18,7 @@ public class HairStylistService : IHairStylistService
     private readonly IHairStylistRepository _hairStylistRepository;
     private readonly IHairStylistServiceRepository _hairStylistServiceRepository;
     private readonly IServiceRepository _serviceRepository;
+    private readonly UserManager<User> _userManager;
 
     private readonly IImageConvertorService _imageConvertorService;
 
@@ -22,12 +27,14 @@ public class HairStylistService : IHairStylistService
         IHairStylistRepository hairStylistRepository,
         IServiceRepository serviceRepository,
         IImageConvertorService imageConvertorService,
-        IHairStylistServiceRepository hairStylistServiceRepository)
+        IHairStylistServiceRepository hairStylistServiceRepository,
+        UserManager<User> userManager)
     {
         _hairStylistRepository = hairStylistRepository;
         _serviceRepository = serviceRepository;
         _imageConvertorService = imageConvertorService;
         _hairStylistServiceRepository = hairStylistServiceRepository;
+        _userManager = userManager;
     }
 
     public async Task<List<AddHairStylistModel>> GetAddHairStylistsAsync()
@@ -47,11 +54,9 @@ public class HairStylistService : IHairStylistService
             {
                 Id = h.Id,
                 ProfileImage = profileImage,
-                ConfirmPassword = h.Password,
                 Email = h.Email,
                 FirstName = h.FirstName,
                 LastName = h.LastName,
-                Password = h.Password,
                 PhoneNumber = h.PhoneNumber,
             });
         }
@@ -59,23 +64,42 @@ public class HairStylistService : IHairStylistService
         return hairStylistsDto;
     }
 
-    public async Task AddHairStylistAsync(AddHairStylistModel model)
+    public async Task<IdentityResult> AddHairStylistAsync(AddHairStylistModel model)
     {
         var hairStylistId = Guid.NewGuid();
-        var hairStylist = new HairStylist()
+        var hairStylist = new User()
         {
             Email = model.Email,
             FirstName = model.FirstName,
             LastName = model.LastName,
-            Password = model.Password,
             PhoneNumber = model.PhoneNumber,
             Id = hairStylistId,
             ProfileImage = await _imageConvertorService.ConvertFileFormToByteArrayAsync(model.ProfileImage),
             ProfileImageFileName = model.ProfileImage.FileName,
             ProfileImageName = model.ProfileImage.Name,
+            EmailConfirmed = true,
+            PhoneNumberConfirmed = true,
+            UserName = model.Email,
+            TwoFactorEnabled = false
         };
+        var result = await _hairStylistRepository.CreateHairStylistAsync(hairStylist, model.Password);
 
-        await _hairStylistRepository.CreateHairStylistAsync(hairStylist);
+        if (!result.Succeeded)
+        {
+            return result;
+        }
+
+        result = await _userManager.AddToRoleAsync(hairStylist, Roles.User);
+        if (!result.Succeeded)
+        {
+            return result;
+        }
+
+        result = await _userManager.AddToRoleAsync(hairStylist, Roles.HairStylist);
+        if (!result.Succeeded)
+        {
+            return result;
+        }
 
         var hairStylistNeeded = await _hairStylistRepository.GetHairStylistAsync(hairStylistId);
 
@@ -97,5 +121,7 @@ public class HairStylistService : IHairStylistService
 
             await _hairStylistServiceRepository.CreateHairStylistServiceAsync(entity);
         }
+
+        return result;
     }
 }

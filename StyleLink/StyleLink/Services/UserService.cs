@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using StyleLink.Repositories.Interfaces;
-using System.Linq;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using DatabaseLayout.Models;
 using Microsoft.AspNetCore.Identity;
+using StyleLink.Constants;
 using StyleLink.Models;
 using StyleLink.Services.Interfaces;
-using Microsoft.Win32;
 
 namespace StyleLink.Services;
 
@@ -30,7 +27,7 @@ public class UserService : IUserService
 
     public async Task<IdentityResult> RegisterAsync(RegisterModel register)
     {
-        return await _userRepository.CreateUserAsync(new User()
+        var user = new User()
         {
             Id = Guid.NewGuid(),
             ProfileImage = await _imageConvertorService.ConvertFileFormToByteArrayAsync(register.ProfileImage),
@@ -44,8 +41,16 @@ public class UserService : IUserService
             ProfileImageName = register.ProfileImage.Name,
             ProfileImageFileName = register.ProfileImage.FileName,
             UserName = register.Email
-        },
-            register.Password);
+        };
+        var result = await _userRepository.CreateUserAsync(user, register.Password);
+        if (!result.Succeeded)
+        {
+            return result;
+        }
+
+        result = await _userManager.AddToRoleAsync(user, Roles.User);
+
+        return result;
     }
 
     public async Task<IdentityResult> UpdateUserAsync(UpdateUserModel model)

@@ -1,9 +1,11 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using DatabaseLayout.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using StyleLink.Constants;
 using StyleLink.Models;
 using StyleLink.Repositories.Interfaces;
 using StyleLink.Services.Interfaces;
@@ -28,6 +30,7 @@ public class ServiceController : Controller
     }
 
     [HttpGet]
+    [Authorize(Roles = Roles.Administrator)]
     public async Task<IActionResult> AddServiceAsync()
     {
         await SetViewBagServiceTypes();
@@ -36,6 +39,7 @@ public class ServiceController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = Roles.Administrator)]
     public async Task<IActionResult> AddServiceAsync(AddServiceModel model)
     {
         await SetViewBagServiceTypes();
@@ -51,6 +55,7 @@ public class ServiceController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = Roles.Administrator)]
     public async Task<IActionResult> AddServiceTypeAsync(AddServiceModel model)
     {
         await _serviceTypeRepository.CreateServiceTypeAsync(new ServiceType()

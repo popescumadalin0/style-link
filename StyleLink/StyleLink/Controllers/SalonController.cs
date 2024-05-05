@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using StyleLink.Constants;
 using StyleLink.Models;
 using StyleLink.Services.Interfaces;
 
@@ -15,18 +17,15 @@ public class SalonController : Controller
 
     private readonly ISalonService _salonService;
     private readonly IHairStylistService _hairStylistService;
-    private readonly IImageConvertorService _imageConvertorService;
 
     public SalonController(
     ILogger<SalonController> logger,
     ISalonService salonService,
-    IHairStylistService hairStylistService,
-    IImageConvertorService imageConvertorService)
+    IHairStylistService hairStylistService)
     {
         _logger = logger;
         _salonService = salonService;
         _hairStylistService = hairStylistService;
-        _imageConvertorService = imageConvertorService;
     }
 
     [HttpGet]
@@ -40,6 +39,7 @@ public class SalonController : Controller
     }
 
     [HttpGet]
+    [Authorize(Roles = Roles.Administrator)]
     public async Task<IActionResult> AddSalonAsync()
     {
         await SetHairStylistsInViewBag();
@@ -48,6 +48,7 @@ public class SalonController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = Roles.Administrator)]
     public async Task<IActionResult> AddSalonAsync(AddSalonModel model)
     {
         await SetHairStylistsInViewBag();

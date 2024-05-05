@@ -1,49 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using DatabaseLayout;
 using DatabaseLayout.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using StyleLink.Constants;
 using StyleLink.Repositories.Interfaces;
 
 namespace StyleLink.Repositories;
 
 public class HairStylistRepository : IHairStylistRepository
 {
-    private readonly IContext _context;
+    private readonly UserManager<User> _userManager;
 
-    public HairStylistRepository(IContext context)
+    public HairStylistRepository(UserManager<User> userManager)
     {
-        _context = context;
+        _userManager = userManager;
     }
 
-    public async Task<List<HairStylist>> GetHairStylistsAsync()
+    public async Task<List<User>> GetHairStylistsAsync()
     {
-        var hairStylists = await _context.HairStylists.ToListAsync();
+        var hairStylists = await _userManager.GetUsersInRoleAsync(Roles.HairStylist);
 
-        return hairStylists;
+        return hairStylists.ToList();
     }
 
-    public async Task<HairStylist> GetHairStylistAsync(Guid id)
+    public async Task<User> GetHairStylistAsync(Guid id)
     {
-        var hairStylist = await _context.HairStylists.FirstAsync(s => s.Id == id);
+        var hairStylist = await _userManager.Users.FirstAsync(s => s.Id == id);
 
         return hairStylist;
     }
 
-    public async Task DeleteHairStylistAsync(Guid id)
+    public async Task<IdentityResult> DeleteHairStylistAsync(Guid id)
     {
-        var hairStylist = await _context.HairStylists.FirstAsync(s => s.Id == id);
+        var hairStylist = await _userManager.Users.FirstAsync(s => s.Id == id);
 
-        _context.HairStylists.Remove(hairStylist);
-
-        await _context.SaveChangesAsync();
+        return await _userManager.DeleteAsync(hairStylist);
     }
 
-    public async Task CreateHairStylistAsync(HairStylist model)
+    public async Task<IdentityResult> CreateHairStylistAsync(User model, string password)
     {
-        await _context.HairStylists.AddAsync(model);
-
-        await _context.SaveChangesAsync();
+        return await _userManager.CreateAsync(model, password);
     }
 }
