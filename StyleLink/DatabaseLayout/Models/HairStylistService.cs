@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DatabaseLayout.Models;
 
@@ -9,7 +10,7 @@ public class HairStylistService
     public Guid Id { get; set; }
 
     [Required]
-    public User HairStylist { get; set; }
+    public User User { get; set; }
 
     [Required]
     public Service Service { get; set; }

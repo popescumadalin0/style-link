@@ -114,7 +114,7 @@ public class HairStylistService : IHairStylistService
                 Currency = service.Currency,
                 Id = new Guid(),
                 Service = serviceDto,
-                HairStylist = hairStylistNeeded,
+                User = hairStylistNeeded,
                 Price = service.Price,
                 Time = service.Time,
             };

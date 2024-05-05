@@ -16,7 +16,7 @@ public class Context : IdentityDbContext<User, Role, Guid>, IContext
     public DbSet<Service> Services { get; set; }
     public DbSet<WorkProgram> WorkPrograms { get; set; }
 
-    public Context(DbContextOptions options)
+    public Context(DbContextOptions<Context> options)
         : base(options) { }
 
     public async Task<int> SaveChangesAsync()
@@ -67,7 +67,7 @@ public class Context : IdentityDbContext<User, Role, Guid>, IContext
 
         modelBuilder.Entity<HairStylistService>().Navigation(h => h.Service).AutoInclude();
 
-        modelBuilder.Entity<Salon>().Navigation(s => s.HairStylists).AutoInclude();
+        modelBuilder.Entity<Salon>().Navigation(s => s.Users).AutoInclude();
         modelBuilder.Entity<Salon>().Navigation(s => s.SalonImages).AutoInclude();
         modelBuilder.Entity<Salon>().Navigation(s => s.WorkProgram).AutoInclude();
 

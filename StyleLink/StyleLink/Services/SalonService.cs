@@ -78,7 +78,7 @@ public class SalonService : ISalonService
     {
         var salon = await _salonRepository.GetSalonAsync(id);
         var servicesUnique =
-            salon.HairStylists?
+            salon.Users?
                 .SelectMany(h => h.HairStylistServices)
                 .Select(hsss => hsss.Service).Distinct();
         var services = servicesUnique.Select(su => new ServiceModel()
@@ -95,7 +95,7 @@ public class SalonService : ISalonService
 
         var hairStylists = new List<HairStylistModel>();
 
-        foreach (var h in salon.HairStylists)
+        foreach (var h in salon.Users)
         {
             var hairStylistProfileImage =
                 await _imageConvertorService.ConvertByteArrayToFileFormAsync(new ImageDto()
@@ -181,7 +181,7 @@ public class SalonService : ISalonService
             ProfileImage = await _imageConvertorService.ConvertFileFormToByteArrayAsync(model.ProfileImage),
             ProfileImageFileName = model.ProfileImage.FileName,
             ProfileImageName = model.ProfileImage.Name,
-            HairStylists = neededHairStylists
+            Users = neededHairStylists
 
         };
         await _salonRepository.CreateSalonAsync(salon);
