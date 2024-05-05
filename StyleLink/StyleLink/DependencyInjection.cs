@@ -31,6 +31,7 @@ public static class DependencyInjection
         services.AddScoped<ISalonService, SalonService>();
         services.AddScoped<IHairStylistService, HairStylistService>();
         services.AddScoped<IServiceSalonService, ServiceSalonService>();
+        services.AddScoped<IUserService, UserService>();
 
         services.AddScoped<IImageConvertorService, ImageConvertorService>();
 

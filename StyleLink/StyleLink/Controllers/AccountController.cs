@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StyleLink.Models;
 using StyleLink.Repositories.Interfaces;
+using StyleLink.Services.Interfaces;
 
 namespace StyleLink.Controllers;
 
@@ -12,13 +13,16 @@ public class AccountController : Controller
 {
     private readonly ILogger<AccountController> _logger;
     private readonly IUserRepository _userRepository;
+    private readonly IUserService _userService;
 
     public AccountController(
         ILogger<AccountController> logger,
-        IUserRepository userRepository)
+        IUserRepository userRepository,
+        IUserService userService)
     {
         _logger = logger;
         _userRepository = userRepository;
+        _userService = userService;
     }
 
     public IActionResult Login()
@@ -34,9 +38,14 @@ public class AccountController : Controller
             return View(login);
         }
 
-        await _userRepository.SignInAsync(login.Email, login.Password);
+        var result = await _userRepository.SignInAsync(login.Email, login.Password);
+        if (result)
+        {
+            return RedirectToAction("Index", "Home");
+        }
 
-        return RedirectToAction("Index", "Home");
+        ModelState.AddModelError("", "The email or password are incorrect!");
+        return View(login);
     }
     public async Task<IActionResult> LogoutAsync()
     {
@@ -57,50 +66,59 @@ public class AccountController : Controller
         {
             return View(register);
         }
-        //todo:
-        /*await _userRepository.CreateUserAsync(new User()
-        {
-            Id = Guid.NewGuid(),
-            ProfileImage = register.ProfileImage,
-        })*/
 
-        return RedirectToAction("Login", "Account");
+        var result = await _userService.RegisterAsync(register);
+
+        if (result.Succeeded)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        foreach (var identityError in result.Errors)
+        {
+            ModelState.AddModelError(identityError.Code, identityError.Description);
+        }
+
+        return View(register);
     }
 
     public async Task<IActionResult> DetailsAsync()
     {
-        //get user details
-        //todo:
-        //var user = await _userRepository.GetUserAsync()
-
-        var user = new UpdateUserModel()
-        {
-            Email = "test@test.com",
-            PhoneNumber = "0763519884",
-            FirstName = "Madalin",
-            LastName = "Popescu"
-        };
+        var user = await _userService.GetUserDetailAsync(User.Identity?.Name);
 
         return View(user);
     }
 
     [HttpPost]
-    public IActionResult Details(UpdateUserModel model)
+    public async Task<IActionResult> DetailsAsync(UpdateUserModel model)
     {
-        //HttpPostedFileBase file = Request.Files["ImageData"];
         if (!ModelState.IsValid)
         {
             return View(model);
         }
+        var result = await _userService.UpdateUserAsync(model);
 
-        //todo: save
+        foreach (var identityError in result.Errors)
+        {
+            ModelState.AddModelError(identityError.Code, identityError.Description);
+        }
+
         return View(model);
     }
 
     public async Task<IActionResult> DeleteAccountAsync()
     {
-        //todo:
-        //await _userRepository.DeleteUserAsync();
-        return RedirectToAction("Logout", "Account");
+        var result = await _userRepository.DeleteUserAsync(User.Identity?.Name);
+        if (result.Succeeded)
+        {
+            return RedirectToAction("Logout", "Account");
+        }
+
+        foreach (var identityError in result.Errors)
+        {
+            ModelState.AddModelError(identityError.Code, identityError.Description);
+        }
+
+        return RedirectToAction("Details", "Account");
     }
 }

@@ -7,7 +7,7 @@ namespace StyleLink.Services.Interfaces;
 
 public interface IFavoriteService
 {
-    Task<List<FavoriteModel>> GetFavoritesAsync();
+    Task<List<FavoriteModel>> GetFavoritesAsync(string userName);
 
-    Task CreateFavoriteAsync(Guid id);
+    Task CreateFavoriteAsync(Guid id, string userName);
 }

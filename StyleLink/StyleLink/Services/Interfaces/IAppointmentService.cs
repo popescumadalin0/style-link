@@ -7,7 +7,7 @@ namespace StyleLink.Services.Interfaces;
 
 public interface IAppointmentService
 {
-    Task<List<AppointmentModel>> GetAppointmentsAsync();
+    Task<List<AppointmentModel>> GetAppointmentsAsync(string userName);
 
     Task<AppointmentDetailModel> GetAppointmentDetailsAsync(Guid id);
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using DatabaseLayout;
 using DatabaseLayout.Models;
@@ -22,14 +23,10 @@ public class UserRepository : IUserRepository
         _userManager = userManager;
     }
 
-    public async Task SignInAsync(User user)
+    public async Task<bool> SignInAsync(string userName, string password)
     {
-        await _signinManager.SignInAsync(user, false);
-    }
-
-    public async Task SignInAsync(string userName, string password)
-    {
-        await _signinManager.PasswordSignInAsync(userName, password, false, false);
+        var isLogged = await _signinManager.PasswordSignInAsync(userName, password, false, false);
+        return isLogged.Succeeded;
     }
 
     public async Task SignOutAsync()
@@ -51,15 +48,56 @@ public class UserRepository : IUserRepository
         return user;
     }
 
-    public async Task DeleteUserAsync(Guid id)
+    public async Task<User> GetUserAsync(string name)
+    {
+        var user = await _userManager.Users.FirstAsync(u => u.UserName == name || u.Email == name);
+
+        return user;
+    }
+
+    public async Task<IdentityResult> DeleteUserAsync(Guid id)
     {
         var user = await _userManager.Users.FirstAsync(s => s.Id == id);
 
-        await _userManager.DeleteAsync(user);
+        return await _userManager.DeleteAsync(user);
     }
 
-    public async Task CreateUserAsync(User model)
+    public async Task<IdentityResult> UpdateUserAsync(User user)
     {
-        await _userManager.CreateAsync(model);
+        var result = await _userManager.UpdateAsync(user);
+
+        return result;
+    }
+
+    public async Task<IdentityResult> UpdateUserEmailAsync(User user, string newEmail, string token)
+    {
+        var result = await _userManager.ChangeEmailAsync(user, newEmail, token);
+        return result;
+    }
+
+    public async Task<IdentityResult> UpdateUserPasswordAsync(User user, string oldPassword, string newPassword)
+    {
+        var result = await _userManager.ChangePasswordAsync(user, oldPassword, newPassword);
+        return result;
+    }
+
+    public async Task<IdentityResult> UpdateUserPhoneNumberAsync(User user, string newPhoneNumber, string token)
+    {
+        var result = await _userManager.ChangePhoneNumberAsync(user, newPhoneNumber, token);
+        return result;
+    }
+
+    public async Task<IdentityResult> DeleteUserAsync(string name)
+    {
+        var user = await _userManager.Users.FirstAsync(s => s.UserName == name || s.Email == name);
+
+        return await _userManager.DeleteAsync(user);
+    }
+
+    public async Task<IdentityResult> CreateUserAsync(User model, string password)
+    {
+        var result = await _userManager.CreateAsync(model, password);
+
+        return result;
     }
 }

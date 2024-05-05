@@ -13,33 +13,36 @@ public class FavoriteService : IFavoriteService
 {
     private readonly IFavoriteRepository _favoriteRepository;
     private readonly ISalonRepository _salonRepository;
+    private readonly IUserRepository _userRepository;
     private readonly IImageConvertorService _imageConvertorService;
 
     public FavoriteService(
         IFavoriteRepository favoriteRepository,
         IImageConvertorService imageConvertorService,
-        ISalonRepository salonRepository)
+        ISalonRepository salonRepository, 
+        IUserRepository userRepository)
     {
         _favoriteRepository = favoriteRepository;
         _imageConvertorService = imageConvertorService;
         _salonRepository = salonRepository;
+        _userRepository = userRepository;
     }
 
-    public async Task<List<FavoriteModel>> GetFavoritesAsync()
+    public async Task<List<FavoriteModel>> GetFavoritesAsync(string userName)
     {
         var favorites = await _favoriteRepository.GetFavoritesAsync();
         var favoritesDto = new List<FavoriteModel>();
-        foreach (var f in favorites)
+        foreach (var favorite in favorites.Where(f=> f.User.Email == userName || f.User.UserName == userName))
         {
             var profileImage = await _imageConvertorService.ConvertByteArrayToFileFormAsync(new ImageDto()
             {
-                Name = f.Salon.Name,
-                Content = f.Salon.ProfileImage,
-                FileName = f.Salon.ProfileImageFileName
+                Name = favorite.Salon.Name,
+                Content = favorite.Salon.ProfileImage,
+                FileName = favorite.Salon.ProfileImageFileName
             });
 
             var images = await _imageConvertorService.ConvertByteArraysToFileFormsAsync(
-                f.Salon.SalonImages
+                favorite.Salon.SalonImages
                     .Select(si =>
                         new ImageDto()
                         {
@@ -50,29 +53,30 @@ public class FavoriteService : IFavoriteService
 
             favoritesDto.Add(new FavoriteModel()
             {
-                Address = f.Salon.Address,
-                Id = f.Id,
-                SalonId = f.Salon.Id,
-                SalonName = f.Salon.Name,
+                Address = favorite.Salon.Address,
+                Id = favorite.Id,
+                SalonId = favorite.Salon.Id,
+                SalonName = favorite.Salon.Name,
                 Images = await _imageConvertorService.ConvertFormFilesToImagesAsync(images),
                 ProfileImage = await _imageConvertorService.ConvertFormFileToImageAsync(profileImage),
-                NumberOfEvaluations = f.Salon.ReviewCount,
-                SalonRating = f.Salon.Rating
+                NumberOfEvaluations = favorite.Salon.ReviewCount,
+                SalonRating = favorite.Salon.Rating
             });
         }
 
         return favoritesDto;
     }
 
-    public async Task CreateFavoriteAsync(Guid id)
+    public async Task CreateFavoriteAsync(Guid id, string userName)
     {
         var salon = await _salonRepository.GetSalonAsync(id);
+        var user = await _userRepository.GetUserAsync(userName);
 
         await _favoriteRepository.CreateFavoriteAsync(new Favorite()
         {
             Id = Guid.NewGuid(),
             Salon = salon,
-            User = new User(){}
+            User = user
         });
     }
 }

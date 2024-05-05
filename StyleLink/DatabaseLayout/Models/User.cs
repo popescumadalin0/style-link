@@ -8,7 +8,11 @@ public class User : IdentityUser<Guid>
 
     public string LastName { get; set; }
 
-    public string ProfileImage { get; set; }
+    public byte[] ProfileImage { get; set; }
+
+    public string ProfileImageFileName { get; set; }
+
+    public string ProfileImageName { get; set; }
 
     public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
 

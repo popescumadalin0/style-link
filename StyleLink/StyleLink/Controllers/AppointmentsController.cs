@@ -21,11 +21,12 @@ public class AppointmentsController : Controller
         _appointmentService = appointmentService;
     }
 
+    [HttpGet]
     public async Task<IActionResult> AppointmentsAsync()
     {
         _logger.LogInformation($"{nameof(AppointmentsAsync)} was called!");
 
-        var appointments = await _appointmentService.GetAppointmentsAsync();
+        var appointments = await _appointmentService.GetAppointmentsAsync(User.Identity?.Name);
 
         return View(appointments);
     }

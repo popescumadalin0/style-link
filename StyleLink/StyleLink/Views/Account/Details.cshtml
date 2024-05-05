@@ -84,6 +84,9 @@
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(model => model.ProfileImage)
+                    <div style="height: 300px; width: 500px;">
+                        <img class="d-block w-100 rounded" src="@Model.ProfileImageDisplay" style="height: 300px; width: 500px;" alt="ProfileImage" />
+                    </div>
                     @Html.EditorFor(model => model.ProfileImage, new
                     {
                         htmlAttributes = new

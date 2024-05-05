@@ -12,15 +12,18 @@ public class AppointmentService : IAppointmentService
 {
     private readonly IAppointmentRepository _appointmentRepository;
 
-    public AppointmentService(IAppointmentRepository appointmentRepository)
+    public AppointmentService(IAppointmentRepository appointmentRepository,
+        IUserRepository userRepository)
     {
         _appointmentRepository = appointmentRepository;
     }
 
-    public async Task<List<AppointmentModel>> GetAppointmentsAsync()
+    public async Task<List<AppointmentModel>> GetAppointmentsAsync(string userName)
     {
         var appointments = await _appointmentRepository.GetAppointmentsAsync();
-        var appointmentsDto = appointments.Select(a => new AppointmentModel()
+        var appointmentsDto = appointments
+            .Where(a=> a.User.UserName == userName || a.User.Email == userName)
+            .Select(a => new AppointmentModel()
         {
             AppointmentStatus = a.Status,
             Currency = a.HairStylistService?.Currency,

@@ -35,7 +35,6 @@ public class ImageConvertorService : IImageConvertorService
 
         return result;
     }
-
     public async Task<IFormFile> ConvertByteArrayToFileFormAsync(ImageDto input)
     {
         var stream = new MemoryStream(input.Content);
@@ -60,7 +59,6 @@ public class ImageConvertorService : IImageConvertorService
 
         return result;
     }
-
     public async Task<string> ConvertFormFileToImageAsync(IFormFile fileForm)
     {
         var byteData = await ConvertFileFormToByteArrayAsync(fileForm);

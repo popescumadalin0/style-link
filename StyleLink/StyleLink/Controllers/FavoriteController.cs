@@ -28,7 +28,7 @@ public class FavoriteController : Controller
     {
         _logger.LogInformation($"{nameof(FavoriteAsync)} was called!");
 
-        var favorites = await _favoriteService.GetFavoritesAsync();
+        var favorites = await _favoriteService.GetFavoritesAsync(User.Identity?.Name);
 
         return View(favorites);
     }
@@ -37,7 +37,7 @@ public class FavoriteController : Controller
     public async Task<IActionResult> AddFavoriteAsync(SalonDetailModel model)
     {
         _logger.LogInformation($"{nameof(AddFavoriteAsync)} was called!");
-        await _favoriteService.CreateFavoriteAsync(model.Id);
+        await _favoriteService.CreateFavoriteAsync(model.Id, User.Identity?.Name);
 
         return RedirectToAction("Salon", "Salon");
     }

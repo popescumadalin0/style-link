@@ -47,6 +47,9 @@
         }
     </div>
 }
-<div class="position-absolute add-button">
-    <a class="btn btn-primary rounded-pill fs-3" asp-area="" asp-controller="Salon" asp-action="AddSalon"><i class="bi bi-plus"></i></a>
-</div>
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="position-absolute add-button">
+        <a class="btn btn-primary rounded-pill fs-3" asp-area="" asp-controller="Salon" asp-action="AddSalon"><i class="bi bi-plus"></i></a>
+    </div>
+}

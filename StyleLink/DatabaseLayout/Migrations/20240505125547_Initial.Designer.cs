@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseLayout.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240504224510_Initial")]
+    [Migration("20240505125547_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -331,7 +331,15 @@ namespace DatabaseLayout.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("ProfileImage")
+                    b.Property<byte[]>("ProfileImage")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("ProfileImageFileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImageName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
