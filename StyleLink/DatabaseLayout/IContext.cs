@@ -6,8 +6,6 @@ namespace DatabaseLayout;
 public interface IContext
 {
     DbSet<ServiceType> ServiceTypes { get; set; }
-    DbSet<Role> Roles { get; set; }
-    DbSet<User> Users { get; set; }
     DbSet<Appointment> Appointments { get; set; }
     DbSet<Favorite> Favorites { get; set; }
     DbSet<HairStylistService> HairStylistServices { get; set; }

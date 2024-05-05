@@ -8,8 +8,6 @@ namespace DatabaseLayout;
 public class Context : IdentityDbContext<User, Role, Guid>, IContext
 {
     public DbSet<ServiceType> ServiceTypes { get; set; }
-    public override DbSet<Role> Roles { get; set; }
-    public override DbSet<User> Users { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
     public DbSet<Favorite> Favorites { get; set; }
     public DbSet<HairStylistService> HairStylistServices { get; set; }
