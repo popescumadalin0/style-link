@@ -12,8 +12,17 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 div {
     outline: none;
+}
+
+.delete-button {
+    color: grey;
+    bottom: 0.4rem;
+    right: 0.7rem;
+    height: 2rem;
+    width: 2rem;
 }
 
 .index-up {

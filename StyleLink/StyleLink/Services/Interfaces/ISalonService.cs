@@ -12,4 +12,6 @@ public interface ISalonService
     Task<SalonDetailModel> GetSalonDetailsAsync(Guid id);
 
     Task AddSalonAsync(AddSalonModel model);
+
+    Task DeleteSalonAsync(Guid id);
 }

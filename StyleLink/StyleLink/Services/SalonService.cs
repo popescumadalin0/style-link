@@ -12,8 +12,6 @@ namespace StyleLink.Services;
 public class SalonService : ISalonService
 {
     private readonly ISalonRepository _salonRepository;
-    private readonly IServiceRepository _serviceRepository;
-    private readonly IHairStylistServiceRepository _hairStylistServiceRepository;
     private readonly IHairStylistRepository _hairStylistRepository;
     private readonly ISalonImageRepository _salonImageRepository;
 
@@ -21,18 +19,14 @@ public class SalonService : ISalonService
 
     public SalonService(
         ISalonRepository salonRepository,
-        IHairStylistServiceRepository hairStylistServiceRepository,
         IHairStylistRepository hairStylistRepository,
         IImageConvertorService imageConvertorService,
-        ISalonImageRepository salonImageRepository,
-        IServiceRepository serviceRepository)
+        ISalonImageRepository salonImageRepository)
     {
         _salonRepository = salonRepository;
-        _hairStylistServiceRepository = hairStylistServiceRepository;
         _hairStylistRepository = hairStylistRepository;
         _imageConvertorService = imageConvertorService;
         _salonImageRepository = salonImageRepository;
-        _serviceRepository = serviceRepository;
     }
 
     public async Task<List<SalonModel>> GetSalonsAsync()
@@ -187,6 +181,11 @@ public class SalonService : ISalonService
         await _salonRepository.CreateSalonAsync(salon);
 
         await AddSalonImagesAsync(model, id);
+    }
+
+    public async Task DeleteSalonAsync(Guid id)
+    {
+        await _salonRepository.DeleteSalonAsync(id);
     }
 
     private async Task AddSalonImagesAsync(AddSalonModel model, Guid id)

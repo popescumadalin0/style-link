@@ -61,6 +61,15 @@ public class SalonController : Controller
         await _salonService.AddSalonAsync(model);
 
         return RedirectToAction("Index", "Home");
+    }
+
+    [HttpPost]
+    [Authorize(Roles = Roles.Administrator)]
+    public async Task<IActionResult> DeleteSalonAsync(SalonModel model)
+    {
+        await _salonService.DeleteSalonAsync(model.Id);
+
+        return RedirectToAction("Index", "Home");
 
     }
 
