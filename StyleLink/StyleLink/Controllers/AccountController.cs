@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
 using StyleLink.Constants;
 using StyleLink.Models;
@@ -104,7 +105,7 @@ public class AccountController : Controller
             ModelState.AddModelError(identityError.Code, identityError.Description);
         }
 
-        return View(model);
+        return RedirectToAction("Details", "Account");
     }
 
     [HttpPost]

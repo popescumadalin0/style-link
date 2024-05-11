@@ -32,6 +32,16 @@
                     </a>
                 </li>
 
+                @if (User.IsInRole(Roles.HairStylist))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Appointments" asp-action="HairStylistAppointments">
+                            <icon class="bi bi-calendar3 fs-4"></icon>
+                            <span>HairStylist Programări</span>
+                        </a>
+                    </li>
+                }
+
                 <li class="nav-item dropdown">
                     <a class="nav-link gap-2 text-dark d-flex align-items-center" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="d-flex flex-column align-content-center justify-content-center" style="padding: 5.5px 0px 5.5px 11px;">
@@ -51,7 +61,7 @@
                                 <span>HairStylist Programări</span>
                             </a>
                         }
-                        <a class="dropdown-item gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Appointments" asp-action="Appointments">
+                        <a class="dropdown-item gap-2 text-dark d-flex align-items-center" asp-area="" asp-controller="Appointments" asp-action="HairStylistAppointments">
                             <icon class="bi bi-calendar3 fs-4"></icon>
                             <span>Programări</span>
                         </a>

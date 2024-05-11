@@ -66,22 +66,38 @@ public class HairStylistService : IHairStylistService
 
     public async Task<IdentityResult> AddHairStylistAsync(AddHairStylistModel model)
     {
-        var hairStylistId = Guid.NewGuid();
         var hairStylist = new User()
         {
             Email = model.Email,
             FirstName = model.FirstName,
             LastName = model.LastName,
             PhoneNumber = model.PhoneNumber,
-            Id = hairStylistId,
+            Id = Guid.NewGuid(),
             ProfileImage = await _imageConvertorService.ConvertFileFormToByteArrayAsync(model.ProfileImage),
             ProfileImageFileName = model.ProfileImage.FileName,
             ProfileImageName = model.ProfileImage.Name,
             EmailConfirmed = true,
             PhoneNumberConfirmed = true,
             UserName = model.Email,
-            TwoFactorEnabled = false
+            TwoFactorEnabled = false,
         };
+        var services = await _serviceRepository.GetServicesAsync();
+        var necessaryServices = model.ServiceDetails.Where(x => x.IsUsed);
+
+        foreach (var service in necessaryServices)
+        {
+            var serviceDto = services.First(s => s.Id == Guid.Parse(service.ServiceId));
+            var entity = new DatabaseLayout.Models.HairStylistService()
+            {
+                Currency = service.Currency,
+                Id = new Guid(),
+                Service = serviceDto,
+                Price = service.Price,
+                Time = service.Time,
+            };
+
+            hairStylist.HairStylistServices.Add(entity);
+        }
         var result = await _hairStylistRepository.CreateHairStylistAsync(hairStylist, model.Password);
 
         if (!result.Succeeded)
@@ -96,31 +112,6 @@ public class HairStylistService : IHairStylistService
         }
 
         result = await _userManager.AddToRoleAsync(hairStylist, Roles.HairStylist);
-        if (!result.Succeeded)
-        {
-            return result;
-        }
-
-        var hairStylistNeeded = await _hairStylistRepository.GetHairStylistAsync(hairStylistId);
-
-        var services = await _serviceRepository.GetServicesAsync();
-        var necessaryServices = model.ServiceDetails.Where(x => x.IsUsed);
-
-        foreach (var service in necessaryServices)
-        {
-            var serviceDto = services.First(s => s.Id == Guid.Parse(service.ServiceId));
-            var entity = new DatabaseLayout.Models.HairStylistService()
-            {
-                Currency = service.Currency,
-                Id = new Guid(),
-                Service = serviceDto,
-                User = hairStylistNeeded,
-                Price = service.Price,
-                Time = service.Time,
-            };
-
-            await _hairStylistServiceRepository.CreateHairStylistServiceAsync(entity);
-        }
 
         return result;
     }

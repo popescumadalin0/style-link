@@ -22,6 +22,7 @@
                 {
                     @class = "text-danger"
                 })
+                @Html.HiddenFor(model => model.Id)
                 <div class="form-group">
                     @Html.LabelFor(model => model.FirstName)
                     @Html.EditorFor(model => model.FirstName, new
