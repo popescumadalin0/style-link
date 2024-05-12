@@ -12,6 +12,7 @@ public class HairStylistService
     [Required]
     public User User { get; set; }
 
+    public Guid ServiceId { get; set; }
     [Required]
     public Service Service { get; set; }
 

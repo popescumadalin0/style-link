@@ -13,6 +13,7 @@ public interface IContext
     DbSet<SalonImage> SalonImages { get; set; }
     DbSet<Service> Services { get; set; }
     DbSet<WorkProgram> WorkPrograms { get; set; }
+    DbSet<SalonUser> SalonUsers { get; set; }
 
     Task<int> SaveChangesAsync();
 }

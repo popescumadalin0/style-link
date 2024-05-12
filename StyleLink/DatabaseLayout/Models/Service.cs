@@ -10,6 +10,7 @@ public class Service
 
     public string Name { get; set; }
 
+    public string ServiceTypeName { get; set; }
     [Required]
     public ServiceType ServiceType { get; set; }
 

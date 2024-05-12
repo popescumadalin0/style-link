@@ -18,7 +18,7 @@ public class User : IdentityUser<Guid>
 
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
-    public virtual ICollection<Salon> Salons { get; set; } = new List<Salon>();
+    public ICollection<SalonUser> SalonUsers { get; set; } = new List<SalonUser>();
 
     public ICollection<HairStylistService> HairStylistServices { get; set; } = new List<HairStylistService>();
 }

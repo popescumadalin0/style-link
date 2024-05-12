@@ -66,6 +66,6 @@ public class AppointmentsController : Controller
             Name = model.ServiceType,
         });*/
 
-        return RedirectToAction("Salon", "Salon");
+        return RedirectToAction("Salon", "Salon", new { id = model.Id.ToString() });
     }
 }

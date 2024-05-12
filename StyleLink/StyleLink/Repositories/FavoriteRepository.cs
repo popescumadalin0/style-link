@@ -31,6 +31,13 @@ public class FavoriteRepository : IFavoriteRepository
         return favorite;
     }
 
+    public async Task<Favorite> GetFavoriteBySalonIdAndUserIdAsync(Guid salonId, Guid userId)
+    {
+        var favorite = await _context.Favorites.FirstOrDefaultAsync(s => s.SalonId == salonId && s.UserId == userId);
+
+        return favorite;
+    }
+
     public async Task DeleteFavoriteAsync(Guid id)
     {
         var favorite = await _context.Favorites.FirstAsync(s => s.Id == id);

@@ -19,7 +19,7 @@ public class FavoriteService : IFavoriteService
     public FavoriteService(
         IFavoriteRepository favoriteRepository,
         IImageConvertorService imageConvertorService,
-        ISalonRepository salonRepository, 
+        ISalonRepository salonRepository,
         IUserRepository userRepository)
     {
         _favoriteRepository = favoriteRepository;
@@ -32,7 +32,7 @@ public class FavoriteService : IFavoriteService
     {
         var favorites = await _favoriteRepository.GetFavoritesAsync();
         var favoritesDto = new List<FavoriteModel>();
-        foreach (var favorite in favorites.Where(f=> f.User.Email == userName || f.User.UserName == userName))
+        foreach (var favorite in favorites.Where(f => f.User.Email == userName || f.User.UserName == userName))
         {
             var profileImage = await _imageConvertorService.ConvertByteArrayToFileFormAsync(new ImageDto()
             {
@@ -69,14 +69,18 @@ public class FavoriteService : IFavoriteService
 
     public async Task CreateFavoriteAsync(Guid id, string userName)
     {
-        var salon = await _salonRepository.GetSalonAsync(id);
         var user = await _userRepository.GetUserAsync(userName);
+        var existFavorite = await _favoriteRepository.GetFavoriteBySalonIdAndUserIdAsync(id, user.Id);
+        if (existFavorite != null)
+        {
+            return;
+        }
 
         await _favoriteRepository.CreateFavoriteAsync(new Favorite()
         {
             Id = Guid.NewGuid(),
-            Salon = salon,
-            User = user
+            UserId = user.Id,
+            SalonId = id
         });
     }
 }

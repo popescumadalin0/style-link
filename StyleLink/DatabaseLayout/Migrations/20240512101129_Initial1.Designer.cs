@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseLayout.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240511125335_initial")]
-    partial class initial
+    [Migration("20240512101129_Initial1")]
+    partial class Initial1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,9 +46,6 @@ namespace DatabaseLayout.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("UserId1")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
                     b.HasIndex("HairStylistServiceId");
@@ -56,8 +53,6 @@ namespace DatabaseLayout.Migrations
                     b.HasIndex("SalonId");
 
                     b.HasIndex("UserId");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("Appointments");
                 });
@@ -209,6 +204,27 @@ namespace DatabaseLayout.Migrations
                     b.HasIndex("SalonId");
 
                     b.ToTable("SalonImages");
+                });
+
+            modelBuilder.Entity("DatabaseLayout.Models.SalonUser", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("SalonId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SalonId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("SalonUsers");
                 });
 
             modelBuilder.Entity("DatabaseLayout.Models.Service", b =>
@@ -469,21 +485,6 @@ namespace DatabaseLayout.Migrations
                     b.ToTable("UserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("SalonUser", b =>
-                {
-                    b.Property<Guid>("SalonsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UsersId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("SalonsId", "UsersId");
-
-                    b.HasIndex("UsersId");
-
-                    b.ToTable("SalonUser");
-                });
-
             modelBuilder.Entity("DatabaseLayout.Models.Appointment", b =>
                 {
                     b.HasOne("DatabaseLayout.Models.HairStylistService", "HairStylistService")
@@ -499,14 +500,10 @@ namespace DatabaseLayout.Migrations
                         .IsRequired();
 
                     b.HasOne("DatabaseLayout.Models.User", "User")
-                        .WithMany()
+                        .WithMany("Appointments")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.HasOne("DatabaseLayout.Models.User", null)
-                        .WithMany("Appointments")
-                        .HasForeignKey("UserId1");
 
                     b.Navigation("HairStylistService");
 
@@ -520,13 +517,13 @@ namespace DatabaseLayout.Migrations
                     b.HasOne("DatabaseLayout.Models.Salon", "Salon")
                         .WithMany("Favorites")
                         .HasForeignKey("SalonId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("DatabaseLayout.Models.User", "User")
                         .WithMany("Favorites")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Salon");
@@ -539,7 +536,7 @@ namespace DatabaseLayout.Migrations
                     b.HasOne("DatabaseLayout.Models.Service", "Service")
                         .WithMany("HairStylistServices")
                         .HasForeignKey("ServiceId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("DatabaseLayout.Models.User", "User")
@@ -558,10 +555,29 @@ namespace DatabaseLayout.Migrations
                     b.HasOne("DatabaseLayout.Models.Salon", "Salon")
                         .WithMany("SalonImages")
                         .HasForeignKey("SalonId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Salon");
+                });
+
+            modelBuilder.Entity("DatabaseLayout.Models.SalonUser", b =>
+                {
+                    b.HasOne("DatabaseLayout.Models.Salon", "Salon")
+                        .WithMany("SalonUsers")
+                        .HasForeignKey("SalonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DatabaseLayout.Models.User", "User")
+                        .WithMany("SalonUsers")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Salon");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("DatabaseLayout.Models.Service", b =>
@@ -569,7 +585,7 @@ namespace DatabaseLayout.Migrations
                     b.HasOne("DatabaseLayout.Models.ServiceType", "ServiceType")
                         .WithMany("Services")
                         .HasForeignKey("ServiceTypeName")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ServiceType");
@@ -637,21 +653,6 @@ namespace DatabaseLayout.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("SalonUser", b =>
-                {
-                    b.HasOne("DatabaseLayout.Models.Salon", null)
-                        .WithMany()
-                        .HasForeignKey("SalonsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DatabaseLayout.Models.User", null)
-                        .WithMany()
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("DatabaseLayout.Models.HairStylistService", b =>
                 {
                     b.Navigation("Appointments");
@@ -662,6 +663,8 @@ namespace DatabaseLayout.Migrations
                     b.Navigation("Favorites");
 
                     b.Navigation("SalonImages");
+
+                    b.Navigation("SalonUsers");
 
                     b.Navigation("WorkProgram")
                         .IsRequired();
@@ -684,6 +687,8 @@ namespace DatabaseLayout.Migrations
                     b.Navigation("Favorites");
 
                     b.Navigation("HairStylistServices");
+
+                    b.Navigation("SalonUsers");
                 });
 #pragma warning restore 612, 618
         }

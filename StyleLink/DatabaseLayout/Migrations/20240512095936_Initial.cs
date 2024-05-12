@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DatabaseLayout.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -123,8 +123,7 @@ namespace DatabaseLayout.Migrations
                         name: "FK_SalonImages_Salons_SalonId",
                         column: x => x.SalonId,
                         principalTable: "Salons",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -166,8 +165,7 @@ namespace DatabaseLayout.Migrations
                         name: "FK_Services_ServiceTypes_ServiceTypeName",
                         column: x => x.ServiceTypeName,
                         principalTable: "ServiceTypes",
-                        principalColumn: "Name",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Name");
                 });
 
             migrationBuilder.CreateTable(
@@ -196,24 +194,25 @@ namespace DatabaseLayout.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SalonUser",
+                name: "SalonUsers",
                 columns: table => new
                 {
-                    SalonsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UsersId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SalonId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SalonUser", x => new { x.SalonsId, x.UsersId });
+                    table.PrimaryKey("PK_SalonUsers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SalonUser_Salons_SalonsId",
-                        column: x => x.SalonsId,
+                        name: "FK_SalonUsers_Salons_SalonId",
+                        column: x => x.SalonId,
                         principalTable: "Salons",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SalonUser_Users_UsersId",
-                        column: x => x.UsersId,
+                        name: "FK_SalonUsers_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -322,8 +321,7 @@ namespace DatabaseLayout.Migrations
                         name: "FK_HairStylistServices_Services_ServiceId",
                         column: x => x.ServiceId,
                         principalTable: "Services",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_HairStylistServices_Users_UserId",
                         column: x => x.UserId,
@@ -341,8 +339,7 @@ namespace DatabaseLayout.Migrations
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     HairStylistServiceId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    SalonId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    SalonId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -364,11 +361,6 @@ namespace DatabaseLayout.Migrations
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Appointments_Users_UserId1",
-                        column: x => x.UserId1,
-                        principalTable: "Users",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -385,11 +377,6 @@ namespace DatabaseLayout.Migrations
                 name: "IX_Appointments_UserId",
                 table: "Appointments",
                 column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Appointments_UserId1",
-                table: "Appointments",
-                column: "UserId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Favorites_SalonId",
@@ -429,9 +416,14 @@ namespace DatabaseLayout.Migrations
                 column: "SalonId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SalonUser_UsersId",
-                table: "SalonUser",
-                column: "UsersId");
+                name: "IX_SalonUsers_SalonId",
+                table: "SalonUsers",
+                column: "SalonId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SalonUsers_UserId",
+                table: "SalonUsers",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Services_ServiceTypeName",
@@ -482,7 +474,7 @@ namespace DatabaseLayout.Migrations
                 name: "SalonImages");
 
             migrationBuilder.DropTable(
-                name: "SalonUser");
+                name: "SalonUsers");
 
             migrationBuilder.DropTable(
                 name: "UserClaims");

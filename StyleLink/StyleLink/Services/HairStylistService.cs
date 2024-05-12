@@ -81,17 +81,15 @@ public class HairStylistService : IHairStylistService
             UserName = model.Email,
             TwoFactorEnabled = false,
         };
-        var services = await _serviceRepository.GetServicesAsync();
         var necessaryServices = model.ServiceDetails.Where(x => x.IsUsed);
 
         foreach (var service in necessaryServices)
         {
-            var serviceDto = services.First(s => s.Id == Guid.Parse(service.ServiceId));
             var entity = new DatabaseLayout.Models.HairStylistService()
             {
                 Currency = service.Currency,
-                Id = new Guid(),
-                Service = serviceDto,
+                Id = Guid.NewGuid(),
+                ServiceId = Guid.Parse(service.ServiceId),
                 Price = service.Price,
                 Time = service.Time,
             };

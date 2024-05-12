@@ -11,6 +11,8 @@ public interface IFavoriteRepository
 
     Task<Favorite> GetFavoriteAsync(Guid id);
 
+    Task<Favorite> GetFavoriteBySalonIdAndUserIdAsync(Guid salonId, Guid userId);
+
     Task DeleteFavoriteAsync(Guid id);
 
     Task CreateFavoriteAsync(Favorite model);

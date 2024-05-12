@@ -43,7 +43,7 @@ public class FavoriteController : Controller
         _logger.LogInformation($"{nameof(AddFavoriteAsync)} was called!");
         await _favoriteService.CreateFavoriteAsync(model.Id, User.Identity?.Name);
 
-        return RedirectToAction("Salon", "Salon");
+        return RedirectToAction("Salon", "Salon", new { id = model.Id.ToString()});
     }
 
     [HttpPost]

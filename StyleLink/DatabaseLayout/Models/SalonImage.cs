@@ -13,5 +13,7 @@ public class SalonImage
 
     public string FileName { get; set; }
 
+    public Guid SalonId { get; set; }
+
     public Salon Salon { get; set; }
 }
