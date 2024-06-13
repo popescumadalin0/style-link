@@ -6,6 +6,9 @@ public enum AppointmentStatus
 {
     None = 0,
 
+    [Description("Neconfirmat")]
+    Pending,
+
     [Description("Confirmat")]
     Confirmed,
 

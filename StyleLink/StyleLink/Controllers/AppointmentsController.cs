@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
+using DatabaseLayout.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StyleLink.Constants;
+using StyleLink.Enums;
 using StyleLink.Models;
+using StyleLink.Repositories.Interfaces;
 using StyleLink.Services.Interfaces;
 
 namespace StyleLink.Controllers;
@@ -15,12 +18,16 @@ public class AppointmentsController : Controller
 
     private readonly IAppointmentService _appointmentService;
 
+    private readonly IAppointmentRepository _appointmentRepository;
+
     public AppointmentsController(
         ILogger<AppointmentsController> logger,
-        IAppointmentService appointmentService)
+        IAppointmentService appointmentService,
+        IAppointmentRepository appointmentRepository)
     {
         _logger = logger;
         _appointmentService = appointmentService;
+        _appointmentRepository = appointmentRepository;
     }
 
     [HttpGet]
@@ -65,6 +72,15 @@ public class AppointmentsController : Controller
         {
             Name = model.ServiceType,
         });*/
+
+        await _appointmentRepository.CreateAppointmentAsync(new Appointment()
+        {
+            //HairStylistService = "",
+            Id = Guid.NewGuid(),
+            StartDate = DateTime.Now,
+            Status = AppointmentStatus.Pending,
+            //User = 
+        });
 
         return RedirectToAction("Salon", "Salon", new { id = model.Id.ToString() });
     }

@@ -97,8 +97,11 @@ public class Context : IdentityDbContext<User, Role, Guid>, IContext
             .OnDelete(DeleteBehavior.NoAction);
 
         modelBuilder.Entity<Appointment>().Navigation(a => a.Salon).AutoInclude();
+        modelBuilder.Entity<Appointment>().Navigation(a => a.User).AutoInclude();
 
         modelBuilder.Entity<Favorite>().Navigation(f => f.Salon).AutoInclude();
+
+        modelBuilder.Entity<Favorite>().Navigation(f => f.User).AutoInclude();
 
         modelBuilder.Entity<User>().Navigation(h => h.HairStylistServices).AutoInclude();
 
